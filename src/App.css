@@ -1,5 +1,11 @@
 .App {
   text-align: center;
+  display: flex;
+  font-family: 'Raleway', sans-serif !important;
+  background-image: url("./assets/DarkPalms3.jpg");
+  background-size: cover;
+  color: #b8d6ca;
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -14,8 +20,9 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  /* background-color: #404E5C; */
   min-height: 100vh;
+  min-width: calc(100vw - 175px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,15 +31,59 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h2 {
+  font-weight: lighter;
+  font-size: 28pt;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h3 {
+  font-weight: lighter;
+}
+
+.nav {
+  width: 175px;
+  display: flex;
+  flex-direction: column;
+  color: #b8d6ca;
+  /* border-right: 1pt solid #B7D1DA */
+  font-family: 'Raleway', sans-serif;
+}
+
+.bar {
+    margin-top: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 18pt;
+}
+
+.nav-link {
+  color: #b8d6ca;
+  text-decoration: none;
+  width: fit-content;
+  height: fit-content;  
+}
+
+.nav-item:hover {
+  transform: scale(1.3);
+}
+
+.landing {
+  min-width: calc(100vw - 175px);
+  font-size: 24pt;
+  font-weight: lighter;
+}
+
+.about {
+  min-width: calc(100vw - 175px);
+}
+
+.projects {
+  min-width: calc(100vw - 175px);
+}
+
+.contact {
+  min-width: calc(100vw - 175px);
 }
