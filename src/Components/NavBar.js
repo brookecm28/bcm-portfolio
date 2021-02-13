@@ -9,6 +9,9 @@ function NavBar() {
                 <h3>web developer</h3>
             </div>
             <nav className='bar'>
+                <Link className='nav-link' to='/'>
+                    <p className='nav-item'>home</p>
+                </Link>   
                 <Link className='nav-link' to='/about'>
                     <p className='nav-item'>about</p>
                 </Link>              
