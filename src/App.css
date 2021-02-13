@@ -84,15 +84,13 @@ h3 {
   min-width: calc(100vw - 175px);
 }
 
-.contact {
-  min-width: calc(100vw - 175px);
-}
 
 /* .contact */
 .contact {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: calc(100vw - 175px);
 }
 
 .contact-info {
