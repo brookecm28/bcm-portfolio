@@ -11,11 +11,9 @@ function Contact() {
                 <p>|</p>
                 <p>Resume</p>
             </div>
-            <div className='contact-info'>my contact info:</div>
+            <div className='contact-info'>email:</div>
             <div className='contact-links'>
                 <p>brooke.miller.dev@gmail.com</p>
-                <p>|</p>
-                <p>(720) 774-0205</p>
             </div>
         </div>
     )
