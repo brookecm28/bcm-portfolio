@@ -5,7 +5,7 @@ function Landing() {
     return (
         <div className='landing'>
             <div className='titles'>
-                <p>who am I?</p>
+                <p className='line-title'>who am I?</p>
             </div>
             <div className='who'>
                 <div className='list'>
@@ -18,34 +18,38 @@ function Landing() {
                 <img className='headshot' src={headshot} />
             </div>
             <div className='titles'>
-                <p>my stack:</p>
+                <p className='line-title'>my stack:</p>
             </div>
-            <div className='stack'>
-                <p>HTML</p>
-                <p>|</p>
-                <p>CSS</p>
-                <p>|</p>
-                <p>JSS</p>
-                <p>|</p>
-                <p>SASS/SCSS</p>
-                <p>|</p>
-                <p>Javascript</p>
-                <p>|</p>
-                <p>React</p>
-                <p>|</p>
-                <p>Redux</p>
-            </div>
-            <div className='stack'>
-                <p>Node.js</p>
-                <p>|</p>
-                <p>PostgreSQL</p>
-                <p>|</p>
-                <p>Typescript</p>
-                <p>|</p>
-                <p>Figma</p>
-                <p>|</p>
-                <p>Nodemailer.js</p>
-            </div>              
+            
+            <div className='stack-container'>
+                <div className='stack'>
+                    <p className='stack-list'>HTML</p>
+                    <p className='stack-list'>|</p>
+                    <p className='stack-list'>CSS</p>
+                    <p className='stack-list'>|</p>
+                    <p className='stack-list'>JSS</p>
+                    <p className='stack-list'>|</p>
+                    <p className='stack-list'>SASS/SCSS</p>
+                    <p className='stack-list'>|</p>
+                    <p className='stack-list'>Javascript</p>
+                    <p className='stack-list'>|</p>
+                    <p className='stack-list'>React</p>
+                    <p className='stack-list'>|</p>
+                    <p className='stack-list'>Redux</p>
+                </div>
+                <div className='stack'>
+                    <p className='stack-list'>Node.js</p>
+                    <p className='stack-list'>|</p>
+                    <p className='stack-list'>PostgreSQL</p>
+                    <p className='stack-list'>|</p>
+                    <p className='stack-list'>Typescript</p>
+                    <p className='stack-list'>|</p>
+                    <p className='stack-list'>Figma</p>
+                    <p className='stack-list'>|</p>
+                    <p className='stack-list'>Nodemailer.js</p>
+                </div>
+        </div>
+                   
             
         </div>
     )
