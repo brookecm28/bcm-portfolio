@@ -5,20 +5,21 @@ function Landing() {
     return (
         <div className='landing'>
             <div className='titles'>
-                <p className='line-title'>who am I?</p>
+                <p className='line-title'>Who Am I?</p>
             </div>
             <div className='who'>
                 <div className='list'>
-                    <li>full stack engineer</li>
-                    <li>budding UI/UX enthusiast</li>
-                    <li>DevMountain graduate</li>
-                    <li>thunderstorm lover</li>
-                    <li>ready to tackle life's challenges</li>
+                    <li>Full Stack Software Engineer</li>
+                    <li>Budding UI/UX Enthusiast</li>
+                    <li>DevMountain Graduate</li>
+                    <li>Thunderstorm Lover</li>
+                    <li>Agile Learner</li>
+                    <li>Ready to tackle life's challenges</li>
                 </div>
                 <img className='headshot' src={headshot} />
             </div>
             <div className='titles'>
-                <p className='line-title'>my stack:</p>
+                <p className='line-title'>My Stack:</p>
             </div>
             
             <div className='stack-container'>
@@ -36,17 +37,21 @@ function Landing() {
                     <p className='stack-list'>React</p>
                     <p className='stack-list'>|</p>
                     <p className='stack-list'>Redux</p>
+                    <p className='stack-list'>|</p>
+                    <p className='stack-list'>Node.js</p>
                 </div>
                 <div className='stack'>
-                    <p className='stack-list'>Node.js</p>
-                    <p className='stack-list'>|</p>
                     <p className='stack-list'>PostgreSQL</p>
                     <p className='stack-list'>|</p>
                     <p className='stack-list'>Typescript</p>
                     <p className='stack-list'>|</p>
+                    <p className='stack-list'>Nodemailer.js</p>
+                    <p className='stack-list'>|</p>
                     <p className='stack-list'>Figma</p>
                     <p className='stack-list'>|</p>
-                    <p className='stack-list'>Nodemailer.js</p>
+                    <p className='stack-list'>Excalidraw</p>
+                    <p className='stack-list'>|</p>
+                    <p className='stack-list'>Visual Studio Code</p>
                 </div>
         </div>
                    
