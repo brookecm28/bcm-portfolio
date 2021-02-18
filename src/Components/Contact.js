@@ -14,7 +14,7 @@ function Contact() {
                 </div>
                 <div className='contact-info project-title'>Email:</div>
                 <div className='contact-links'>
-                    <p className='project-link'>brooke.miller.dev@gmail.com</p>
+                    <a className='project-link' href='mailto:brooke.miller.dev@gmail.com'>brooke.miller.dev@gmail.com</a>
                 </div>
             </div>
         </div>

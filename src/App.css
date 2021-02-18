@@ -200,6 +200,10 @@ h3 {
   font-size: 14pt;
 }
 
+.indent {
+  margin-left: 28px;
+}
+
 /*contact */
 .contact {
   display: flex;

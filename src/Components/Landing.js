@@ -12,9 +12,9 @@ function Landing() {
                     <li>Full Stack Software Engineer</li>
                     <li>Budding UI/UX Enthusiast</li>
                     <li>DevMountain Graduate</li>
-                    <li>Thunderstorm Lover</li>
                     <li>Agile Learner</li>
                     <li>Detail-Oriented Organizer</li>
+                    <li>Thunderstorm Lover</li>
                 </div>
                 <img className='headshot' src={headshot} />
             </div>

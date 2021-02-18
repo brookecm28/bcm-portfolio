@@ -19,6 +19,9 @@ function Projects() {
                 	<li>Electronic storage and management system for recipes</li>
                 	<li>Built for anyone, the user can navigate through their recipes in a list, view individual recipes, and edit their recipes</li>
                 	<li>Anyone can register for an account and will receive a welcome email upon doing so</li>
+                    <li>Dummy account login</li>
+                    <li className='indent'>U: lulu@lol.com</li>
+                    <li className='indent'>P: purple</li>
                 </div>
             </div>
             <div className='project-group'>
@@ -35,6 +38,12 @@ function Projects() {
                 	<li>Property management website for making payments and submitting maintenance requests as a tenant</li>
                 	<li>Utilized for tracking tenant activity as a manager</li>
                 	<li>Conditional rendering determines what gets displayed and is dependent upon whether the user is a tenant or manager</li>
+                    <li>Dummy tenant account login</li>
+                    <li className='indent'>U: pika@pika.com</li>
+                    <li className='indent'>P: Michael</li>
+                    <li>Dummy manager account login</li>
+                    <li className='indent'>U: manager@manager.com</li>
+                    <li className='indent'>P: manager</li>
                 </div>
             </div>
             <div className='project-group'>
