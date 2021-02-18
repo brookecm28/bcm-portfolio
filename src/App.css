@@ -111,7 +111,7 @@ h3 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  min-width: 1250px;
+  width: 1250px;
   justify-content: space-between;
   height: 60px;
   padding-top: 0;
@@ -231,4 +231,46 @@ h3 {
 
 .larger-link {
   width: 580px;
+}
+
+/* media queries */
+
+@media (max-width: 1450px) {
+  .stack {
+    width: 85%;
+    font-size: 26px;
+  }
+  .list {
+    font-size: 20pt;
+  }
+  .headshot {
+    height: 325px;
+  }
+  .titles {
+    font-size: 44pt;
+  }
+  .top-title {
+    margin-top: 150px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .stack {
+    font-size: 22px;
+  }
+  .headshot {
+    height: 275px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .nav {
+    width: 150px !important;
+  }
+  .App-header.landing.about.projects.contact {
+    min-width: calc(100vw - 150px);
+  }
+  .about {
+    max-width: calc(100vw - 150px);
+  }
 }

@@ -16,7 +16,7 @@ function About() {
                 </p>
                 <p className='para'>
                     A little taste was all it took for me to fall in love with coding. I felt like I'd finally discovered what I was meant to do. So, I took the plunge and enrolled in
-                    DevMountain's Web Developer program. After 13 simultaneously long and short weeks, I've graduated and am ready to show the world who the real Brooke Miller is.
+                    DevMountain's Web Development program. After 13 simultaneously long and short weeks, I've graduated and am ready to show the world who the real Brooke Miller is.
                 </p>
              </div>
         </div>
