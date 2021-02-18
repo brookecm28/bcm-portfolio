@@ -4,8 +4,8 @@ import headshot from '../assets/Headshot2.jpg'
 function Landing() {
     return (
         <div className='landing'>
-            <div className='titles'>
-                <p className='line-title'>Who Am I?</p>
+            <div className='titles top-title'>
+                <p className='line-title '>Who Am I?</p>
             </div>
             <div className='who'>
                 <div className='list'>
@@ -14,7 +14,7 @@ function Landing() {
                     <li>DevMountain Graduate</li>
                     <li>Thunderstorm Lover</li>
                     <li>Agile Learner</li>
-                    <li>Ready to tackle life's challenges</li>
+                    <li>Detail-Oriented Organizer</li>
                 </div>
                 <img className='headshot' src={headshot} />
             </div>

@@ -4,7 +4,7 @@
   font-family: 'Raleway', sans-serif !important;
   background-image: url("./assets/DarkPalms3.jpg");
   background-size: cover;
-  color: #b8d6ca;
+  color: #a7dfc8;
   min-height: 100vh;
 }
 
@@ -28,7 +28,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  /* color: white; */
 }
 
 h2 {
@@ -44,26 +44,31 @@ h3 {
   width: 175px !important;
   display: flex;
   flex-direction: column;
-  color: #b8d6ca;
+  color: #a7dfc8;
   /* border-right: 1pt solid #B7D1DA */
   font-family: 'Raleway', sans-serif;
 }
 
 .bar {
     margin-top: 200px;
-    height: 200px;
+    height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    font-size: 18pt;
+    font-size: 20pt;
 }
 
 .nav-link {
-  color: #b8d6ca;
+  color: #a7dfc8;
   text-decoration: none;
   width: fit-content;
   height: fit-content;  
+}
+
+.nav-item {
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .nav-item:hover {
@@ -75,6 +80,10 @@ h3 {
   min-width: calc(100vw - 175px);
   font-size: 24pt;
   font-weight: lighter;
+}
+
+.top-title {
+  margin-top: 100px;
 }
 
 .headshot {
@@ -96,7 +105,6 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* max-width: 1200px; */
 }
 
 .stack {
@@ -126,10 +134,26 @@ h3 {
   font-size: 24pt;
 }
 
+/* about */
 .about {
-  min-width: calc(100vw - 275px);
-  padding-left: 50px;
-  padding-right: 50px;
+  min-width: calc(100vw - 175px);
+  max-width: calc(100vw - 175px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-me {
+  width: 1250px;
+}
+
+.about-title {
+  margin-bottom: 80px !important;
+}
+
+.para {
+  font-size: 18pt;
+  text-align: left;
 }
 
 /* projects */
@@ -140,20 +164,48 @@ h3 {
 .project-title {
   font-size: 36pt;
   margin-bottom: 0;
+  margin-top: 0;
 }
 
 .project-link {
   font-size: 22pt;
   margin-top: 15px;
   margin-bottom: 15px;
-  color: #b8d6ca;
+  color: #a7dfc8;
 }
 
-/*      contact */
+.project-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 1250px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.logo {
+  height: 75px;
+  margin-left: 15px;
+}
+
+.title-group {
+  display: flex;
+  align-items: center;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 14pt;
+}
+
+/*contact */
 .contact {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   min-width: calc(100vw - 175px);
 }
 
@@ -171,4 +223,8 @@ h3 {
   display: flex;
   justify-content: space-around;
   width: 500px;
+}
+
+.larger-link {
+  width: 580px;
 }
