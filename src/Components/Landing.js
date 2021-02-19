@@ -24,34 +24,42 @@ function Landing() {
             
             <div className='stack-container'>
                 <div className='stack'>
-                    <p className='stack-list'>HTML</p>
-                    <p className='stack-list'>|</p>
-                    <p className='stack-list'>CSS</p>
-                    <p className='stack-list'>|</p>
-                    <p className='stack-list'>JSS</p>
-                    <p className='stack-list'>|</p>
-                    <p className='stack-list'>SASS/SCSS</p>
-                    <p className='stack-list'>|</p>
-                    <p className='stack-list'>Javascript</p>
-                    <p className='stack-list'>|</p>
-                    <p className='stack-list'>React</p>
-                    <p className='stack-list'>|</p>
-                    <p className='stack-list'>Redux</p>
-                    <p className='stack-list'>|</p>
-                    <p className='stack-list'>Node.js</p>
+                    <div className='stack-sub'>
+                        <p className='stack-list'>HTML</p>
+                        <p className='stack-list line'>|</p>
+                        <p className='stack-list'>CSS</p>
+                        <p className='stack-list line'>|</p>
+                        <p className='stack-list'>JSS</p>
+                        <p className='stack-list line'>|</p>
+                        <p className='stack-list'>SASS/SCSS</p>
+                        <p className='stack-list line last'>|</p>
+                    </div>
+                    <div className='stack-sub'>
+                        <p className='stack-list'>Javascript</p>
+                        <p className='stack-list line'>|</p>
+                        <p className='stack-list'>React</p>
+                        <p className='stack-list line'>|</p>
+                        <p className='stack-list'>Redux</p>
+                        <p className='stack-list line'>|</p>
+                        <p className='stack-list'>Node.js</p>
+                    </div>
                 </div>
                 <div className='stack'>
-                    <p className='stack-list'>PostgreSQL</p>
-                    <p className='stack-list'>|</p>
-                    <p className='stack-list'>Typescript</p>
-                    <p className='stack-list'>|</p>
-                    <p className='stack-list'>Nodemailer.js</p>
-                    <p className='stack-list'>|</p>
-                    <p className='stack-list'>Figma</p>
-                    <p className='stack-list'>|</p>
-                    <p className='stack-list'>Excalidraw</p>
-                    <p className='stack-list'>|</p>
-                    <p className='stack-list'>Visual Studio Code</p>
+                    <div className='stack-sub'>
+                        <p className='stack-list'>PostgreSQL</p>
+                        <p className='stack-list line'>|</p>
+                        <p className='stack-list'>Typescript</p>
+                        <p className='stack-list line'>|</p>
+                        <p className='stack-list'>Nodemailer.js</p>
+                        <p className='stack-list line last'>|</p>
+                    </div>
+                    <div className='stack-sub'>
+                        <p className='stack-list'>Figma</p>
+                        <p className='stack-list line'>|</p>
+                        <p className='stack-list'>Excalidraw</p>
+                        <p className='stack-list line'>|</p>
+                        <p className='stack-list'>Visual Studio Code</p>
+                    </div>
                 </div>
         </div>
                    

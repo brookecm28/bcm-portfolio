@@ -75,6 +75,11 @@ h3 {
   transform: scale(1.3);
 }
 
+.hamburger {
+  height: 100px;
+  width: 100px;
+}
+
 /* landing */
 .landing {
   min-width: calc(100vw - 175px);
@@ -112,10 +117,16 @@ h3 {
   flex-direction: row;
   flex-wrap: wrap;
   width: 1250px;
-  justify-content: space-between;
+  justify-content: center;
   height: 60px;
   padding-top: 0;
   padding-bottom: 0;
+}
+
+.stack-sub {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
 }
 
 .stack-list {
@@ -180,7 +191,7 @@ h3 {
   min-width: 1250px;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .logo {
@@ -197,7 +208,7 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  font-size: 14pt;
+  font-size: 15pt;
 }
 
 .indent {
@@ -234,7 +245,6 @@ h3 {
 }
 
 /* media queries */
-
 @media (max-width: 1450px) {
   .stack {
     width: 85%;
@@ -272,5 +282,62 @@ h3 {
   }
   .about {
     max-width: calc(100vw - 150px);
+  }
+  .stack {
+    width: 95%;
+  }
+}
+
+@media (max-width: 970px) {
+  .last {
+    display: none;
+  }
+  .stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 82px;
+    padding: 0;
+  }
+  .stack-sub {
+    width: 425px;
+    padding: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .who {
+    flex-direction: column-reverse;
+  }
+  .headshot {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .App {
+    flex-direction: column;
+  }
+  .nav-top {
+    display: none;
+  }
+  .nav {
+    flex-direction: row;
+    width: 100vw !important;
+    height: 100px;
+    position: fixed;
+  }
+  .bar {
+    flex-direction: row;
+    height: 100px;
+    margin: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .nav-item {
+    font-size: 16pt;
   }
 }
