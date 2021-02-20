@@ -11,9 +11,9 @@ function Projects() {
                     <img className='logo' src={lobster}/>
                 </div>
                 <div className='info-links'>
-                    <p ><a className='project-link'href='https://rich-recipes.com' target='_blank' rel='noopener noreferrer'>https://rich-recipes.com</a></p>
-                    <p className='project-link'> | </p>
-                    <p><a className='project-link' href='https://github.com/brookecm28/rich-recipes' target='_blank' rel='noopener noreferrer'>GitHub</a></p>
+                    <p className='pl-top'><a className='project-link'href='https://rich-recipes.com' target='_blank' rel='noopener noreferrer'>https://rich-recipes.com</a></p>
+                    <p className='project-link separator'> | </p>
+                    <p className='pl-bot'><a className='project-link' href='https://github.com/brookecm28/rich-recipes' target='_blank' rel='noopener noreferrer'>GitHub</a></p>
                 </div>
                 <div className='project-list'>
                 	<li>Electronic storage and management system for recipes</li>
@@ -30,9 +30,9 @@ function Projects() {
                     <img className='logo' src={lemon} />
                 </div>
                 <div className='info-links'>
-                    <p ><a className='project-link' href='https://lemonprop.com' target='_blank' rel='noopener noreferrer'>https://lemonprop.com</a></p>
-                    <p className='project-link'> | </p>
-                    <p><a className='project-link' href='https://github.com/Lemon-Prop-Management/lemon-prop' target='_blank' rel='noopener noreferrer'>GitHub</a></p>
+                    <p className='pl-top'><a className='project-link' href='https://lemonprop.com' target='_blank' rel='noopener noreferrer'>https://lemonprop.com</a></p>
+                    <p className='project-link separator'> | </p>
+                    <p className='pl-bot'><a className='project-link' href='https://github.com/Lemon-Prop-Management/lemon-prop' target='_blank' rel='noopener noreferrer'>GitHub</a></p>
                 </div>
                 <div className='project-list'>
                 	<li>Property management website for making payments and submitting maintenance requests as a tenant</li>
@@ -55,9 +55,9 @@ function Projects() {
             <div className='project-group'>
                 <p className='project-title'>Portfolio Website</p>
                 <div className='info-links larger-link'>
-                    <p className='project-link'>https://brookemillerdev.com</p>
-                    <p className='project-link'> | </p>
-                    <p><a className='project-link' href='https://github.com/brookecm28/bcm-portfolio' target='_blank' rel='noopener noreferrer'>GitHub</a></p>
+                    <p className='project-link pl-top'>https://brookemillerdev.com</p>
+                    <p className='project-link separator'> | </p>
+                    <p className='pl-bot'><a className='project-link' href='https://github.com/brookecm28/bcm-portfolio' target='_blank' rel='noopener noreferrer'>GitHub</a></p>
                 </div>
                 <div className='project-list'>
                 	<li>Portfolio website built from the ground up with an emphasis on design and no template</li>

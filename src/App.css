@@ -7,17 +7,17 @@
   color: #94dabd;
   min-height: 100vh;
 }
-
+/* 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-
+} */
+/* 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
 .App-header {
   /* background-color: #404E5C; */
@@ -223,16 +223,13 @@ h3 {
 
 .dummy-acct {
   display: flex;
-  justify-content: left;
-  min-width: 1150px;
+  justify-content: center;
+  min-width: 100%;
 }
 
 .dummy-sub {
   text-align: left;
-}
-
-.dummy-right {
-  margin-left: 25%;
+  width: 50%;
 }
 
 .indent {
@@ -297,13 +294,10 @@ h3 {
     width: 85%;
   }
   .project-list {
-    width: 80%;
+    width: 85%;
   }
   .dummy-acct{
     min-width: 100% !important;
-  }
-  .dummy-right {
-    margin-left: 15%;
   }
   li {
     text-align: left;
@@ -318,9 +312,6 @@ h3 {
   }
   .headshot {
     height: 275px;
-  }
-  .dummy-right {
-    margin-left: 8%;
   }
 }
 
@@ -337,7 +328,18 @@ h3 {
   .stack {
     width: 95%;
   }
-  
+  .project-title {
+    font-size: 30pt;
+  }
+  .logo {
+    height: 55px;
+  }
+  .project-link {
+    font-size: 18pt;
+  }
+  .project-list {
+    font-size: 13pt;
+  }
 }
 
 @media (max-width: 970px) {
@@ -362,6 +364,15 @@ h3 {
   .about-title {
     margin-bottom: 50px !important;
   }
+  .project-title {
+    font-size: 26pt;
+  }
+  .dummy-acct {
+    flex-direction: column;
+  }
+  .dummy-sub {
+    width: 100%;
+  }
 }
 
 @media (max-width: 800px) {
@@ -383,12 +394,41 @@ h3 {
   .para {
     font-size: 15pt;
   }
+  .project-group {
+    margin-bottom: 15px;
+  }
+  .info-links{
+    width: 450px;
+  }
+  .larger-link {
+    width: 475px;
+  }
+  .project-title {
+    width: 275px;
+  }
+  .logo {
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 700px) {
   .para {
     font-size: 14pt;
     margin-bottom: 20px;
+  }
+  .separator {
+    display: none;
+  }
+  .info-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .pl-top {
+    margin-bottom: 2.5px;
+  }
+  .pl-bot {
+    margin-top: 2.5px;
   }
 }
 
