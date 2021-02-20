@@ -4,7 +4,7 @@
   font-family: 'Raleway', sans-serif !important;
   background-image: url("./assets/DarkPalms3.jpg");
   background-size: cover;
-  color: #a7dfc8;
+  color: #94dabd;
   min-height: 100vh;
 }
 
@@ -44,10 +44,11 @@ h3 {
   width: 175px !important;
   display: flex;
   flex-direction: column;
-  color: #a7dfc8;
+  color: #94dabd;
   /* border-right: 1pt solid #B7D1DA */
   font-family: 'Raleway', sans-serif;
   z-index: 3;
+  position: fixed;
 }
 
 .bar {
@@ -61,7 +62,7 @@ h3 {
 }
 
 .nav-link {
-  color: #a7dfc8;
+  color: #94dabd;
   text-decoration: none;
   width: fit-content;
   height: fit-content;  
@@ -84,6 +85,7 @@ h3 {
 /* landing */
 .landing {
   min-width: calc(100vw - 175px);
+  margin-left: 175px;
   font-size: 24pt;
   font-weight: lighter;
 }
@@ -150,6 +152,7 @@ h3 {
 .about {
   min-width: calc(100vw - 175px);
   max-width: calc(100vw - 175px);
+  margin-left: 175px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -171,6 +174,10 @@ h3 {
 /* projects */
 .projects {
   min-width: calc(100vw - 175px);
+  margin-left: 175px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .project-title {
@@ -183,16 +190,17 @@ h3 {
   font-size: 22pt;
   margin-top: 15px;
   margin-bottom: 15px;
-  color: #a7dfc8;
+  color: #94dabd;
 }
 
 .project-group {
   display: flex;
   flex-direction: column;
-  min-width: 1250px;
+  width: 1250px;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 30px;
+  margin-bottom:30px;
 }
 
 .logo {
@@ -210,6 +218,21 @@ h3 {
   flex-direction: column;
   align-items: flex-start;
   font-size: 15pt;
+  width: 1150px;
+}
+
+.dummy-acct {
+  display: flex;
+  justify-content: left;
+  min-width: 1150px;
+}
+
+.dummy-sub {
+  text-align: left;
+}
+
+.dummy-right {
+  margin-left: 25%;
 }
 
 .indent {
@@ -223,6 +246,7 @@ h3 {
   align-items: center;
   justify-content: center;
   min-width: calc(100vw - 175px);
+  margin-left: 175px;
 }
 
 .contact-info {
@@ -269,6 +293,23 @@ h3 {
   .about-me {
     width: 85%;
   }
+  .project-group {
+    width: 85%;
+  }
+  .project-list {
+    width: 80%;
+  }
+  .dummy-acct{
+    min-width: 100% !important;
+  }
+  .dummy-right {
+    margin-left: 15%;
+  }
+  li {
+    text-align: left;
+    text-indent: -28px;
+    padding-left: 28px;
+  }
 }
 
 @media (max-width: 1250px) {
@@ -277,6 +318,9 @@ h3 {
   }
   .headshot {
     height: 275px;
+  }
+  .dummy-right {
+    margin-left: 8%;
   }
 }
 
@@ -293,6 +337,7 @@ h3 {
   .stack {
     width: 95%;
   }
+  
 }
 
 @media (max-width: 970px) {
@@ -367,7 +412,7 @@ h3 {
     margin: 0;
     width: 100%;
   }
-  .landing.projects.contact {
+  .landing {
     margin-top: 100px;
     z-index: 0;
     min-width: 100vw;

@@ -38,12 +38,18 @@ function Projects() {
                 	<li>Property management website for making payments and submitting maintenance requests as a tenant</li>
                 	<li>Utilized for tracking tenant activity as a manager</li>
                 	<li>Conditional rendering determines what gets displayed and is dependent upon whether the user is a tenant or manager</li>
-                    <li>Dummy tenant account login</li>
-                    <li className='indent'>U: pika@pika.com</li>
-                    <li className='indent'>P: Michael</li>
-                    <li>Dummy manager account login</li>
-                    <li className='indent'>U: manager@manager.com</li>
-                    <li className='indent'>P: manager</li>
+                    <div className='dummy-acct'>
+                        <div className='dummy-sub'>
+                            <li>Dummy tenant account login</li>
+                            <li className='indent'>U: pika@pika.com</li>
+                            <li className='indent'>P: Michael</li>
+                        </div>
+                        <div className='dummy-sub dummy-right'>
+                            <li>Dummy manager account login</li>
+                            <li className='indent'>U: manager@manager.com</li>
+                            <li className='indent'>P: manager</li>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className='project-group'>
@@ -56,7 +62,7 @@ function Projects() {
                 <div className='project-list'>
                 	<li>Portfolio website built from the ground up with an emphasis on design and no template</li>
                 	<li>Responsive design built for both mobile and desktop viewing</li>
-                	<li>Continued education of new features while building</li>
+                	<li className='bottom-sub'>Continued education of new features while building</li>
                 </div>
             </div>
         </div>
