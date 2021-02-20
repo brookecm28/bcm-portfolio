@@ -23,7 +23,7 @@ function Landing() {
             </div>
             
             <div className='stack-container'>
-                <div className='stack'>
+                <div className='stack top-stack'>
                     <div className='stack-sub'>
                         <p className='stack-list'>HTML</p>
                         <p className='stack-list line'>|</p>
@@ -53,7 +53,7 @@ function Landing() {
                         <p className='stack-list'>Nodemailer.js</p>
                         <p className='stack-list line last'>|</p>
                     </div>
-                    <div className='stack-sub'>
+                    <div className='stack-sub bottom-sub'>
                         <p className='stack-list'>Figma</p>
                         <p className='stack-list line'>|</p>
                         <p className='stack-list'>Excalidraw</p>

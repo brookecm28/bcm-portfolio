@@ -47,6 +47,7 @@ h3 {
   color: #a7dfc8;
   /* border-right: 1pt solid #B7D1DA */
   font-family: 'Raleway', sans-serif;
+  z-index: 3;
 }
 
 .bar {
@@ -262,6 +263,12 @@ h3 {
   .top-title {
     margin-top: 150px;
   }
+  .para {
+    font-size: 17pt;
+  }
+  .about-me {
+    width: 85%;
+  }
 }
 
 @media (max-width: 1250px) {
@@ -304,6 +311,12 @@ h3 {
     width: 425px;
     padding: 0;
   }
+  .about-me {
+    width: 80%;
+  }
+  .about-title {
+    margin-bottom: 50px !important;
+  }
 }
 
 @media (max-width: 800px) {
@@ -311,6 +324,25 @@ h3 {
     flex-direction: column-reverse;
   }
   .headshot {
+    margin-bottom: 20px;
+  }  
+  .stack {
+    height: 102px;
+  }
+  .top-stack {
+    height: 82px;
+  }
+  .bottom-sub {
+    margin-bottom: 20px;
+  }
+  .para {
+    font-size: 15pt;
+  }
+}
+
+@media (max-width: 700px) {
+  .para {
+    font-size: 14pt;
     margin-bottom: 20px;
   }
 }
@@ -327,6 +359,7 @@ h3 {
     width: 100vw !important;
     height: 100px;
     position: fixed;
+    backdrop-filter: blur(4px);
   }
   .bar {
     flex-direction: row;
@@ -334,10 +367,49 @@ h3 {
     margin: 0;
     width: 100%;
   }
+  .landing.projects.contact {
+    margin-top: 100px;
+    z-index: 0;
+    min-width: 100vw;
+  }
+  .about {
+    margin-top: 100px;
+    z-index: 0;
+    min-width: 100vw !important;
+    max-width: 100vw !important;
+    min-height: calc(100vh - 100px);
+  }
+  .projects{
+    margin-top: 100px;
+    z-index: 0;
+    min-width: 100vw;
+  }
+  .contact {
+    margin-top: 100px;
+    z-index: 0;
+    min-width: 100vw;
+    min-height: calc(100vh - 100px);
+  }
 }
 
 @media (max-width: 450px) {
   .nav-item {
     font-size: 16pt;
+  }
+  .line-title {
+    font-size: 32pt;
+  }
+  li {
+    font-size: 16pt;
+  }
+  .stack-list {
+    font-size: 14pt;
+  }
+  .stack-sub {
+    width: 350px;
+  }
+  .about-title {
+    margin-top: 25px;
+    font-size: 30pt;
   }
 }

@@ -14,7 +14,7 @@ function About() {
                     challenging than the work I was currently doing. I dabbled in computer programming in high school but had not pursued it further after graduation. 
                     Quarantine gave me the opportunity to do so—I found myself taking a free online class for coding in my spare time.
                 </p>
-                <p className='para'>
+                <p className='para bottom-sub'>
                     A little taste was all it took for me to fall in love with coding. I felt like I'd finally discovered what I was meant to do. So, I took the plunge and enrolled in
                     DevMountain's Web Development program. After 13 simultaneously long and short weeks, I've graduated and am ready to show the world who the real Brooke Miller is.
                 </p>
