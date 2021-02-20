@@ -160,10 +160,14 @@ h3 {
 
 .about-me {
   width: 1250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .about-title {
-  margin-bottom: 80px !important;
+  margin-bottom: 60px !important;
+  width: 100%;
 }
 
 .para {
@@ -319,8 +323,9 @@ h3 {
   .nav {
     width: 150px !important;
   }
-  .App-header.landing.about.projects.contact {
+  .App-header, .landing, .about, .projects, .contact {
     min-width: calc(100vw - 150px);
+    margin-left: 150px;
   }
   .about {
     max-width: calc(100vw - 150px);
@@ -406,6 +411,10 @@ h3 {
   .project-title {
     width: 275px;
   }
+  .about-title {
+    width: 100%;
+    margin-bottom: 30px !important;
+  }
   .logo {
     margin-left: 0;
   }
@@ -452,34 +461,22 @@ h3 {
     margin: 0;
     width: 100%;
   }
-  .landing {
+  .landing, .about, .projects, .contact {
     margin-top: 100px;
+    margin-left: 0;
     z-index: 0;
     min-width: 100vw;
   }
   .about {
-    margin-top: 100px;
-    z-index: 0;
     min-width: 100vw !important;
     max-width: 100vw !important;
-    min-height: calc(100vh - 100px);
-  }
-  .projects{
-    margin-top: 100px;
-    z-index: 0;
-    min-width: 100vw;
-  }
-  .contact {
-    margin-top: 100px;
-    z-index: 0;
-    min-width: 100vw;
     min-height: calc(100vh - 100px);
   }
 }
 
 @media (max-width: 450px) {
   .nav-item {
-    font-size: 16pt;
+    font-size: 15pt;
   }
   .line-title {
     font-size: 32pt;
@@ -495,6 +492,6 @@ h3 {
   }
   .about-title {
     margin-top: 25px;
-    font-size: 30pt;
+    font-size: 24pt;
   }
 }
