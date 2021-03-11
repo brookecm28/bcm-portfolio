@@ -3,8 +3,8 @@ import React from 'react'
 function Contact() {
     return (
         <div className='contact'>
-            <div>
-                <div className='project-title contact-title'>Find me at the following:</div>
+            <div className='contact-container'>
+                <div className='project-title contact-title'>Find Me at the Following:</div>
                 <div className='info-links contact-title'>
                     <p><a className='project-link' href='https://www.linkedin.com/in/brooke-miller-95a08479' target='_blank' rel='noopener noreferrer'>LinkedIn</a></p>
                     <p className='project-link separator'>|</p>

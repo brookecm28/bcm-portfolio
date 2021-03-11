@@ -303,7 +303,7 @@ h3 {
     width: 85%;
   }
   .project-list {
-    width: 85%;
+    width: 92%;
   }
   .dummy-acct{
     min-width: 100% !important;
@@ -431,7 +431,10 @@ h3 {
     margin-left: 0;
   }
   .contact-title {
-    width: 100%;
+    width: 95%;
+  }
+  .contact-links {
+    width: 95%;
   }
 }
 
@@ -481,6 +484,7 @@ h3 {
     margin-left: 0;
     z-index: 0;
     min-width: 100vw;
+    /* max-width: 100vw; */
     min-height: 100vh;
   }
   .about {
@@ -490,6 +494,15 @@ h3 {
   }
   .info-links {
     width: 100%;
+  }
+  .contact {
+    margin-top: 50px;
+  }
+  .contact-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -512,5 +525,12 @@ h3 {
   .about-title {
     margin-top: 25px;
     font-size: 24pt;
+  }
+  .contact-info {
+    margin-top: 75px;
+  }
+  p {
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
