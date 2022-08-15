@@ -23,7 +23,14 @@ function Landing() {
                 <p className='line-title'>My Stack:</p>
             </div>
 
-            <div>{myStack.join(', ')}</div>
+            <ul>
+                {myStack.map(stackItem => {
+                    return (
+                        <li>{stackItem}</li>
+                    )
+                })}
+
+            </ul>
 
         </div>
     )
