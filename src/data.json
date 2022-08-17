@@ -1,4 +1,12 @@
 {
+    "myDescriptions": [
+        "Full Stack Software Engineer",
+        "Budding UI/UX Enthusiast",
+        "DevMountain Graduate",
+        "Agile Learner",
+        "Detail-Oriented Organizer",
+        "Thunderstorm Lover"
+    ],
     "myStack": [
         "JavaScript",
         "HTML5",
@@ -7,6 +15,7 @@
         "SASS/SCSS",
         "Tailwind",
         "Typescript",
+        "PHP",
         "Vue",
         "React",
         "Next.js",

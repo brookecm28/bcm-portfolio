@@ -1,37 +1,33 @@
 import React from 'react'
 import headshot from '../assets/Headshot2.jpg'
-import { myStack } from '../data.json'
+import { myStack, myDescriptions } from '../data.json'
 
 function Landing() {
     return (
-        <div className='landing'>
-            <div className='titles top-title'>
-                <p className='line-title '>Who Am I?</p>
+        <div>
+            <div>
+                <p>Who Am I?</p>
             </div>
-            <div className='who'>
-                <div className='list'>
-                    <li>Full Stack Software Engineer</li>
-                    <li>Budding UI/UX Enthusiast</li>
-                    <li>DevMountain Graduate</li>
-                    <li>Agile Learner</li>
-                    <li>Detail-Oriented Organizer</li>
-                    <li>Thunderstorm Lover</li>
+            <div>
+                <div>
+                    {myDescriptions.map(description => {
+                        return (
+                            <li className="bg-stone-500">{description}</li>
+                        )
+                    })}
                 </div>
                 <img className='headshot' src={headshot} />
             </div>
-            <div className='titles'>
-                <p className='line-title'>My Stack:</p>
+            <div>
+                <p>My Stack:</p>
             </div>
-
             <ul>
                 {myStack.map(stackItem => {
                     return (
                         <li>{stackItem}</li>
                     )
                 })}
-
             </ul>
-
         </div>
     )
 }
