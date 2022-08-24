@@ -7,33 +7,46 @@
         "Detail-Oriented Organizer",
         "Thunderstorm Lover"
     ],
-    "myStack": [
-        "JavaScript",
-        "HTML5",
-        "CSS",
-        "JSS",
-        "SASS/SCSS",
-        "Tailwind",
-        "UI Kit",
-        "Typescript",
-        "PHP",
-        "Linux Command Line",
-        "Vue",
-        "React",
-        "Next.js",
-        "Redux",
-        "Alpine.js",
-        "Handlebars",
-        "WordPress",
-        "Node.js",
-        "PostgreSQL",
-        "Nodemailer",
-        "GraphQL",
-        "WebStorm/PHPStorm",
-        "Visual Studio Code",
-        "Figma",
-        "Zoho"
-    ],
+    "myStack":
+        {
+            "Front End": [
+                "JavaScript",
+                "Typescript",
+                "HTML",
+                "CSS",
+                "JSS",
+                "JSX",
+                "Handlebars",
+                "GraphQL"
+            ],
+            "Design Elements": [
+                "SASS/SCSS",
+                "Tailwind",
+                "UI Kit"
+            ],
+            "Frameworks": [
+                "Vue",
+                "React",
+                "Next.js",
+                "Alpine.js",
+                "Redux"
+            ],
+            "Dev Tools": [
+                "WebStorm/PHPStorm",
+                "Visual Studio Code",
+                "Chrome DevTools",
+                "Figma",
+                "WordPress",
+                "Zoho"
+            ],
+            "Back End": [
+                "PHP",
+                "Linux Command Line",
+                "Node.js",
+                "PostgreSQL",
+                "Nodemailer"
+            ]
+        },
     "projects": {
         "richRecipes": {
             "source": "https://rich-recipes.com",
