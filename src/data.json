@@ -14,20 +14,65 @@
         "JSS",
         "SASS/SCSS",
         "Tailwind",
+        "UI Kit",
         "Typescript",
         "PHP",
+        "Linux Command Line",
         "Vue",
         "React",
         "Next.js",
         "Redux",
+        "Alpine.js",
         "Handlebars",
+        "WordPress",
         "Node.js",
         "PostgreSQL",
         "Nodemailer",
         "GraphQL",
-        "WebStorm",
+        "WebStorm/PHPStorm",
         "Visual Studio Code",
         "Figma",
         "Zoho"
-    ]
+    ],
+    "projects": {
+        "richRecipes": {
+            "source": "https://rich-recipes.com",
+            "gitHub": "https://github.com/brookecm28/rich-recipes",
+            "descriptions": [
+                "Electronic storage and management system for recipes",
+                "Built for anyone, the user can navigate through their recipes in a list, view individual recipes, and edit their recipes",
+                "Anyone can register for an account and will receive a welcome email upon doing so"
+            ],
+            "basicCredentials": {
+                "username": "lulu@lol.com",
+                "password": "purple"
+            }
+        },
+        "lemonProp": {
+            "source": "https://lemonprop.com",
+            "gitHub": "https://github.com/Lemon-Prop-Management/lemon-prop",
+            "descriptions": [
+                "Property management website for making payments and submitting maintenance requests as a tenant",
+                "Utilized for tracking tenant activity as a manager",
+                "Conditional rendering determines what gets displayed and is dependent upon whether the user is a tenant or manager"
+            ],
+            "basicCredentials": {
+                "username": "pika@pika.com",
+                "password": "Michael"
+            },
+            "adminCredentials": {
+                "username": "manager@manager.com",
+                "password": "manager"
+            }
+        },
+        "bcmPortfolio": {
+            "source": "https://brookemillerdev.com",
+            "gitHub": "https://github.com/brookecm28/bcm-portfolio",
+            "descriptions": [
+                "Portfolio website built from the ground up with an emphasis on design and no template",
+                "Responsive design built for both mobile and desktop viewing",
+                "Continued education of new features while building"
+            ]
+        }
+    }
 }

@@ -4,23 +4,19 @@ import { myStack, myDescriptions } from '../data.json'
 
 function Landing() {
     return (
-        <div>
-            <div>
-                <p>Who Am I?</p>
-            </div>
-            <div>
-                <div>
+        <section role="region" className='landing-top-section container flex justify-center flex-col'>
+            <h2>Who Am I?</h2>
+            <div className='flex'>
+                <ul className='container flex flex-col'>
                     {myDescriptions.map(description => {
                         return (
-                            <li className="bg-stone-500">{description}</li>
+                            <li className="">{description}</li>
                         )
                     })}
-                </div>
+                </ul>
                 <img className='headshot' src={headshot} />
             </div>
-            <div>
-                <p>My Stack:</p>
-            </div>
+            <h2>My Stack:</h2>
             <ul>
                 {myStack.map(stackItem => {
                     return (
@@ -28,7 +24,7 @@ function Landing() {
                     )
                 })}
             </ul>
-        </div>
+        </section>
     )
 }
 
