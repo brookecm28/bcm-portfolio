@@ -2,24 +2,25 @@ import React from 'react'
 import headshot from '../assets/Headshot2.jpg'
 import {myStack, myDescriptions} from '../data.json'
 
+
 function Landing() {
 
     function stackLoop() {
         if (myStack) {
-            for (const stackArea in myStack) {
-                console.log('area', stackArea)
+            const myStackAsArray = Object.keys(myStack)
+            return myStackAsArray.map(stackArea => {
                 return (
-                    <div key={`${stackArea}-stack`}>
-                        <h3>{stackArea}</h3>
+                    <div className='bg-gray-500 border-[color:var(--primary)] border-2 rounded-3xl' key={`${stackArea}-stack`}>
+                        <h3 className='text-2xl underline'>{stackArea}</h3>
                         <div> {myStack[stackArea].map(stackItem => {
                             return (
-                                <li key={`${stackArea}-${stackItem}`}>{stackItem}</li>
+                                <p key={`${stackArea}-${stackItem}`}>{stackItem}</p>
                             )
                         })}
                         </div>
                     </div>
                 )
-            }
+            })
         }
     }
 
@@ -37,8 +38,7 @@ function Landing() {
                 <img className='headshot' src={headshot} alt='Brooke Miller Headshot'/>
             </div>
             <h2>My Stack:</h2>
-            {stackLoop()}
-
+            <div className="container grid grid-cols-5 gap-20">{stackLoop()}</div>
         </section>
     )
 }
