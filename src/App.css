@@ -9,6 +9,7 @@
   background-color: darkslategrey;
   color: #94dabd;
   min-height: 100vh;
+  min-width: 100vw;
 }
 /* 
 .landing-top-section {

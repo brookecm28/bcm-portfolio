@@ -9,7 +9,9 @@ function Landing() {
             const myStackAsArray = Object.keys(myStack)
             return myStackAsArray.map(stackArea => {
                 return (
-                    <div className=' bg-gradient-to-br from-primary via-blue-900 to-primary border-primary border-2 rounded-3xl' key={`${stackArea}-stack`}>
+                    <div className=' bg-gradient-to-br from-secondary-light via-secondary-dark to-secondary-light
+                    hover:from-secondary-dark hover:via-secondary-light hover:to-secondary-dark
+                    border-primary border-2 rounded-3xl' key={`${stackArea}-stack`}>
                         <h3 className='text-2xl underline'>{stackArea}</h3>
                         <div> {myStack[stackArea].map(stackItem => {
                             return (
@@ -24,8 +26,8 @@ function Landing() {
     }
 
     return (
-        <section role="region" className="bg-dark-palms bg-cover container flex justify-center flex-col h-screen w-screen"
-       >
+        <section role="region" className="bg-dark-palms bg-center bg-cover bg-no-repeat
+        container flex justify-center flex-col h-screen w-screen">
             <h2>Who Am I?</h2>
             <div className='flex'>
                 <ul className='container flex flex-col'>

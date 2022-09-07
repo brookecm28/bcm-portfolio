@@ -24,7 +24,7 @@
     "eject": "react-scripts eject",
     "npm start": "npm start",
     "configure Tailwind": "npx tailwindcss -i ./src/App.css -o ./src/dist/output.css",
-    "configure and watch Tailwind": "npx tailwindcss -i ./src/App.css -o ./src/dist/output.css --watch"
+    "Watch Tailwind": "npx tailwindcss -i ./src/App.css -o ./src/dist/output.css --watch"
   },
   "eslintConfig": {
     "extends": [

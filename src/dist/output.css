@@ -636,23 +636,31 @@ video {
   background-image: url('../assets/DarkPalms3.jpg');
 }
 
-.from-primary {
-  --tw-gradient-from: #94dabd;
-  --tw-gradient-to: rgb(148 218 189 / 0);
+.from-secondary-light {
+  --tw-gradient-from: #da9a94;
+  --tw-gradient-to: rgb(218 154 148 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.via-blue-900 {
-  --tw-gradient-to: rgb(30 58 138 / 0);
-  --tw-gradient-stops: var(--tw-gradient-from), #1e3a8a, var(--tw-gradient-to);
+.via-secondary-dark {
+  --tw-gradient-to: rgb(18 53 39 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), #123527, var(--tw-gradient-to);
 }
 
-.to-primary {
-  --tw-gradient-to: #94dabd;
+.to-secondary-light {
+  --tw-gradient-to: #da9a94;
 }
 
 .bg-cover {
   background-size: cover;
+}
+
+.bg-center {
+  background-position: center;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
 }
 
 .text-2xl {
@@ -672,6 +680,7 @@ video {
   background-color: darkslategrey;
   color: #94dabd;
   min-height: 100vh;
+  min-width: 100vw;
 }
 
 /* 
@@ -767,4 +776,19 @@ h3 {
 
 .indent {
   margin-left: 28px;
+}
+
+.hover\:from-secondary-dark:hover {
+  --tw-gradient-from: #123527;
+  --tw-gradient-to: rgb(18 53 39 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.hover\:via-secondary-light:hover {
+  --tw-gradient-to: rgb(218 154 148 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), #da9a94, var(--tw-gradient-to);
+}
+
+.hover\:to-secondary-dark:hover {
+  --tw-gradient-to: #123527;
 }
