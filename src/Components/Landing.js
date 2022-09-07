@@ -9,7 +9,7 @@ function Landing() {
             const myStackAsArray = Object.keys(myStack)
             return myStackAsArray.map(stackArea => {
                 return (
-                    <div className=' bg-gradient-to-br from-gray-400 via-primary to-gray-900 border-primary border-2 rounded-3xl' key={`${stackArea}-stack`}>
+                    <div className=' bg-gradient-to-br from-primary via-blue-900 to-primary border-primary border-2 rounded-3xl' key={`${stackArea}-stack`}>
                         <h3 className='text-2xl underline'>{stackArea}</h3>
                         <div> {myStack[stackArea].map(stackItem => {
                             return (
