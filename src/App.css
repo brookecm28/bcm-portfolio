@@ -6,6 +6,7 @@
   --primary: #94dabd;
   --secondary-light: #da9a94;
   --secondary-dark: #123527;
+  --nav-width: 175px;
 }
 
 .App {
@@ -47,7 +48,7 @@ h3 {
 }
 
 .nav {
-  width: 175px !important;
+  width: var(--nav-width) !important;
   height: 100vh;
   display: flex;
   flex-direction: column;

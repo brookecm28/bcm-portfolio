@@ -26,8 +26,8 @@ function Landing() {
     }
 
     return (
-        <section role="region" className="bg-dark-palms bg-center bg-cover bg-no-repeat
-        container flex justify-center flex-col h-screen w-screen">
+        <section role="region" className="bg-dark-palms bg-center bg-no-repeat
+        bg-cover flex justify-center flex-col h-screen w-screen pl-nav-width">
             <h2>Who Am I?</h2>
             <div className='flex'>
                 <ul className='container flex flex-col'>

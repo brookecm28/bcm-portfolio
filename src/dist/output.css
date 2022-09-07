@@ -595,10 +595,6 @@ video {
   height: 100vh;
 }
 
-.w-full {
-  width: 100%;
-}
-
 .w-screen {
   width: 100vw;
 }
@@ -666,6 +662,10 @@ video {
   background-repeat: no-repeat;
 }
 
+.pl-nav-width {
+  padding-left: var(--nav-width);
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -680,6 +680,7 @@ video {
   --primary: #94dabd;
   --secondary-light: #da9a94;
   --secondary-dark: #123527;
+  --nav-width: 175px;
 }
 
 .App {
@@ -721,7 +722,7 @@ h3 {
 }
 
 .nav {
-  width: 175px !important;
+  width: var(--nav-width) !important;
   height: 100vh;
   display: flex;
   flex-direction: column;
