@@ -636,30 +636,15 @@ video {
   background-image: url('../assets/DarkPalms3.jpg');
 }
 
-.from-gray-400 {
-  --tw-gradient-from: #9ca3af;
-  --tw-gradient-to: rgb(156 163 175 / 0);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
 .from-primary {
   --tw-gradient-from: #94dabd;
   --tw-gradient-to: rgb(148 218 189 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.via-primary {
-  --tw-gradient-to: rgb(148 218 189 / 0);
-  --tw-gradient-stops: var(--tw-gradient-from), #94dabd, var(--tw-gradient-to);
-}
-
 .via-blue-900 {
   --tw-gradient-to: rgb(30 58 138 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), #1e3a8a, var(--tw-gradient-to);
-}
-
-.to-gray-900 {
-  --tw-gradient-to: #111827;
 }
 
 .to-primary {
@@ -702,11 +687,6 @@ body {
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-  monospace;
 }
 
 .App-header {
