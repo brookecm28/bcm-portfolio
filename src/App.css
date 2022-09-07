@@ -2,20 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary: #94dabd;
+  --secondary-light: #da9a94;
+  --secondary-dark: #123527;
+}
+
 .App {
   text-align: center;
   display: flex;
   font-family: 'Raleway', sans-serif !important;
-  background-color: darkslategrey;
-  color: #94dabd;
+  background-color: var(--secondary-dark);
+  color: var(--primary);
   min-height: 100vh;
   min-width: 100vw;
 }
-/* 
-.landing-top-section {
-  background-image: url("./assets/DarkPalms3.jpg");
-  background-size: cover;
-} */
 
 body {
   margin: 0;

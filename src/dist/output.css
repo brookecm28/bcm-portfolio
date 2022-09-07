@@ -40,7 +40,7 @@ html {
   /* 3 */
   tab-size: 4;
   /* 3 */
-  font-family: Raleway;
+  font-family: 'Raleway', sans-serif;
   /* 4 */
 }
 
@@ -595,6 +595,10 @@ video {
   height: 100vh;
 }
 
+.w-full {
+  width: 100%;
+}
+
 .w-screen {
   width: 100vw;
 }
@@ -624,8 +628,7 @@ video {
 }
 
 .border-primary {
-  --tw-border-opacity: 1;
-  border-color: rgb(148 218 189 / var(--tw-border-opacity));
+  border-color: var(--primary);
 }
 
 .bg-gradient-to-br {
@@ -637,18 +640,18 @@ video {
 }
 
 .from-secondary-light {
-  --tw-gradient-from: #da9a94;
-  --tw-gradient-to: rgb(218 154 148 / 0);
+  --tw-gradient-from: var(--secondary-light);
+  --tw-gradient-to: rgb(255 255 255 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
 .via-secondary-dark {
-  --tw-gradient-to: rgb(18 53 39 / 0);
-  --tw-gradient-stops: var(--tw-gradient-from), #123527, var(--tw-gradient-to);
+  --tw-gradient-to: rgb(255 255 255 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--secondary-dark), var(--tw-gradient-to);
 }
 
 .to-secondary-light {
-  --tw-gradient-to: #da9a94;
+  --tw-gradient-to: var(--secondary-light);
 }
 
 .bg-cover {
@@ -673,21 +676,21 @@ video {
           text-decoration-line: underline;
 }
 
+:root {
+  --primary: #94dabd;
+  --secondary-light: #da9a94;
+  --secondary-dark: #123527;
+}
+
 .App {
   text-align: center;
   display: flex;
   font-family: 'Raleway', sans-serif !important;
-  background-color: darkslategrey;
-  color: #94dabd;
+  background-color: var(--secondary-dark);
+  color: var(--primary);
   min-height: 100vh;
   min-width: 100vw;
 }
-
-/* 
-.landing-top-section {
-  background-image: url("./assets/DarkPalms3.jpg");
-  background-size: cover;
-} */
 
 body {
   margin: 0;
@@ -779,16 +782,16 @@ h3 {
 }
 
 .hover\:from-secondary-dark:hover {
-  --tw-gradient-from: #123527;
-  --tw-gradient-to: rgb(18 53 39 / 0);
+  --tw-gradient-from: var(--secondary-dark);
+  --tw-gradient-to: rgb(255 255 255 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
 .hover\:via-secondary-light:hover {
-  --tw-gradient-to: rgb(218 154 148 / 0);
-  --tw-gradient-stops: var(--tw-gradient-from), #da9a94, var(--tw-gradient-to);
+  --tw-gradient-to: rgb(255 255 255 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--secondary-light), var(--tw-gradient-to);
 }
 
 .hover\:to-secondary-dark:hover {
-  --tw-gradient-to: #123527;
+  --tw-gradient-to: var(--secondary-dark);
 }
