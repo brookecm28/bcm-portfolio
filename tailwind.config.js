@@ -10,14 +10,15 @@ module.exports = {
     fontFamily: {
       'sans': 'Raleway',
     },
-    colors: {
-      'primary': '#94dabd',
-    },
     extend: {
+      colors: {
+        'primary': '#94dabd',
+      },
       backgroundImage: {
-        'palms': "url('~/src/assets/DarkPalms3.jpg')"
+        'light-palms': "url('')",
+        'dark-palms': "url('../assets/DarkPalms3.jpg')"
       }
-    },
+    }
   },
-  plugins: [],
+  plugins: []
 }
