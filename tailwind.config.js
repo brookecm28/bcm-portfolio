@@ -1,9 +1,10 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     "./src/*.{html, js}",
     "./src/Components/*.js",
-    ".public/index.html"
+    "./public/index.html"
   ],
   theme: {
     fontFamily: {
@@ -12,7 +13,11 @@ module.exports = {
     colors: {
       'primary': '#94dabd',
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'palms': "url('~/src/assets/DarkPalms3.jpg')"
+      }
+    },
   },
   plugins: [],
 }

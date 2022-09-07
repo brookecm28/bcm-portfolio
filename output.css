@@ -599,14 +599,6 @@ video {
   display: grid;
 }
 
-.h-screen {
-  height: 100vh;
-}
-
-.w-screen {
-  width: 100vw;
-}
-
 .grid-cols-5 {
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
@@ -640,11 +632,15 @@ video {
 }
 
 .bg-palms {
-  background-image: url('~/src/assets/DarkPalms3.jpg');
+  background-image: url('./src/assets/DarkPalms3');
 }
 
 .bg-cover {
   background-size: cover;
+}
+
+.bg-center {
+  background-position: center;
 }
 
 .text-2xl {
