@@ -3,9 +3,14 @@ import {contact} from '../data.json'
 
 function Contact() {
     function loopContactInfo() {
+        let iconPath
         return contact.map(item => {
+            if (item.iconPath) {
+                iconPath = item.iconPath
+            }
             return (
-                <div>
+                <div className="h-48 w-48 rounded-full backdrop-brightness-50">
+                    <frame src={iconPath}/>
                     <a href={`${item.url}`}>{item.name}</a>
                 </div>
             )

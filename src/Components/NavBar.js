@@ -17,18 +17,24 @@ function NavBar() {
             {moon}{sun}
             <nav className='bar'>
                 <Link className='nav-link' to='/'>
-                    <div className='nav-item'>
+                    <div className='nav-item h-12 w-12 backdrop-brightness-60 rounded-full flex justify-center items-center'>
                         {home}
                     </div>
                 </Link>   
                 <Link className='nav-link' to='/about'>
-                    <div className='nav-item'>{about}</div>
+                    <div className='nav-item h-12 w-12 backdrop-brightness-60 rounded-full flex justify-center items-center'>
+                        {about}
+                    </div>
                 </Link>              
                 <Link className='nav-link' to='/projects'>
-                    <div className='nav-item'>{projects}</div>
+                    <div className='nav-item h-12 w-12 backdrop-brightness-60 rounded-full flex justify-center items-center'>
+                        {projects}
+                    </div>
                 </Link>
                 <Link className='nav-link' to='/contact'>
-                    <div className='nav-item'>{contact}</div>
+                    <div className='nav-item h-12 w-12 backdrop-brightness-60 rounded-full flex justify-center items-center'>
+                        {contact}
+                    </div>
                 </Link>
             </nav>
         </div>
