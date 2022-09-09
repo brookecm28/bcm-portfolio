@@ -3,8 +3,6 @@ import { contact } from '../data.json'
 import github from '../assets/icons/github'
 import linkedin from '../assets/icons/linkedin'
 import resume from '../assets/icons/resume'
-import { Switch } from 'react-router'
-import { Link } from 'react-router-dom'
 
 function Contact() {
     function loopContactInfoWithIcons() {
