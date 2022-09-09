@@ -1,6 +1,6 @@
 import React from 'react'
 import headshot from '../assets/Headshot2.jpg'
-import {myStack, myDescriptions} from '../data.json'
+import { myStack, myDescriptions } from '../data.json'
 import About from './About'
 import Projects from './Projects'
 import Contact from './Contact'
@@ -31,7 +31,7 @@ function Landing() {
     return (
         <div>
             <section role="region" id="home" className="bg-dark-palms bg-center bg-no-repeat
-        bg-cover flex justify-center flex-col h-screen w-full pl-nav-width">
+        bg-cover flex justify-center flex-col min-h-screen w-full pl-nav-width">
                 <h2>Who Am I?</h2>
                 <div className='flex'>
                     <ul className='container flex flex-col'>
@@ -41,20 +41,20 @@ function Landing() {
                             )
                         })}
                     </ul>
-                    <img className='headshot' src={headshot} alt='Brooke Miller Headshot'/>
+                    <img className='headshot' src={headshot} alt='Brooke Miller Headshot' />
                 </div>
             </section>
             <section role="region" id="about" className="bg-tropical-leaves bg-cover justify-center h-screen w-full pl-nav-width">
                 <h2>My Stack:</h2>
                 <div className="container grid grid-cols-5 gap-20">{stackLoop()}</div>
             </section>
-            <section role="region" id="about" className="justify-center h-screen w-full pl-nav-width">
+            <section role="region" id="about" className="justify-center min-h-screen w-full pl-nav-width">
                 {About()}
             </section>
-            <section role="region" id="about" className="bg-light-palms-2 bg-cover justify-center h-screen w-full pl-nav-width">
+            <section role="region" id="about" className="bg-light-palms-2 bg-cover justify-center min-h-screen w-full pl-nav-width">
                 {Projects()}
             </section>
-            <section role="region" id="about" className="bg-starry-palms bg-cover justify-center h-screen w-full pl-nav-width">
+            <section role="region" id="about" className="bg-pink-palms bg-cover justify-center min-h-screen w-full pl-nav-width">
                 {Contact()}
             </section>
         </div>

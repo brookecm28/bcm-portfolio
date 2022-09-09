@@ -1,18 +1,51 @@
 import React from 'react'
-import {contact} from '../data.json'
+import { contact } from '../data.json'
+import github from '../assets/icons/github'
+import linkedin from '../assets/icons/linkedin'
+import resume from '../assets/icons/resume'
+import { Switch } from 'react-router'
+import { Link } from 'react-router-dom'
 
 function Contact() {
-    function loopContactInfo() {
-        let iconPath
-        return contact.map(item => {
-            if (item.iconPath) {
-                iconPath = item.iconPath
+    function loopContactInfoWithIcons() {
+        return contact.infoWithIcons.map(item => {
+            let icon
+            switch (item.name) {
+                case "LinkedIn":
+                    icon = linkedin
+                    break
+                case "GitHub":
+                    icon = github
+                    break
+                case "Resume":
+                    icon = resume
+                    break
+                default:
+                    icon = ""
             }
+
             return (
-                <div className="h-48 w-48 rounded-full backdrop-brightness-50">
-                    <frame src={iconPath}/>
-                    <a href={`${item.url}`}>{item.name}</a>
-                </div>
+                <a href={`${item.url}`} key={`contact-item-${item.name}`}>
+                    <div className="h-48 w-48 rounded-full backdrop-brightness-50 flex flex-col justify-center items-center">
+                        <h3 className='fixed top-4'>{item.name}</h3>
+                        {icon}
+                    </div>
+
+                </a>
+            )
+        })
+    }
+
+    function loopContactInfoWithoutIcons() {
+        return contact.infoWithoutIcons.map(item => {
+            return (
+                <a href={`${item.url}`} key={`contact-item-${item.name}`}>
+                    <div className="h-48 w-48 rounded-full backdrop-brightness-50 flex flex-col justify-center items-center">
+                        <h3 className='fixed top-4'>{item.name}</h3>
+                        {item.display}
+                    </div>
+
+                </a>
             )
         })
     }
@@ -21,18 +54,8 @@ function Contact() {
         <div>
             <div>
                 <h2>Find Me at the Following:</h2>
-                <div>
-                    <p><a href='https://www.linkedin.com/in/brooke-miller-95a08479' target='_blank' rel='noopener noreferrer'>LinkedIn</a></p>
-
-                    <p><a href='https://github.com/brookecm28' target='_blank' rel='noopener noreferrer'>GitHub</a></p>
-
-                    <p><a href='https://drive.google.com/file/d/1AmSyP1Mkzj3n6FjnzLiLLTWV9zuPI2Md/view?usp=sharing' target='_blank' rel='noopener noreferrer'>Resume</a></p>
-                </div>
-                <div>Email:</div>
-                <div>
-                    <a href='mailto:brooke.miller.dev@gmail.com'>brooke.miller.dev@gmail.com</a>
-                </div>
-                {loopContactInfo()}
+                <div className='flex justify-center items-center gap-8'>{loopContactInfoWithIcons()}</div>
+                <div className='flex justify-center items-center gap-12'>{loopContactInfoWithoutIcons()}</div>
             </div>
         </div>
     )

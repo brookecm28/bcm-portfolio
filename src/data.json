@@ -7,46 +7,45 @@
         "Detail-Oriented Organizer",
         "Thunderstorm Lover"
     ],
-    "myStack":
-        {
-            "Front End": [
-                "JavaScript",
-                "Typescript",
-                "HTML",
-                "CSS",
-                "JSS",
-                "JSX",
-                "Handlebars",
-                "GraphQL"
-            ],
-            "Design Elements": [
-                "SASS/SCSS",
-                "Tailwind",
-                "UI Kit"
-            ],
-            "Frameworks": [
-                "Vue",
-                "React",
-                "Next.js",
-                "Alpine.js",
-                "Redux"
-            ],
-            "Dev Tools": [
-                "WebStorm/PHPStorm",
-                "Visual Studio Code",
-                "Chrome DevTools",
-                "Figma",
-                "WordPress",
-                "Zoho"
-            ],
-            "Back End": [
-                "PHP",
-                "Linux Command Line",
-                "Node.js",
-                "PostgreSQL",
-                "Nodemailer"
-            ]
-        },
+    "myStack": {
+        "Front End": [
+            "JavaScript",
+            "Typescript",
+            "HTML",
+            "CSS",
+            "JSS",
+            "JSX",
+            "Handlebars",
+            "GraphQL"
+        ],
+        "Design Elements": [
+            "SASS/SCSS",
+            "Tailwind",
+            "UI Kit"
+        ],
+        "Frameworks": [
+            "Vue",
+            "React",
+            "Next.js",
+            "Alpine.js",
+            "Redux"
+        ],
+        "Dev Tools": [
+            "WebStorm/PHPStorm",
+            "Visual Studio Code",
+            "Chrome DevTools",
+            "Figma",
+            "WordPress",
+            "Zoho"
+        ],
+        "Back End": [
+            "PHP",
+            "Linux Command Line",
+            "Node.js",
+            "PostgreSQL",
+            "Nodemailer"
+        ]
+    },
     "projects": {
         "richRecipes": {
             "source": "https://rich-recipes.com",
@@ -88,29 +87,35 @@
             ]
         }
     },
-    "contact": [
-        {
-            "name": "LinkedIn",
-            "url": "https://www.linkedin.com/in/brooke-miller-95a08479"
-        },
-        {
-            "name": "GitHub",
-            "url": "https://github.com/brookecm28",
-            "iconPath": "../assets/icons/github.js"
-        },
-        {
-            "name": "Resume",
-            "url": "https://drive.google.com/file/d/1AmSyP1Mkzj3n6FjnzLiLLTWV9zuPI2Md/view"
-        },
-        {
-            "name": "Email",
-            "url": "mailto:brooke.miller.dev@gmail.com",
-            "display": "brooke.miller.dev@gmail.com"
-        },
-        {
-            "name": "Phone",
-            "url": "tel:720-774-0205",
-            "display": "(720) 774-0205"
-        }
-    ]
+    "contact": {
+        "infoWithIcons": [
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/brooke-miller-95a08479",
+                "icon": true
+            },
+            {
+                "name": "GitHub",
+                "url": "https://github.com/brookecm28",
+                "icon": true
+            },
+            {
+                "name": "Resume",
+                "url": "https://drive.google.com/file/d/1AmSyP1Mkzj3n6FjnzLiLLTWV9zuPI2Md/view",
+                "icon": true
+            }
+        ],
+        "infoWithoutIcons": [
+            {
+                "name": "Email",
+                "url": "mailto:brooke.miller.dev@gmail.com",
+                "display": "brooke.miller.dev@gmail.com"
+            },
+            {
+                "name": "Phone",
+                "url": "tel:720-774-0205",
+                "display": "(720) 774-0205"
+            }
+        ]
+    }
 }
