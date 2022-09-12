@@ -53,7 +53,8 @@
             "descriptions": [
                 "Electronic storage and management system for recipes",
                 "Built for anyone, the user can navigate through their recipes in a list, view individual recipes, and edit their recipes",
-                "Anyone can register for an account and will receive a welcome email upon doing so"
+                "Anyone can register for an account and will receive a welcome email upon doing so",
+                "My first solo website"
             ],
             "basicCredentials": {
                 "username": "lulu@lol.com",
