@@ -679,24 +679,24 @@ video {
   border-color: var(--primary);
 }
 
+.bg-primary {
+  background-color: var(--primary);
+}
+
 .bg-gradient-to-br {
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
 
-.bg-dark-palms {
-  background-image: url('../assets/DarkPalms3.jpg');
+.bg-light-landing {
+  background-image: url('../assets/light-landing.jpg');
 }
 
-.bg-tropical-leaves {
-  background-image: url('../assets/tropical-leaves.jpg');
+.bg-light-waters {
+  background-image: url('../assets/light-waters.jpg');
 }
 
-.bg-light-palms-2 {
-  background-image: url('../assets/light-palms-2.jpg');
-}
-
-.bg-pink-palms {
-  background-image: url('../assets/pink-palms.jpg');
+.bg-light-wood {
+  background-image: url('../assets/light-wood.jpg');
 }
 
 .from-secondary-light {
@@ -716,6 +716,10 @@ video {
 
 .bg-cover {
   background-size: cover;
+}
+
+.bg-fixed {
+  background-attachment: fixed;
 }
 
 .bg-center {
@@ -741,6 +745,10 @@ video {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-secondary-dark {
+  color: var(--secondary-dark);
 }
 
 .underline {
@@ -776,7 +784,7 @@ video {
   display: flex;
   font-family: 'Raleway', sans-serif !important;
   background-color: var(--secondary-dark);
-  color: var(--primary);
+  color: var(--secondary-dark);
   min-height: 100vh;
   max-width: 100vw;
 }
@@ -879,4 +887,24 @@ h3 {
 
 .hover\:to-secondary-dark:hover {
   --tw-gradient-to: var(--secondary-dark);
+}
+
+.dark .dark\:bg-secondary-dark {
+  background-color: var(--secondary-dark);
+}
+
+.dark .dark\:bg-dark-landing {
+  background-image: url('../assets/dark-landing.jpg');
+}
+
+.dark .dark\:bg-dark-waters {
+  background-image: url('../assets/dark-waters.jpg');
+}
+
+.dark .dark\:bg-dark-wood {
+  background-image: url('../assets/dark-wood.jpg');
+}
+
+.dark .dark\:text-primary {
+  color: var(--primary);
 }

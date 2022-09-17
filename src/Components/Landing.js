@@ -29,8 +29,8 @@ function Landing() {
     }
 
     return (
-        <div>
-            <section role="region" id="home" className="bg-dark-palms bg-center bg-no-repeat
+        <div className='text-secondary-dark dark:text-primary'>
+            <section role="region" id="home" className="bg-light-landing dark:bg-dark-landing bg-fixed bg-center bg-no-repeat
         bg-cover flex justify-center flex-col min-h-screen w-full pl-nav-width">
                 <h2>Who Am I?</h2>
                 <div className='flex'>
@@ -44,17 +44,18 @@ function Landing() {
                     <img className='headshot' src={headshot} alt='Brooke Miller Headshot' />
                 </div>
             </section>
-            <section role="region" id="about" className="bg-tropical-leaves bg-cover justify-center h-screen w-full pl-nav-width">
+            <section role="region" id="about" className="bg-primary dark:bg-secondary-dark bg-fixed bg-cover justify-center h-screen w-full pl-nav-width">
                 <h2>My Stack:</h2>
                 <div className="container grid grid-cols-5 gap-20">{stackLoop()}</div>
             </section>
-            <section role="region" id="about" className="justify-center min-h-screen w-full pl-nav-width">
-                {About()}
-            </section>
-            <section role="region" id="about" className="bg-light-palms-2 bg-cover justify-center min-h-screen w-full pl-nav-width">
+            <section role="region" id="about" className="bg-light-waters dark:bg-dark-waters bg-fixed bg-cover justify-center min-h-screen w-full pl-nav-width">
                 {Projects()}
             </section>
-            <section role="region" id="about" className="bg-pink-palms bg-cover justify-center min-h-screen w-full pl-nav-width">
+            <section role="region" id="about" className="bg-primary dark:bg-secondary-dark bg-fixed bg-cover justify-center min-h-screen w-full pl-nav-width">
+                {About()}
+            </section>
+     
+            <section role="region" id="about" className="bg-light-wood dark:bg-dark-wood bg-cover bg-fixed justify-center min-h-screen w-full pl-nav-width">
                 {Contact()}
             </section>
         </div>

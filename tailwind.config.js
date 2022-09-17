@@ -6,6 +6,7 @@ module.exports = {
     "./src/Components/*.js",
     "./public/index.html"
   ],
+  darkMode: 'class',
   theme: {
     fontFamily: {
       'sans': "'Raleway', sans-serif",
@@ -17,12 +18,16 @@ module.exports = {
         'secondary-dark': 'var(--secondary-dark)'
       },
       backgroundImage: {
-        'light-palms-1': "url('../assets/light-palms-1.jpg')",
-        'light-palms-2': "url('../assets/light-palms-2.jpg')",
-        'starry-palms': "url('../assets/starry-palms.jpg')",
-        'dark-palms': "url('../assets/DarkPalms3.jpg')",
+        'dark-waters': "url('../assets/dark-waters.jpg')",
+        'light-waters': "url('../assets/light-waters.jpg')",
+        'dark-blues': "url('../assets/dark-blue.jpg')",
         'pink-palms': "url('../assets/pink-palms.jpg')",
-        'tropical-leaves': "url('../assets/tropical-leaves.jpg')"
+        'tropical-leaves': "url('../assets/tropical-leaves.jpg')",
+        'light-wood': "url('../assets/light-wood.jpg')",
+        'dark-wood': "url('../assets/dark-wood.jpg')",
+        'mint-green': "url('../assets/mint-green.jpg')",
+        'dark-landing': "url('../assets/dark-landing.jpg')",
+        'light-landing': "url('../assets/light-landing.jpg')"
       },
       padding: {
         'nav-width': 'var(--nav-width)'
