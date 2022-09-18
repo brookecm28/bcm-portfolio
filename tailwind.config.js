@@ -27,7 +27,8 @@ module.exports = {
         'dark-wood': "url('../assets/dark-wood.jpg')",
         'mint-green': "url('../assets/mint-green.jpg')",
         'dark-landing': "url('../assets/dark-landing.jpg')",
-        'light-landing': "url('../assets/light-landing.jpg')"
+        'light-landing': "url('../assets/light-landing.jpg')",
+        'baby-blue': "url('../assets/baby-blue.jpg')"
       },
       padding: {
         'nav-width': 'var(--nav-width)'

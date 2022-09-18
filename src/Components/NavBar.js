@@ -9,7 +9,7 @@ import contact from '../assets/icons/contact'
 
 function NavBar() {
     return (
-        <div className='nav'>
+        <div className='nav text-secondary-dark dark:text-primary'>
             <div className='nav-top'>
                 <h2>Brooke Miller</h2>
                 <h3>Web Developer</h3>

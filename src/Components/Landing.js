@@ -48,7 +48,7 @@ function Landing() {
                 <h2>My Stack:</h2>
                 <div className="container grid grid-cols-5 gap-20">{stackLoop()}</div>
             </section>
-            <section role="region" id="about" className="bg-light-waters dark:bg-dark-waters bg-fixed bg-cover justify-center min-h-screen w-full pl-nav-width">
+            <section role="region" id="about" className="bg-baby-blue dark:bg-dark-waters bg-fixed bg-cover justify-center min-h-screen w-full pl-nav-width">
                 {Projects()}
             </section>
             <section role="region" id="about" className="bg-primary dark:bg-secondary-dark bg-fixed bg-cover justify-center min-h-screen w-full pl-nav-width">
