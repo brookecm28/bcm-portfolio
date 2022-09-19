@@ -54,7 +54,6 @@ function Landing() {
             <section role="region" id="about" className="bg-primary dark:bg-secondary-dark bg-fixed bg-cover justify-center min-h-screen w-full pl-nav-width">
                 {About()}
             </section>
-     
             <section role="region" id="about" className="bg-light-wood dark:bg-dark-wood bg-cover bg-fixed justify-center min-h-screen w-full pl-nav-width">
                 {Contact()}
             </section>

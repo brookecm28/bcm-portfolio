@@ -6,15 +6,22 @@ import home from '../assets/icons/home'
 import about from '../assets/icons/about'
 import projects from '../assets/icons/projects'
 import contact from '../assets/icons/contact'
+import hamburger from "../assets/icons/hamburger";
 
 function NavBar() {
+    function toggleColorMode() {
+
+    }
     return (
         <div className='nav text-secondary-dark dark:text-primary'>
             <div className='nav-top'>
                 <h2>Brooke Miller</h2>
                 <h3>Web Developer</h3>
             </div>
-            {moon}{sun}
+            <div onClick={toggleColorMode()}>
+                {moon}{sun}
+            </div>
+            {hamburger}
             <nav className='bar'>
                 <Link className='nav-link' to='/'>
                     <div className='nav-item h-12 w-12 backdrop-brightness-60 rounded-full flex justify-center items-center'>
