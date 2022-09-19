@@ -1,6 +1,6 @@
 import React from 'react'
-import lobster from '../assets/blue-lobster-logo.png'
-import lemon from '../assets/lemon_prop.png'
+import lobster from '../assets/icons/blue-lobster-logo.png'
+import lemon from '../assets/icons/lemon_prop.png'
 
 function Projects() {
     return (
