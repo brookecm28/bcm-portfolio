@@ -16,15 +16,15 @@ function NavBar() {
 
         if (app.classList && app.classList.contains('dark')) {
             app.classList.remove('dark')
-            moon.classList.add('hidden-color-mode-icon')
-            sun.classList.remove('hidden-color-mode-icon')
+            moon.classList.remove('hidden-color-mode-icon')
+            sun.classList.add('hidden-color-mode-icon')
 
             return
         }
 
         app.classList.add('dark')
-        moon.classList.remove('hidden-color-mode-icon')
-        sun.classList.add('hidden-color-mode-icon')
+        moon.classList.add('hidden-color-mode-icon')
+        sun.classList.remove('hidden-color-mode-icon')
     }
     return (
         <div className='nav text-secondary-dark dark:text-primary'>
