@@ -83,6 +83,10 @@ h3 {
   width: 100px;
 }
 
+.hidden-color-mode-icon {
+  display: none;
+}
+
 .headshot {
   height: 300px;
   border-radius: 45px;

@@ -10,7 +10,21 @@ import hamburger from "../assets/icons/hamburger";
 
 function NavBar() {
     function toggleColorMode() {
+        const [app] = document.getElementsByClassName('App')
+        const [moon] = document.getElementsByClassName('moon-icon')
+        const [sun] = document.getElementsByClassName('sun-icon')
 
+        if (app.classList && app.classList.contains('dark')) {
+            app.classList.remove('dark')
+            moon.classList.add('hidden-color-mode-icon')
+            sun.classList.remove('hidden-color-mode-icon')
+
+            return
+        }
+
+        app.classList.add('dark')
+        moon.classList.remove('hidden-color-mode-icon')
+        sun.classList.add('hidden-color-mode-icon')
     }
     return (
         <div className='nav text-secondary-dark dark:text-primary'>
@@ -18,7 +32,7 @@ function NavBar() {
                 <h2>Brooke Miller</h2>
                 <h3>Web Developer</h3>
             </div>
-            <div onClick={toggleColorMode()}>
+            <div onClick={toggleColorMode}>
                 {moon}{sun}
             </div>
             {hamburger}
