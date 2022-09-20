@@ -27,33 +27,33 @@ function NavBar() {
         sun.classList.remove('hidden-color-mode-icon')
     }
     return (
-        <div className='nav text-secondary-dark dark:text-primary'>
+        <div className='nav text-secondary-dark dark:text-primary flex flex-col items-center'>
             <div className='nav-top'>
                 <h2>Brooke Miller</h2>
                 <h3>Web Developer</h3>
             </div>
-            <div onClick={toggleColorMode}>
+            <div onClick={toggleColorMode} className="hover:cursor-pointer h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center">
                 {moon}{sun}
             </div>
-            {hamburger}
+            {/* {hamburger} */}
             <nav className='bar'>
                 <Link className='nav-link' to='/'>
-                    <div className='nav-item h-12 w-12 backdrop-brightness-60 rounded-full flex justify-center items-center'>
+                    <div className='nav-item h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center'>
                         {home}
                     </div>
                 </Link>   
                 <Link className='nav-link' to='/about'>
-                    <div className='nav-item h-12 w-12 backdrop-brightness-60 rounded-full flex justify-center items-center'>
+                    <div className='nav-item h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center'>
                         {about}
                     </div>
                 </Link>              
                 <Link className='nav-link' to='/projects'>
-                    <div className='nav-item h-12 w-12 backdrop-brightness-60 rounded-full flex justify-center items-center'>
+                    <div className='nav-item h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center'>
                         {projects}
                     </div>
                 </Link>
                 <Link className='nav-link' to='/contact'>
-                    <div className='nav-item h-12 w-12 backdrop-brightness-60 rounded-full flex justify-center items-center'>
+                    <div className='nav-item h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center'>
                         {contact}
                     </div>
                 </Link>
