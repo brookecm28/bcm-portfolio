@@ -48,8 +48,10 @@
     },
     "projects": {
         "richRecipes": {
+            "displayName": "Rich Recipes",
             "source": "https://rich-recipes.com",
             "gitHub": "https://github.com/brookecm28/rich-recipes",
+            "tagline": "Your easy recipe storage solution",
             "descriptions": [
                 "Electronic storage and management system for recipes",
                 "Built for anyone, the user can navigate through their recipes in a list, view individual recipes, and edit their recipes",
@@ -62,8 +64,10 @@
             }
         },
         "lemonProp": {
+            "displayName": "Lemon Prop",
             "source": "https://lemonprop.com",
             "gitHub": "https://github.com/Lemon-Prop-Management/lemon-prop",
+            "tagline": "Property management portal for tenants and managers alike",
             "descriptions": [
                 "Property management website for making payments and submitting maintenance requests as a tenant",
                 "Utilized for tracking tenant activity as a manager",
@@ -79,8 +83,10 @@
             }
         },
         "bcmPortfolio": {
+            "displayName": "Portfolio",
             "source": "https://brookemillerdev.com",
             "gitHub": "https://github.com/brookecm28/bcm-portfolio",
+            "tagline": "The source of all things Brooke Miller",
             "descriptions": [
                 "Portfolio website built from the ground up with an emphasis on design and no template",
                 "Responsive design built for both mobile and desktop viewing",

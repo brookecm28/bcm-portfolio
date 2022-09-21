@@ -40,7 +40,7 @@ function Contact() {
                 <a href={`${item.url}`} key={`contact-item-${item.name}`}>
                     <div className="h-72 w-72 rounded-full backdrop-brightness-110 dark:backdrop-brightness-50 flex flex-col justify-center items-center">
                         <h3 className='fixed top-10 text-3xl'>{item.name}</h3>
-                        {item.display}
+                        <p className='text-xl'>{item.display}</p>
                     </div>
 
                 </a>
