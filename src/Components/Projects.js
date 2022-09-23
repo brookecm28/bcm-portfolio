@@ -9,19 +9,31 @@ function Projects() {
         for (const key in projects) {
             console.log('key', key)
             htmlForReturn.push(
-                <div>
-                    <h3>{projects[key].displayName}</h3>
-                    <p className=''>{projects[key].tagline}</p>
+                <div className='flex justify-center border-2 dark:border-secondary-light w-2/3'>
+                    <div className='w-1/2 border-r-2 dark:border-r-secondary-light'>
+                        <h3>{projects[key].displayName}</h3>
+                        <p className='italic'>{projects[key].tagline}</p>
+                    </div>
+                    <div className='w-1/2'>
+                        <button href={projects[key].source} target='_blank' rel='noopener noreferrer'
+                            className='border-2 border-secondary-dark dark:border-primary w-48 h-12 hover:dark:bg-primary hover:dark:text-secondary-dark'>
+                            Visit Site
+                        </button>
+                        <button className='border-2 border-secondary-dark dark:border-primary w-48 h-12 hover:dark:bg-primary hover:dark:text-secondary-dark'>
+                            More Details
+                        </button>
+                    </div>
                 </div>
             )
         }
         return htmlForReturn
     }
 
+    // still need to figure out how to display the logos, which are all in the icons folder
     return (
         <div>
             <div>
-                <div>{loopProjects()}</div>
+                <div className='flex flex-col gap-12 items-center justify-center'>{loopProjects()}</div>
                 <div className='mt-12'>
                     <p>Rich Recipes</p>
                     <img className='logo' src={lobster} />
