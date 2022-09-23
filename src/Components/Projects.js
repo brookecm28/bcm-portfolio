@@ -9,17 +9,17 @@ function Projects() {
         for (const key in projects) {
             console.log('key', key)
             htmlForReturn.push(
-                <div className='flex justify-center border-2 dark:border-secondary-light w-2/3'>
-                    <div className='w-1/2 border-r-2 dark:border-r-secondary-light'>
+                <div className='flex justify-center border-2 dark:border-secondary-light w-2/3 h-64'>
+                    <div className='w-1/2 border-r-2 dark:border-r-secondary-light dark:bg-secondary-light'>
                         <h3>{projects[key].displayName}</h3>
                         <p className='italic'>{projects[key].tagline}</p>
                     </div>
-                    <div className='w-1/2'>
-                        <button href={projects[key].source} target='_blank' rel='noopener noreferrer'
-                            className='border-2 border-secondary-dark dark:border-primary w-48 h-12 hover:dark:bg-primary hover:dark:text-secondary-dark'>
+                    <div className='w-1/2 dark:bg-secondary-dark'>
+                        <button role="button" href={projects[key].source} target='_blank' rel='noopener noreferrer'
+                            className='border-2 border-secondary-dark dark:border-primary h-12 w-48 hover:dark:bg-primary hover:dark:text-secondary-dark'>
                             Visit Site
                         </button>
-                        <button className='border-2 border-secondary-dark dark:border-primary w-48 h-12 hover:dark:bg-primary hover:dark:text-secondary-dark'>
+                        <button role="button" className='border-2 border-secondary-dark dark:border-primary h-12 w-48 hover:dark:bg-primary hover:dark:text-secondary-dark'>
                             More Details
                         </button>
                     </div>
