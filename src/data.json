@@ -15,13 +15,14 @@
             "CSS",
             "JSS",
             "JSX",
-            "Handlebars",
+            "Handlebars.js",
             "GraphQL"
         ],
         "Design Elements": [
             "SASS/SCSS",
             "Tailwind",
-            "UI Kit"
+            "UI Kit",
+            "WCAG Requirements"
         ],
         "Frameworks": [
             "Vue",
@@ -52,6 +53,7 @@
             "source": "https://rich-recipes.com",
             "gitHub": "https://github.com/brookecm28/rich-recipes",
             "tagline": "Your easy recipe storage solution",
+            "logo": "assets/icons/richRecipes.png",
             "descriptions": [
                 "Electronic storage and management system for recipes",
                 "Built for anyone, the user can navigate through their recipes in a list, view individual recipes, and edit their recipes",
@@ -91,6 +93,17 @@
                 "Portfolio website built from the ground up with an emphasis on design and no template",
                 "Responsive design built for both mobile and desktop viewing",
                 "Continued education of new features while building"
+            ]
+        },
+        "inventoryManagerPro": {
+            "displayName": "Inventory Manager Pro",
+            "source": "https://inventorymanagerpro.com",
+            "gitHub": "https://github.com/nativerank/inventory-manager",
+            "tagline": "TBD---Inventory solutions innovated",
+            "descriptions": [
+                "Inventory system designed for boat and vehicle dealerships and manufacturers",
+                "Inventory items are added either manually or via an XML feed from various integrations",
+                "Items that are added or updated get pushed directly to the clients' sites in real time"
             ]
         }
     },
