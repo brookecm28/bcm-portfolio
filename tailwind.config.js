@@ -15,7 +15,8 @@ module.exports = {
       colors: {
         'primary': 'var(--primary)',
         'secondary-light': 'var(--secondary-light)',
-        'secondary-dark': 'var(--secondary-dark)'
+        'secondary-dark': 'var(--secondary-dark)',
+        'secondary-grey': 'var(--secondary-grey)'
       },
       backgroundImage: {
         'dark-waters': "url('../assets/dark-waters.jpg')",
@@ -35,6 +36,12 @@ module.exports = {
       },
       backdropBrightness: {
         '60': '.6'
+      },
+      maxWidth: {
+        'icon': '4rem',
+      },
+      maxHeight: {
+        'icon': '5rem',
       }
     }
   },

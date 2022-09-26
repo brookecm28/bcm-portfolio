@@ -1,21 +1,40 @@
 import React from 'react'
 import lobster from '../assets/icons/richRecipes.png'
 import lemon from '../assets/icons/lemonProp.png'
+import imp from '../assets/icons/inventoryManager.png'
+import portfolio from '../assets/icons/portfolio.png'
 import { projects } from '../data.json'
 
 function Projects() {
     function loopProjects() {
         const htmlForReturn = []
         for (const key in projects) {
-            const logo = projects[key].logo || `../assets/icons/${key}`
+            let icon
+            switch (key) {
+                case "richRecipes":
+                    icon = lobster
+                    break
+                case "lemonProp":
+                    icon = lemon
+                    break
+                case "portfolio":
+                    icon = portfolio
+                    break
+                case "inventoryManagerPro":
+                    icon = imp
+                    break
+                default:
+                    icon = ""
+            }
+
             htmlForReturn.push(
-                <div className='flex justify-center border-2 dark:border-secondary-light w-2/3 h-64'>
-                    <div className='w-1/2 flex flex-col justify-around border-r-2 dark:border-r-secondary-light bg-secondary-light text-primary'>
+                <div className='flex justify-center w-2/3 h-64'>
+                    <div className='w-7/12 flex flex-col justify-around bg-secondary-grey text-primary'>
                         <h3 className='text-2xl'>{projects[key].displayName}</h3>
                         <p className='italic'>{projects[key].tagline}</p>
-                        <img src={logo} alt={key} />
+                        <img src={icon} alt={key} className="max-h-icon max-w-icon"/>
                     </div>
-                    <div className='w-1/2 flex flex-col justify-center gap-8 items-center bg-primary dark:bg-secondary-dark'>
+                    <div className='w-5/12 flex flex-col justify-center gap-8 items-center bg-primary dark:bg-secondary-dark'>
                         <button role="button" href={projects[key].source} target='_blank' rel='noopener noreferrer'
                             className='border-2 border-secondary-dark dark:border-primary h-12 w-48 hover:dark:bg-primary hover:dark:text-secondary-dark'>
                             Visit Site

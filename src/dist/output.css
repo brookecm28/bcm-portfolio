@@ -627,6 +627,10 @@ video {
   height: 16rem;
 }
 
+.max-h-icon {
+  max-height: 5rem;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -647,12 +651,20 @@ video {
   width: 66.666667%;
 }
 
-.w-1\/2 {
-  width: 50%;
+.w-7\/12 {
+  width: 58.333333%;
+}
+
+.w-5\/12 {
+  width: 41.666667%;
 }
 
 .w-48 {
   width: 12rem;
+}
+
+.max-w-icon {
+  max-width: 4rem;
 }
 
 .grid-cols-5 {
@@ -671,10 +683,6 @@ video {
   justify-content: center;
 }
 
-.justify-between {
-  justify-content: space-between;
-}
-
 .justify-around {
   justify-content: space-around;
 }
@@ -691,10 +699,6 @@ video {
   gap: 5rem;
 }
 
-.gap-4 {
-  gap: 1rem;
-}
-
 .rounded-full {
   border-radius: 9999px;
 }
@@ -705,10 +709,6 @@ video {
 
 .border-2 {
   border-width: 2px;
-}
-
-.border-r-2 {
-  border-right-width: 2px;
 }
 
 .border-primary {
@@ -723,8 +723,8 @@ video {
   background-color: var(--primary);
 }
 
-.bg-secondary-light {
-  background-color: var(--secondary-light);
+.bg-secondary-grey {
+  background-color: var(--secondary-grey);
 }
 
 .bg-gradient-to-br {
@@ -735,16 +735,12 @@ video {
   background-image: url('../assets/light-landing.jpg');
 }
 
-.bg-baby-blue {
-  background-image: url('../assets/baby-blue.jpg');
+.bg-light-waters {
+  background-image: url('../assets/light-waters.jpg');
 }
 
 .bg-light-wood {
   background-image: url('../assets/light-woods.jpg');
-}
-
-.bg-light-waters {
-  background-image: url('../assets/light-waters.jpg');
 }
 
 .from-secondary-light {
@@ -836,6 +832,7 @@ video {
   --primary: #D4F4FF;
   --secondary-light: #437fbb;
   --secondary-dark: #062442;
+  --secondary-grey: #4b5e6d;
   --nav-width: 150px;
 }
 
@@ -954,16 +951,8 @@ h3 {
   --tw-gradient-to: var(--secondary-dark);
 }
 
-.dark .dark\:border-secondary-light {
-  border-color: var(--secondary-light);
-}
-
 .dark .dark\:border-primary {
   border-color: var(--primary);
-}
-
-.dark .dark\:border-r-secondary-light {
-  border-right-color: var(--secondary-light);
 }
 
 .dark .dark\:bg-secondary-dark {
