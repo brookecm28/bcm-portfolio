@@ -29,10 +29,10 @@ function Projects() {
 
             htmlForReturn.push(
                 <div className='flex justify-center h-64 rounded-3xl overflow-hidden'>
-                    <div className='w-7/12 flex flex-col justify-around items-center bg-secondary-grey text-primary'>
+                    <div className='px-12 w-7/12 flex flex-col justify-around items-center bg-secondary-grey text-primary'>
                         <h3 className='text-3xl'>{projects[key].displayName}</h3>
                         <p className='italic'>{projects[key].tagline}</p>
-                        <img src={icon} alt={key} className="max-h-icon max-w-icon" />
+                        <img src={icon} alt={key} className="max-h-icon max-w-icon pb-4" />
                     </div>
                     <div className='w-5/12 flex flex-col justify-center gap-8 items-center bg-primary dark:bg-secondary-dark'>
                         <button role="button" href={projects[key].source} target='_blank' rel='noopener noreferrer'
@@ -51,10 +51,8 @@ function Projects() {
 
     // still need to figure out how to display the logos, which are all in the icons folder
     return (
-        <div>
-            <div>
-                <div className='pt-24 px-24 grid grid-cols-2 gap-12'>{loopProjects()}</div>
-            </div>
+        <div className="pt-24 px-24">
+                <div className='grid grid-cols-2 gap-12'>{loopProjects()}</div>
 
         </div>
 

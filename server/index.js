@@ -2,6 +2,7 @@ require('dotenv').config()
 const path = require('path')
 const express = require('express')
 const {SERVER_PORT} = process.env
+import {toggleColorMode} from "../src/Components/NavBar";
 
 const app = express()
 
@@ -14,3 +15,17 @@ app.get('*', (req, res) => {
 app.listen(SERVER_PORT, () => {
     console.log(`Server listening on port ${SERVER_PORT}`)
 })
+
+window.onload = function() {
+    const darkTheme = localStorage.getItem('darkTheme')
+
+    if (darkTheme) {
+        toggleColorMode(true, 'dark')
+
+
+        return
+    }
+
+
+    toggleColorMode(true, 'light')
+}

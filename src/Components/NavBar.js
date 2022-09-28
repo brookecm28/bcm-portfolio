@@ -8,24 +8,52 @@ import projects from '../assets/icons/projects'
 import contact from '../assets/icons/contact'
 import hamburger from "../assets/icons/hamburger";
 
-function NavBar() {
-    function toggleColorMode() {
-        const [app] = document.getElementsByClassName('App')
-        const [moon] = document.getElementsByClassName('moon-icon')
-        const [sun] = document.getElementsByClassName('sun-icon')
 
-        if (app.classList && app.classList.contains('dark')) {
-            app.classList.remove('dark')
-            moon.classList.remove('hidden-color-mode-icon')
-            sun.classList.add('hidden-color-mode-icon')
+export function toggleColorMode(onRender, theme) {
 
-            return
+    const [app] = document.getElementsByClassName('App')
+
+    if (onRender) {
+        if (theme === 'dark') {
+            setDarkMode(app)
         }
 
-        app.classList.add('dark')
-        moon.classList.add('hidden-color-mode-icon')
-        sun.classList.remove('hidden-color-mode-icon')
+        setLightMode(app)
+
+        return
     }
+
+    if (app.classList && app.classList.contains('dark')) {
+        setLightMode(app)
+    }
+
+    setDarkMode(app)
+}
+
+function setDarkMode(app) {
+    const [moon] = document.getElementsByClassName('moon-icon')
+    const [sun] = document.getElementsByClassName('sun-icon')
+
+    app.classList.add('dark')
+    moon.classList.add('hidden-color-mode-icon')
+    sun.classList.remove('hidden-color-mode-icon')
+
+    localStorage.setItem('darkTheme', true)
+}
+
+function setLightMode(app) {
+    const [moon] = document.getElementsByClassName('moon-icon')
+    const [sun] = document.getElementsByClassName('sun-icon')
+
+    app.classList.remove('dark')
+    moon.classList.remove('hidden-color-mode-icon')
+    sun.classList.add('hidden-color-mode-icon')
+
+    localStorage.setItem('darkTheme', false)
+}
+
+function NavBar() {
+
     return (
         <div className='nav text-secondary-dark dark:text-primary flex flex-col items-center'>
             <div className='nav-top'>
