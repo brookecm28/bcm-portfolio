@@ -17,7 +17,7 @@ function Projects() {
                 case "lemonProp":
                     icon = lemon
                     break
-                case "portfolio":
+                case "bcmPortfolio":
                     icon = portfolio
                     break
                 case "inventoryManagerPro":
@@ -28,9 +28,9 @@ function Projects() {
             }
 
             htmlForReturn.push(
-                <div className='flex justify-center w-2/3 h-64'>
+                <div className='flex justify-center h-64 rounded-3xl overflow-hidden'>
                     <div className='w-7/12 flex flex-col justify-around bg-secondary-grey text-primary'>
-                        <h3 className='text-2xl'>{projects[key].displayName}</h3>
+                        <h3 className='text-3xl'>{projects[key].displayName}</h3>
                         <p className='italic'>{projects[key].tagline}</p>
                         <img src={icon} alt={key} className="max-h-icon max-w-icon"/>
                     </div>
@@ -53,19 +53,8 @@ function Projects() {
     return (
         <div>
             <div>
-                <div className='flex flex-col gap-12 items-center justify-center'>{loopProjects()}</div>
-                <div className='mt-12'>
-                    <p>Rich Recipes</p>
-                    <img className='logo' src={lobster} />
-                </div>
+                <div className='pt-24 px-24 grid grid-cols-2 gap-12'>{loopProjects()}</div>
             </div>
-            <div>
-                <div>
-                    <p>LemonProp Management</p>
-                    <img className='logo' src={lemon} />
-                </div>
-            </div>
-            <p><a href='https://github.com/brookecm28/bcm-portfolio' target='_blank' rel='noopener noreferrer'>GitHub</a></p>
 
         </div>
 

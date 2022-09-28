@@ -12,9 +12,12 @@ function Landing() {
             const myStackAsArray = Object.keys(myStack)
             return myStackAsArray.map(stackArea => {
                 return (
-                    <div className=' bg-gradient-to-br from-secondary-light via-secondary-dark to-secondary-light
-                    hover:from-secondary-dark hover:via-secondary-light hover:to-secondary-dark
-                    border-primary border-2 rounded-3xl transition-color duration-500' key={`${stackArea}-stack`}>
+                    <div className=' bg-gradient-to-br  border-2 rounded-3xl transition-color duration-500
+                    from-secondary-grey via-primary to-secondary-grey border-secondary-dark
+                    hover:from-secondary-light hover:via-primary hover:to-secondary-light
+                    dark:from-secondary-grey dark:via-secondary-dark dark:to-secondary-grey dark:border-primary
+                    hover:dark:from-secondary-light hover:dark:via-secondary-dark hover:dark:to-secondary-light
+                   ' key={`${stackArea}-stack`}>
                         <h3 className='text-2xl underline'>{stackArea}</h3>
                         <div> {myStack[stackArea].map(stackItem => {
                             return (
