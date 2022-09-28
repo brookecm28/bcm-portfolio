@@ -29,10 +29,10 @@ function Projects() {
 
             htmlForReturn.push(
                 <div className='flex justify-center h-64 rounded-3xl overflow-hidden'>
-                    <div className='w-7/12 flex flex-col justify-around bg-secondary-grey text-primary'>
+                    <div className='w-7/12 flex flex-col justify-around items-center bg-secondary-grey text-primary'>
                         <h3 className='text-3xl'>{projects[key].displayName}</h3>
                         <p className='italic'>{projects[key].tagline}</p>
-                        <img src={icon} alt={key} className="max-h-icon max-w-icon"/>
+                        <img src={icon} alt={key} className="max-h-icon max-w-icon" />
                     </div>
                     <div className='w-5/12 flex flex-col justify-center gap-8 items-center bg-primary dark:bg-secondary-dark'>
                         <button role="button" href={projects[key].source} target='_blank' rel='noopener noreferrer'
