@@ -28,7 +28,7 @@ function Projects() {
             }
 
             htmlForReturn.push(
-                <div className='flex justify-center h-64 rounded-3xl overflow-hidden'>
+                <div key={`projects-card-${key}`} className='flex justify-center h-64 rounded-3xl overflow-hidden'>
                     <div className='px-12 w-7/12 flex flex-col justify-around items-center bg-secondary-grey text-primary'>
                         <h3 className='text-3xl'>{projects[key].displayName}</h3>
                         <p className='italic'>{projects[key].tagline}</p>
@@ -52,7 +52,7 @@ function Projects() {
     // still need to figure out how to display the logos, which are all in the icons folder
     return (
         <div className="pt-24 px-24">
-                <div className='grid grid-cols-2 gap-12'>{loopProjects()}</div>
+            <div className='grid grid-cols-2 gap-12'>{loopProjects()}</div>
 
         </div>
 
