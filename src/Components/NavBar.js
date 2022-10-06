@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import moon from '../assets/icons/moon'
 import sun from '../assets/icons/sun'
@@ -7,7 +7,64 @@ import about from '../assets/icons/about'
 import projects from '../assets/icons/projects'
 import contact from '../assets/icons/contact'
 import hamburger from "../assets/icons/hamburger";
-import { toggleColorMode } from '../App'
+
+const [theme, setTheme] = useState('light')
+const storedTheme = localStorage.getItem('theme')
+
+useEffect(() => {
+    if (storedTheme === 'light' && theme === 'light') {
+        setLightMode()
+
+        return
+    }
+
+    if (storedTheme === 'dark' && theme === 'dark') {
+        setDarkMode()
+
+        return
+    }
+
+    console.log('problem; storedTheme:', storedTheme, 'theme:', theme)
+}, [theme])
+
+function fetchElements() {
+    const [app] = document.getElementsByClassName('App')
+    const [moon] = document.getElementsByClassName('moon-icon')
+    const [sun] = document.getElementsByClassName('sun-icon')
+
+    return {app, moon, sun}
+}
+function setLightMode() {
+    const {app, moon, sun} = fetchElements()
+
+    app && app.classList.remove('dark')
+    moon && moon.classList.remove('hidden-color-mode-icon')
+    sun && sun.classList.add('hidden-color-mode-icon')
+
+    localStorage.setItem('theme', 'light')
+}
+
+function setDarkMode() {
+    const {app, moon, sun} = fetchElements()
+
+    console.log('setting dark mode', app)
+
+    app && app.classList.add('dark')
+    moon && moon.classList.add('hidden-color-mode-icon')
+    sun && sun.classList.remove('hidden-color-mode-icon')
+
+    localStorage.setItem('theme', 'dark')
+}
+
+export function toggleColorMode() {
+    if (theme === 'dark') {
+        setTheme('light')
+        storedTheme.setItem(theme)
+        return
+    }
+    setTheme('dark')
+    storedTheme.setItem(theme)
+}
 
 class NavBar extends React.Component {
 
@@ -19,7 +76,7 @@ class NavBar extends React.Component {
                     <h2>Brooke Miller</h2>
                     <h3>Web Developer</h3>
                 </div>
-                <div onClick={toggleColorMode(false)} className="hover:cursor-pointer h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center">
+                <div onClick={toggleColorMode} className="hover:cursor-pointer h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center">
                     {moon}{sun}
                 </div>
                 {/* {hamburger} */}
