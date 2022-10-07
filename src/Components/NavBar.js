@@ -8,67 +8,64 @@ import projects from '../assets/icons/projects'
 import contact from '../assets/icons/contact'
 import hamburger from "../assets/icons/hamburger";
 
-const [theme, setTheme] = useState('light')
-const storedTheme = localStorage.getItem('theme')
+function NavBar() {
+    const [theme, setTheme] = useState('light')
+    const storedTheme = localStorage.getItem('theme')
 
-useEffect(() => {
-    if (storedTheme === 'light' && theme === 'light') {
-        setLightMode()
+    useEffect(() => {
+        if (storedTheme === 'light' && theme === 'light') {
+            setLightMode()
 
-        return
+            return
+        }
+
+        if (storedTheme === 'dark' && theme === 'dark') {
+            setDarkMode()
+
+            return
+        }
+
+        console.log('problem; storedTheme:', storedTheme, 'theme:', theme)
+    }, [theme])
+
+    function fetchElements() {
+        const [app] = document.getElementsByClassName('App')
+        const [moon] = document.getElementsByClassName('moon-icon')
+        const [sun] = document.getElementsByClassName('sun-icon')
+
+        return {app, moon, sun}
+    }
+    function setLightMode() {
+        const {app, moon, sun} = fetchElements()
+
+        app && app.classList.remove('dark')
+        moon && moon.classList.remove('hidden-color-mode-icon')
+        sun && sun.classList.add('hidden-color-mode-icon')
+
+        localStorage.setItem('theme', 'light')
     }
 
-    if (storedTheme === 'dark' && theme === 'dark') {
-        setDarkMode()
+    function setDarkMode() {
+        const {app, moon, sun} = fetchElements()
 
-        return
+        console.log('setting dark mode', app)
+
+        app && app.classList.add('dark')
+        moon && moon.classList.add('hidden-color-mode-icon')
+        sun && sun.classList.remove('hidden-color-mode-icon')
+
+        localStorage.setItem('theme', 'dark')
     }
 
-    console.log('problem; storedTheme:', storedTheme, 'theme:', theme)
-}, [theme])
-
-function fetchElements() {
-    const [app] = document.getElementsByClassName('App')
-    const [moon] = document.getElementsByClassName('moon-icon')
-    const [sun] = document.getElementsByClassName('sun-icon')
-
-    return {app, moon, sun}
-}
-function setLightMode() {
-    const {app, moon, sun} = fetchElements()
-
-    app && app.classList.remove('dark')
-    moon && moon.classList.remove('hidden-color-mode-icon')
-    sun && sun.classList.add('hidden-color-mode-icon')
-
-    localStorage.setItem('theme', 'light')
-}
-
-function setDarkMode() {
-    const {app, moon, sun} = fetchElements()
-
-    console.log('setting dark mode', app)
-
-    app && app.classList.add('dark')
-    moon && moon.classList.add('hidden-color-mode-icon')
-    sun && sun.classList.remove('hidden-color-mode-icon')
-
-    localStorage.setItem('theme', 'dark')
-}
-
-export function toggleColorMode() {
-    if (theme === 'dark') {
-        setTheme('light')
-        storedTheme.setItem(theme)
-        return
+    function toggleColorMode() {
+        if (theme === 'dark') {
+            setTheme('light')
+            localStorage.setItem('theme', 'light')
+            return
+        }
+        setTheme('dark')
+        localStorage.setItem('theme', 'dark')
     }
-    setTheme('dark')
-    storedTheme.setItem(theme)
-}
-
-class NavBar extends React.Component {
-
-    render() {
 
         return (
             <div className='nav text-secondary-dark dark:text-primary flex flex-col items-center'>
@@ -105,7 +102,6 @@ class NavBar extends React.Component {
             </div>
         )
     }
-}
 
 
 export default withRouter(NavBar)
