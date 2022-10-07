@@ -9,23 +9,34 @@ import contact from '../assets/icons/contact'
 import hamburger from "../assets/icons/hamburger";
 
 function NavBar() {
-    const [theme, setTheme] = useState('light')
+    const [theme, setTheme] = useState('dark')
     const storedTheme = localStorage.getItem('theme')
 
     useEffect(() => {
-        if (storedTheme === 'light' && theme === 'light') {
+        if (theme === 'light') {
+            if (storedTheme === ('dark')) {
+              setDarkMode()
+
+                return
+            }
+
             setLightMode()
 
             return
         }
 
-        if (storedTheme === 'dark' && theme === 'dark') {
+        if (theme === 'dark') {
+            if (storedTheme === 'light') {
+                setLightMode()
+
+                return
+            }
+
             setDarkMode()
 
             return
         }
 
-        console.log('problem; storedTheme:', storedTheme, 'theme:', theme)
     }, [theme])
 
     function fetchElements() {
@@ -43,18 +54,18 @@ function NavBar() {
         sun && sun.classList.add('hidden-color-mode-icon')
 
         localStorage.setItem('theme', 'light')
+        setTheme('light')
     }
 
     function setDarkMode() {
         const {app, moon, sun} = fetchElements()
-
-        console.log('setting dark mode', app)
 
         app && app.classList.add('dark')
         moon && moon.classList.add('hidden-color-mode-icon')
         sun && sun.classList.remove('hidden-color-mode-icon')
 
         localStorage.setItem('theme', 'dark')
+        setTheme('dark')
     }
 
     function toggleColorMode() {
@@ -63,6 +74,7 @@ function NavBar() {
             localStorage.setItem('theme', 'light')
             return
         }
+
         setTheme('dark')
         localStorage.setItem('theme', 'dark')
     }
