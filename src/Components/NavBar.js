@@ -21,8 +21,6 @@ function NavBar() {
             }
 
             setLightMode()
-
-            return
         }
 
         if (theme === 'dark') {
@@ -33,8 +31,6 @@ function NavBar() {
             }
 
             setDarkMode()
-
-            return
         }
 
     }, [theme])
@@ -46,6 +42,7 @@ function NavBar() {
 
         return {app, moon, sun}
     }
+
     function setLightMode() {
         const {app, moon, sun} = fetchElements()
 
@@ -114,6 +111,5 @@ function NavBar() {
             </div>
         )
     }
-
 
 export default withRouter(NavBar)
