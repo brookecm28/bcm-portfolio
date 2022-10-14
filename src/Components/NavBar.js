@@ -6,6 +6,7 @@ import home from '../assets/icons/home'
 import about from '../assets/icons/about'
 import projects from '../assets/icons/projects'
 import contact from '../assets/icons/contact'
+import stack from '../assets/icons/stack'
 import hamburger from "../assets/icons/hamburger";
 
 function NavBar() {
@@ -32,7 +33,6 @@ function NavBar() {
 
             setDarkMode()
         }
-
     }, [theme])
 
     function fetchElements() {
@@ -87,22 +87,27 @@ function NavBar() {
                 </div>
                 {/* {hamburger} */}
                 <nav className='bar'>
-                    <Link className='nav-link' to='/'>
+                    <Link className='nav-link' to='#landing'>
                         <div className='nav-item h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center'>
                             {home}
                         </div>
                     </Link>
-                    <Link className='nav-link' to='/about'>
+                    <Link className='nav-link' to='#stack'>
+                        <div className='nav-item h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center'>
+                            {stack}
+                        </div>
+                    </Link>
+                    <Link className='nav-link' to='#about'>
                         <div className='nav-item h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center'>
                             {about}
                         </div>
                     </Link>
-                    <Link className='nav-link' to='/projects'>
+                    <Link className='nav-link' to='#projects'>
                         <div className='nav-item h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center'>
                             {projects}
                         </div>
                     </Link>
-                    <Link className='nav-link' to='/contact'>
+                    <Link className='nav-link' to='#contact'>
                         <div className='nav-item h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center'>
                             {contact}
                         </div>
