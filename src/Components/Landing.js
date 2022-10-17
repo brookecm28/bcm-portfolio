@@ -1,4 +1,5 @@
 import React from 'react'
+import {Element} from 'react-scroll'
 import headshot from '../assets/Headshot2.jpg'
 import { myStack, myDescriptions } from '../data.json'
 import About from './About'
@@ -33,33 +34,43 @@ function Landing() {
 
     return (
         <div className='text-secondary-dark dark:text-primary'>
-            <section role="region" id="landing" className="bg-light-landing dark:bg-dark-landing bg-fixed bg-center bg-no-repeat
+            <Element name="landing">
+                <section role="region" id="landing" className="bg-light-landing dark:bg-dark-landing bg-fixed bg-center bg-no-repeat
         bg-cover flex justify-center flex-col min-h-screen w-full pl-nav-width">
-                <h2>Who Am I?</h2>
-                <div className='flex'>
-                    <ul className='container flex flex-col'>
-                        {myDescriptions.map((description, index) => {
-                            return (
-                                <li key={`description-${index}`} className="">{description}</li>
-                            )
-                        })}
-                    </ul>
-                    <img className='headshot' src={headshot} alt='Brooke Miller Headshot' />
-                </div>
-            </section>
-            <section role="region" id="stack" className="bg-primary dark:bg-secondary-dark bg-fixed bg-cover justify-center h-screen w-full pl-nav-width">
-                <h2>My Stack:</h2>
-                <div className="container grid grid-cols-5 gap-20">{stackLoop()}</div>
-            </section>
-            <section role="region" id="projects" className="bg-baby-blue dark:bg-dark-waters bg-fixed bg-cover justify-center min-h-screen w-full pl-nav-width">
-                {Projects()}
-            </section>
-            <section role="region" id="about" className="bg-primary dark:bg-secondary-dark bg-fixed bg-cover justify-center min-h-screen w-full pl-nav-width">
-                {About()}
-            </section>
-            <section role="region" id="contact" className="bg-light-wood dark:bg-dark-wood bg-cover bg-fixed justify-center min-h-screen w-full pl-nav-width">
-                {Contact()}
-            </section>
+                    <h2>Who Am I?</h2>
+                    <div className='flex'>
+                        <ul className='container flex flex-col'>
+                            {myDescriptions.map((description, index) => {
+                                return (
+                                    <li key={`description-${index}`} className="">{description}</li>
+                                )
+                            })}
+                        </ul>
+                        <img className='headshot' src={headshot} alt='Brooke Miller Headshot' />
+                    </div>
+                </section>
+            </Element>
+            <Element name="stack">
+                <section role="region" className="bg-primary dark:bg-secondary-dark bg-fixed bg-cover justify-center h-screen w-full pl-nav-width">
+                    <h2>My Stack:</h2>
+                    <div className="container grid grid-cols-5 gap-20">{stackLoop()}</div>
+                </section>
+            </Element>
+            <Element name="projects">
+                <section role="region" className="bg-baby-blue dark:bg-dark-waters bg-fixed bg-cover justify-center min-h-screen w-full pl-nav-width">
+                    {Projects()}
+                </section>
+            </Element>
+            <Element name="about">
+                <section role="region" className="bg-primary dark:bg-secondary-dark bg-fixed bg-cover justify-center min-h-screen w-full pl-nav-width">
+                    {About()}
+                </section>
+            </Element>
+            <Element name="contact">
+                <section role="region" className="bg-light-wood dark:bg-dark-wood bg-cover bg-fixed justify-center min-h-screen w-full pl-nav-width">
+                    {Contact()}
+                </section>
+            </Element>
         </div>
 
     )
