@@ -1,5 +1,6 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link, withRouter } from 'react-router-dom'
+import { Link as ScrollLink } from 'react-scroll'
 import moon from '../assets/icons/moon'
 import sun from '../assets/icons/sun'
 import home from '../assets/icons/home'
@@ -16,7 +17,7 @@ function NavBar() {
     useEffect(() => {
         if (theme === 'light') {
             if (storedTheme === ('dark')) {
-              setDarkMode()
+                setDarkMode()
 
                 return
             }
@@ -40,11 +41,11 @@ function NavBar() {
         const [moon] = document.getElementsByClassName('moon-icon')
         const [sun] = document.getElementsByClassName('sun-icon')
 
-        return {app, moon, sun}
+        return { app, moon, sun }
     }
 
     function setLightMode() {
-        const {app, moon, sun} = fetchElements()
+        const { app, moon, sun } = fetchElements()
 
         app && app.classList.remove('dark')
         moon && moon.classList.remove('hidden-color-mode-icon')
@@ -55,7 +56,7 @@ function NavBar() {
     }
 
     function setDarkMode() {
-        const {app, moon, sun} = fetchElements()
+        const { app, moon, sun } = fetchElements()
 
         app && app.classList.add('dark')
         moon && moon.classList.add('hidden-color-mode-icon')
@@ -76,45 +77,45 @@ function NavBar() {
         localStorage.setItem('theme', 'dark')
     }
 
-        return (
-            <div className='nav text-secondary-dark dark:text-primary flex flex-col items-center'>
-                <div className='nav-top'>
-                    <h2>Brooke Miller</h2>
-                    <h3>Web Developer</h3>
-                </div>
-                <div onClick={toggleColorMode} className="hover:cursor-pointer h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center">
-                    {moon}{sun}
-                </div>
-                {/* {hamburger} */}
-                <nav className='bar'>
-                    <Link className='nav-link' to='#landing'>
-                        <div className='nav-item h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center'>
-                            {home}
-                        </div>
-                    </Link>
-                    <Link className='nav-link' to='#stack'>
-                        <div className='nav-item h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center'>
-                            {stack}
-                        </div>
-                    </Link>
-                    <Link className='nav-link' to='#about'>
-                        <div className='nav-item h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center'>
-                            {about}
-                        </div>
-                    </Link>
-                    <Link className='nav-link' to='#projects'>
-                        <div className='nav-item h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center'>
-                            {projects}
-                        </div>
-                    </Link>
-                    <Link className='nav-link' to='#contact'>
-                        <div className='nav-item h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center'>
-                            {contact}
-                        </div>
-                    </Link>
-                </nav>
+    return (
+        <div className='nav text-secondary-dark dark:text-primary flex flex-col items-center'>
+            <div className='nav-top'>
+                <h2>Brooke Miller</h2>
+                <h3>Web Developer</h3>
             </div>
-        )
-    }
+            <div onClick={toggleColorMode} className="hover:cursor-pointer h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center">
+                {moon}{sun}
+            </div>
+            {/* {hamburger} */}
+            <nav className='bar'>
+                <Link className='nav-link' to='#landing'>
+                    <div className='nav-item h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center'>
+                        {home}
+                    </div>
+                </Link>
+                <ScrollLink className='nav-link' to='#stack'>
+                    <div className='nav-item h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center'>
+                        {stack}
+                    </div>
+                </ScrollLink>
+                <ScrollLink className='nav-link' to='#about'>
+                    <div className='nav-item h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center'>
+                        {about}
+                    </div>
+                </ScrollLink>
+                <Link className='nav-link' to='#projects'>
+                    <div className='nav-item h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center'>
+                        {projects}
+                    </div>
+                </Link>
+                <Link className='nav-link' to='#contact'>
+                    <div className='nav-item h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center'>
+                        {contact}
+                    </div>
+                </Link>
+            </nav>
+        </div>
+    )
+}
 
 export default withRouter(NavBar)

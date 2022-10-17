@@ -1,4 +1,4 @@
-import {Switch, Route} from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import Landing from './Components/Landing'
 import About from './Components/About'
 import Projects from './Components/Projects'
