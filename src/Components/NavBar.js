@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link, withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 import * as Scroll from 'react-scroll'
 import moon from '../assets/icons/moon'
 import sun from '../assets/icons/sun'
@@ -99,16 +99,16 @@ function NavBar() {
                         {stack}
                     </div>
                 </ScrollLink>
-                <ScrollLink className='nav-link' to='about' smooth spy>
-                    <div className='nav-item h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center'>
-                        {about}
-                    </div>
-                </ScrollLink>
                 <ScrollLink className='nav-link' to='projects' smooth spy>
                     <div className='nav-item h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center'>
                         {projects}
                     </div>
                 </ScrollLink>
+                <ScrollLink className='nav-link' to='about' smooth spy>
+                <div className='nav-item h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center'>
+                    {about}
+                </div>
+            </ScrollLink>
                 <ScrollLink className='nav-link' to='contact' smooth spu>
                     <div className='nav-item h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center'>
                         {contact}
