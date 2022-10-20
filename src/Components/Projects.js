@@ -4,6 +4,7 @@ import lemon from '../assets/icons/lemonProp.png'
 import imp from '../assets/icons/inventoryManager.png'
 import portfolio from '../assets/icons/portfolio.png'
 import { projects } from '../data.json'
+import {Link} from "react-router-dom";
 
 function Projects() {
     function loopProjects() {
@@ -39,10 +40,10 @@ function Projects() {
                             className='border-2 border-secondary-dark dark:border-primary h-12 w-48 p-2 hover:dark:bg-primary hover:dark:text-secondary-dark'>
                             Visit Site
                         </a>
-                        <a as="button"
+                        <Link to={`/projects/${projects[key].slug}`}
                             className='border-2 border-secondary-dark align-middle dark:border-primary h-12 w-48 p-2 hover:dark:bg-primary hover:dark:text-secondary-dark'>
                             More Details
-                        </a>
+                        </Link>
                     </div>
                 </div>
             )
