@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { withRouter } from 'react-router-dom'
+import {withRouter, useLocation, Link} from 'react-router-dom'
+import { Route } from 'react-router'
 import * as Scroll from 'react-scroll'
 import moon from '../assets/icons/moon'
 import sun from '../assets/icons/sun'
@@ -11,9 +12,21 @@ import stack from '../assets/icons/stack'
 import hamburger from "../assets/icons/hamburger";
 
 function NavBar() {
+    const page = useLocation().pathname
+
     const [theme, setTheme] = useState('dark')
+    const [landingPage, setLandingPage] = useState( true)
     const storedTheme = localStorage.getItem('theme')
     const ScrollLink = Scroll.Link
+
+    useEffect(() => {
+        if (page === '/') {
+            setLandingPage(true)
+            return
+        }
+
+        setLandingPage(false)
+    }, [page])
 
     useEffect(() => {
         if (theme === 'light') {
@@ -78,6 +91,26 @@ function NavBar() {
         localStorage.setItem('theme', 'dark')
     }
 
+    function scrollNav(icon, to) {
+        return (
+            <ScrollLink className='nav-link' to={to} smooth spy>
+                <div className='nav-item h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center'>
+                    {icon}
+                </div>
+            </ScrollLink>
+        )
+    }
+
+    function linkNav(icon, to) {
+        return (
+            <Link to={to}>
+            <div className='nav-item h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center'>
+                {icon}
+            </div>
+        </Link>
+        )
+    }
+
     return (
         <div className='nav text-secondary-dark dark:text-primary flex flex-col items-center'>
             <div className='nav-top'>
@@ -89,31 +122,11 @@ function NavBar() {
             </div>
             {/* {hamburger} */}
             <nav className='bar'>
-                <ScrollLink className='nav-link' to='landing' smooth spy>
-                    <div className='nav-item h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center'>
-                        {home}
-                    </div>
-                </ScrollLink>
-                <ScrollLink className='nav-link' to='stack' smooth spy>
-                    <div className='nav-item h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center'>
-                        {stack}
-                    </div>
-                </ScrollLink>
-                <ScrollLink className='nav-link' to='projects' smooth spy>
-                    <div className='nav-item h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center'>
-                        {projects}
-                    </div>
-                </ScrollLink>
-                <ScrollLink className='nav-link' to='about' smooth spy>
-                <div className='nav-item h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center'>
-                    {about}
-                </div>
-            </ScrollLink>
-                <ScrollLink className='nav-link' to='contact' smooth spu>
-                    <div className='nav-item h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center'>
-                        {contact}
-                    </div>
-                </ScrollLink>
+                {landingPage ? scrollNav(home, 'landing') : linkNav(home, '/')}
+                {landingPage ? scrollNav(stack, 'stack') : linkNav(home, '/#stack')}
+                {landingPage ? scrollNav(projects, 'projects') : linkNav(home, '/#projects')}
+                {landingPage ? scrollNav(about, 'about') : linkNav(home, '/#about')}
+                {landingPage ? scrollNav(contact, 'contact') : linkNav(home, '/#contact')}
             </nav>
         </div>
     )
