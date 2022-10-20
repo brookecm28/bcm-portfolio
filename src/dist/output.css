@@ -599,6 +599,14 @@ video {
   top: 2.5rem;
 }
 
+.mt-64 {
+  margin-top: 16rem;
+}
+
+.mt-36 {
+  margin-top: 9rem;
+}
+
 .flex {
   display: flex;
 }
@@ -617,6 +625,10 @@ video {
 
 .h-12 {
   height: 3rem;
+}
+
+.h-1\/2 {
+  height: 50%;
 }
 
 .h-64 {
@@ -641,6 +653,10 @@ video {
 
 .w-12 {
   width: 3rem;
+}
+
+.w-5\/6 {
+  width: 83.333333%;
 }
 
 .w-7\/12 {
@@ -695,6 +711,14 @@ video {
   gap: 5rem;
 }
 
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-1 {
+  gap: 0.25rem;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -731,16 +755,12 @@ video {
   background-image: url('../assets/light-landing.jpg');
 }
 
-.bg-light-waters {
-  background-image: url('../assets/light-waters.jpg');
+.bg-baby-blue {
+  background-image: url('../assets/baby-blue.jpg');
 }
 
 .bg-light-wood {
   background-image: url('../assets/light-woods.jpg');
-}
-
-.bg-baby-blue {
-  background-image: url('../assets/baby-blue.jpg');
 }
 
 .from-secondary-grey {
@@ -774,14 +794,14 @@ video {
   background-repeat: no-repeat;
 }
 
-.px-24 {
-  padding-left: 6rem;
-  padding-right: 6rem;
-}
-
 .px-12 {
   padding-left: 3rem;
   padding-right: 3rem;
+}
+
+.px-24 {
+  padding-left: 6rem;
+  padding-right: 6rem;
 }
 
 .pt-4 {
@@ -796,12 +816,20 @@ video {
   padding-left: var(--nav-width);
 }
 
-.pt-24 {
-  padding-top: 6rem;
+.pt-2 {
+  padding-top: 0.5rem;
 }
 
 .pb-4 {
   padding-bottom: 1rem;
+}
+
+.pt-24 {
+  padding-top: 6rem;
+}
+
+.align-middle {
+  vertical-align: middle;
 }
 
 .text-3xl {
@@ -817,6 +845,11 @@ video {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .italic {
@@ -879,15 +912,6 @@ body {
   font-size: calc(10px + 2vmin);
 }
 
-h2 {
-  font-weight: lighter;
-  font-size: 28pt;
-}
-
-h3 {
-  font-weight: lighter;
-}
-
 .nav {
   width: var(--nav-width) !important;
   height: 100vh;
@@ -896,16 +920,6 @@ h3 {
   font-family: 'Raleway', sans-serif;
   z-index: 3;
   position: fixed;
-}
-
-.bar {
-  margin-top: 200px;
-  height: 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  font-size: 20pt;
 }
 
 .nav-link {

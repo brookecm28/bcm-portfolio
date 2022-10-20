@@ -35,14 +35,7 @@ body {
   font-size: calc(10px + 2vmin);
 }
 
-h2 {
-  font-weight: lighter;
-  font-size: 28pt;
-}
 
-h3 {
-  font-weight: lighter;
-}
 
 .nav {
   width: var(--nav-width) !important;
@@ -52,16 +45,6 @@ h3 {
   font-family: 'Raleway', sans-serif;
   z-index: 3;
   position: fixed;
-}
-
-.bar {
-  margin-top: 200px;
-  height: 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  font-size: 20pt;
 }
 
 .nav-link {

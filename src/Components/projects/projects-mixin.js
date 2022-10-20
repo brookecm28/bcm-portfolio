@@ -5,9 +5,10 @@ export function projectsHeader(key) {
     const data = projects[key]
 
     return (
-        <div>
-            <h1> {data.displayName}</h1>
-            <h3>{data.tagline}</h3>
+        <div className='container mt-8'>
+            <h1 className='text-5xl'> {data.displayName}</h1>
+            <br/>
+            <h3 className='text-2xl'>-{data.tagline}-</h3>
         </div>
     )
 }
@@ -16,14 +17,17 @@ export function projectsButtons(key) {
     const data = projects[key]
 
     return (
-        <div>
+        <div className='flex mt-16 gap-12'>
             <a href={data.source} target='_blank' rel='noopener noreferrer'
-               className='border-2 border-secondary-dark dark:border-primary h-12 w-48 p-2 hover:dark:bg-primary hover:dark:text-secondary-dark'>
+               className='bg-secondary-grey dark:bg-primary text-primary dark:text-secondary-dark h-12 w-48
+                              hover:bg-secondary-dark hover:dark:text-secondary-dark text-xl flex items-center justify-center'>
                 Visit Site
             </a>
             <a href={data.gitHub} target='_blank' rel='noopener noreferrer'
-               className='border-2 border-secondary-dark align-middle dark:border-primary h-12 w-48 p-2 hover:dark:bg-primary hover:dark:text-secondary-dark'>
-                View Code
+               className='bg-secondary-grey dark:bg-primary text-primary dark:text-secondary-dark h-12 w-48
+               text-xl flex items-center justify-center
+               hover:bg-secondary-dark hover:dark:text-secondary-dark'>
+                 View Code
             </a>
         </div>
     )

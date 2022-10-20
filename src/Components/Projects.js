@@ -37,11 +37,11 @@ function Projects() {
                     </div>
                     <div className='w-5/12 flex flex-col justify-center gap-8 items-center bg-primary dark:bg-secondary-dark'>
                         <a href={projects[key].source} target='_blank' rel='noopener noreferrer'
-                            className='border-2 border-secondary-dark dark:border-primary h-12 w-48 p-2 hover:dark:bg-primary hover:dark:text-secondary-dark'>
+                            className='border-2 border-secondary-dark dark:border-primary h-12 w-48 flex items-center justify-center hover:dark:bg-primary hover:dark:text-secondary-dark'>
                             Visit Site
                         </a>
                         <Link to={`/projects/${projects[key].slug}`}
-                            className='border-2 border-secondary-dark align-middle dark:border-primary h-12 w-48 p-2 hover:dark:bg-primary hover:dark:text-secondary-dark'>
+                            className='border-2 border-secondary-dark align-middle dark:border-primary h-12 w-48 flex items-center justify-center hover:dark:bg-primary hover:dark:text-secondary-dark'>
                             More Details
                         </Link>
                     </div>
