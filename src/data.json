@@ -27,9 +27,9 @@
         "Frameworks": [
             "Vue",
             "React",
+            "Redux",
             "Next.js",
-            "Alpine.js",
-            "Redux"
+            "Alpine.js"
         ],
         "Dev Tools": [
             "WebStorm/PHPStorm",
@@ -50,6 +50,7 @@
     "projects": {
         "richRecipes": {
             "displayName": "Rich Recipes",
+            "slug": "rich-recipes",
             "source": "https://rich-recipes.com",
             "gitHub": "https://github.com/brookecm28/rich-recipes",
             "tagline": "Your easy recipe storage solution",
@@ -67,6 +68,7 @@
         },
         "lemonProp": {
             "displayName": "Lemon Prop",
+            "slug": "lemon-prop",
             "source": "https://lemonprop.com",
             "gitHub": "https://github.com/Lemon-Prop-Management/lemon-prop",
             "tagline": "Property management portal for tenants and managers alike",
@@ -86,24 +88,28 @@
         },
         "bcmPortfolio": {
             "displayName": "Portfolio",
+            "slug": "bcm-portfolio",
             "source": "https://brookemillerdev.com",
             "gitHub": "https://github.com/brookecm28/bcm-portfolio",
             "tagline": "Your source for all things Brooke Miller",
             "descriptions": [
                 "Portfolio website built from the ground up with an emphasis on design and no template",
-                "Responsive design built for both mobile and desktop viewing",
-                "Continued education of new features while building"
+                "Built with Tailwindcss for easy theme toggling",
+                "Continued education of new features while building",
+                "Complete refactor and design from v1 to v2"
             ]
         },
         "inventoryManagerPro": {
             "displayName": "Inventory Manager Pro",
+            "slug": "inventory-manager-pro",
             "source": "https://inventorymanagerpro.com",
             "gitHub": "https://github.com/nativerank/inventory-manager",
             "tagline": "Inventory Redefined",
             "descriptions": [
                 "Inventory system designed for boat and vehicle dealerships and manufacturers",
                 "Inventory items are added either manually or via an XML feed from various integrations",
-                "Items that are added or updated get pushed directly to the clients' sites in real time"
+                "Items that are added or updated get pushed directly to the clients' sites in real time",
+                "Built with Vue, my contributions were to the front end and user experience"
             ]
         }
     },
