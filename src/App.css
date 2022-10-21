@@ -84,3 +84,13 @@ body {
 .indent {
   margin-left: 28px;
 }
+
+.hover-projects-buttons:hover {
+  background-color: var(--secondary-dark);
+  color: var(--primary)
+}
+
+.hover-projects-buttons-dark:hover {
+  background-color: var(--primary);
+  color: var(--secondary-dark)
+}

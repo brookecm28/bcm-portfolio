@@ -13,20 +13,19 @@ export function projectsHeader(key) {
     )
 }
 
-export function projectsButtons(key) {
+export function projectsButtons(key, theme) {
     const data = projects[key]
 
     return (
         <div className='flex mt-16 gap-12'>
             <a href={data.source} target='_blank' rel='noopener noreferrer'
-               className='bg-secondary-grey dark:bg-primary text-primary dark:text-secondary-dark h-12 w-48
-                              hover:bg-secondary-dark hover:dark:text-secondary-dark text-xl flex items-center justify-center'>
+               className={`bg-secondary-grey dark:bg-primary text-primary dark:text-secondary-dark h-12 w-48 text-xl flex items-center justify-center
+               ${theme === 'light' ? 'hover-projects-buttons' : 'hover-projects-buttons-dark'}`}>
                 Visit Site
             </a>
             <a href={data.gitHub} target='_blank' rel='noopener noreferrer'
-               className='bg-secondary-grey dark:bg-primary text-primary dark:text-secondary-dark h-12 w-48
-               text-xl flex items-center justify-center
-               hover:bg-secondary-dark hover:dark:text-secondary-dark'>
+               className={`bg-secondary-grey dark:bg-primary text-primary dark:text-secondary-dark h-12 w-48 text-xl flex items-center justify-center
+               ${theme === 'light' ? 'hover-projects-buttons' : 'hover-projects-buttons-dark'}`}>
                  View Code
             </a>
         </div>

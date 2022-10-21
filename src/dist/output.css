@@ -599,10 +599,6 @@ video {
   top: 2.5rem;
 }
 
-.mt-64 {
-  margin-top: 16rem;
-}
-
 .mt-36 {
   margin-top: 9rem;
 }
@@ -713,10 +709,6 @@ video {
 
 .gap-2 {
   gap: 0.5rem;
-}
-
-.gap-1 {
-  gap: 0.25rem;
 }
 
 .overflow-hidden {
@@ -962,6 +954,16 @@ body {
 
 .indent {
   margin-left: 28px;
+}
+
+.hover-projects-buttons:hover {
+  background-color: var(--secondary-dark);
+  color: var(--primary)
+}
+
+.hover-projects-buttons-dark:hover {
+  background-color: var(--primary);
+  color: var(--secondary-dark)
 }
 
 .hover\:cursor-pointer:hover {
