@@ -1,15 +1,13 @@
 import './App.css';
 import NavBar from './Components/NavBar'
 import {useEffect, useState} from "react";
-import {Route, Switch} from "react-router-dom";
+import {Route, Switch, useLocation} from "react-router-dom";
 import Landing from "./Components/Landing";
 import RichRecipes from "./Components/projects/rich-recipes";
 import Contact from "./Components/Contact";
 
 function App() {
-  //  https://bootcamp.rocketacademy.co/7-react/7.6-passing-data-between-sibling-components
-  //  try what this article suggests halfway down the page re passing to siblings
-
+    const location = useLocation()
     const [theme, setTheme] = useState('dark')
     const storedTheme = localStorage.getItem('theme')
 
@@ -80,7 +78,9 @@ function App() {
     <div className="App scroll-smooth dark">
       <NavBar toggleColorMode={() => toggleColorMode()} />
       <Switch>
-          <Route exact path='/' component={Landing}/>
+          <Route exact path='/'>
+                <Landing section={location.state}/>
+          </Route>
           <Route exact path='/projects/rich-recipes'>
               <RichRecipes theme={theme}/>
           </Route>

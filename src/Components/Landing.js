@@ -1,12 +1,20 @@
 import React from 'react'
-import {Element} from 'react-scroll'
+import Scroller, {Element} from 'react-scroll'
 import headshot from '../assets/Headshot2.jpg'
 import { myStack, myDescriptions } from '../data.json'
 import About from './About'
 import Projects from './Projects'
 import Contact from './Contact'
 
-function Landing() {
+
+function Landing(props) {
+    console.log('props', props)
+
+    if (props.section) {
+        console.log('before scrolling')
+        Scroller.scroller.scrollTo(props.section)
+        console.log('after scrolling')
+    }
 
     function stackLoop() {
         if (myStack) {

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import {withRouter, useLocation, Link} from 'react-router-dom'
-import { Route } from 'react-router'
 import * as Scroll from 'react-scroll'
 import moon from '../assets/icons/moon'
 import sun from '../assets/icons/sun'
@@ -36,13 +35,13 @@ function NavBar(props) {
         )
     }
 
-    function linkNav(icon, to) {
+    function linkNav(icon, section) {
         return (
-            <Link to={to}>
-            <div className='nav-item h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center hover:cursor-pointer'>
-                {icon}
-            </div>
-        </Link>
+            <Link to={{pathname: '/', state: section}}>
+                    <div className='nav-item h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center hover:cursor-pointer'>
+                        {icon}
+                    </div>
+            </Link>
         )
     }
 
@@ -62,11 +61,11 @@ function NavBar(props) {
             {/* {hamburger} */}
 
             <nav className='mt-36 h-1/2 flex flex-col items-center gap-2'>
-                {landingPage ? scrollNav(home, 'landing') : linkNav(home, '/')}
-                {landingPage ? scrollNav(stack, 'stack') : linkNav(stack, '/#stack')}
-                {landingPage ? scrollNav(projects, 'projects') : linkNav(projects, '/#projects')}
-                {landingPage ? scrollNav(about, 'about') : linkNav(about, '/#about')}
-                {landingPage ? scrollNav(contact, 'contact') : linkNav(contact, '/#contact')}
+                {landingPage ? scrollNav(home, 'landing') : linkNav(home, 'landing')}
+                {landingPage ? scrollNav(stack, 'stack') : linkNav(stack, 'stack')}
+                {landingPage ? scrollNav(projects, 'projects') : linkNav(projects, 'projects')}
+                {landingPage ? scrollNav(about, 'about') : linkNav(about, 'about')}
+                {landingPage ? scrollNav(contact, 'contact') : linkNav(contact, 'contact')}
             </nav>
         </div>
     )

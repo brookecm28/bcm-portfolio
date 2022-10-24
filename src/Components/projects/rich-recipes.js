@@ -14,7 +14,6 @@ class RichRecipes extends React.Component {
             <div
                 className='flex flex-col items-center bg-primary dark:bg-secondary-dark min-h-screen min-w-full text-secondary-dark dark:text-primary'>
                 {projectsHeader(key)}
-                <div>{this.props.theme}</div>
                 {projectsButtons(key, this.props.theme)}
                 {projectDescriptions(key)}
                 {projectsCredentials(key, 'basicCredentials')}
