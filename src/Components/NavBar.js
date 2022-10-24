@@ -11,12 +11,10 @@ import contact from '../assets/icons/contact'
 import stack from '../assets/icons/stack'
 import hamburger from "../assets/icons/hamburger";
 
-function NavBar() {
+function NavBar(props) {
     const page = useLocation().pathname
 
-    const [theme, setTheme] = useState('dark')
     const [landingPage, setLandingPage] = useState( true)
-    const storedTheme = localStorage.getItem('theme')
     const ScrollLink = Scroll.Link
 
     useEffect(() => {
@@ -27,69 +25,6 @@ function NavBar() {
 
         setLandingPage(false)
     }, [page])
-
-    useEffect(() => {
-        if (theme === 'light') {
-            if (storedTheme === ('dark')) {
-                setDarkMode()
-
-                return
-            }
-
-            setLightMode()
-        }
-
-        if (theme === 'dark') {
-            if (storedTheme === 'light') {
-                setLightMode()
-
-                return
-            }
-
-            setDarkMode()
-        }
-    }, [theme])
-
-    function fetchElements() {
-        const [app] = document.getElementsByClassName('App')
-        const [moon] = document.getElementsByClassName('moon-icon')
-        const [sun] = document.getElementsByClassName('sun-icon')
-
-        return { app, moon, sun }
-    }
-
-    function setLightMode() {
-        const { app, moon, sun } = fetchElements()
-
-        app && app.classList.remove('dark')
-        moon && moon.classList.remove('hidden-color-mode-icon')
-        sun && sun.classList.add('hidden-color-mode-icon')
-
-        localStorage.setItem('theme', 'light')
-        setTheme('light')
-    }
-
-    function setDarkMode() {
-        const { app, moon, sun } = fetchElements()
-
-        app && app.classList.add('dark')
-        moon && moon.classList.add('hidden-color-mode-icon')
-        sun && sun.classList.remove('hidden-color-mode-icon')
-
-        localStorage.setItem('theme', 'dark')
-        setTheme('dark')
-    }
-
-    function toggleColorMode() {
-        if (theme === 'dark') {
-            setTheme('light')
-            localStorage.setItem('theme', 'light')
-            return
-        }
-
-        setTheme('dark')
-        localStorage.setItem('theme', 'dark')
-    }
 
     function scrollNav(icon, to) {
         return (
@@ -121,7 +56,7 @@ function NavBar() {
                 <h3>Software Engineer</h3>
                 <br/>
             </div>
-            <div onClick={toggleColorMode} className="hover:cursor-pointer h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center">
+            <div onClick={props.toggleColorMode} className="hover:cursor-pointer h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center">
                 {moon}{sun}
             </div>
             {/* {hamburger} */}
