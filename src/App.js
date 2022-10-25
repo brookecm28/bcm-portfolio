@@ -4,7 +4,9 @@ import {useEffect, useState} from "react";
 import {Route, Switch, useLocation} from "react-router-dom";
 import Landing from "./Components/Landing";
 import RichRecipes from "./Components/projects/rich-recipes";
-import Contact from "./Components/Contact";
+import LemonProp from "./Components/projects/lemon-prop";
+import BcmPortfolio from "./Components/projects/bcm-portfolio";
+import InventoryManager from "./Components/projects/inventory-manager";
 
 function App() {
     const location = useLocation()
@@ -84,9 +86,15 @@ function App() {
           <Route exact path='/projects/rich-recipes'>
               <RichRecipes theme={theme}/>
           </Route>
-          <Route exact path='/projects/lemon-prop' component={Contact}/>
-          <Route exact path='/projects/bcm-portfolio' component={Contact}/>
-          <Route exact path='/projects/inventory-manager-pro' component={Contact}/>
+          <Route >
+            <LemonProp exact path='/projects/lemon-prop' />
+          </Route>
+          <Route>
+              <BcmPortfolio exact path='/projects/bcm-portfolio'/>
+          </Route>
+          <Route>
+              <InventoryManager exact path='/projects/inventory-manager-pro' />
+          </Route>
       </Switch>
     </div>
   );

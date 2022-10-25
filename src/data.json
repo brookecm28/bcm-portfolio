@@ -75,7 +75,8 @@
             "descriptions": [
                 "Property management website for making payments and submitting maintenance requests as a tenant",
                 "Utilized for tracking tenant activity as a manager",
-                "Conditional rendering determines what gets displayed and is dependent upon whether the user is a tenant or manager"
+                "Conditional rendering determines what gets displayed and is dependent upon whether the user is a tenant or manager",
+                "SOMETHING ELSE"
             ],
             "basicCredentials": {
                 "username": "pika@pika.com",
