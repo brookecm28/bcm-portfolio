@@ -1,22 +1,13 @@
 import React from 'react'
+import data from '../data.json'
 
 function About() {
     return (
-        <div className="w-full">
-                <h2>A Little About Me</h2>
-                <p className="pt-4 pr-12">After growing up and living in small-town Indiana for the first 18 years of my life, I took my first step in finding who I truly was by attending Purdue University.
-                    The four years I spent there studying also gave me the opportunity to truly discover who I was: someone who wanted more. By the end of my studies, I determined
-                    that I needed to get away, and I found myself in Colorado.
-                </p>
-                <p className="pt-4 pr-12">
-                    I've lived in Colorado for three and a half years now. At the end of three years working for a tax debt resolution firm, I decided that I needed to do something more
-                    challenging than the work I was currently doing. I dabbled in computer programming in high school but had not pursued it further after graduation.
-                    Quarantine gave me the opportunity to do so—I found myself taking a free online class for coding in my spare time.
-                </p>
-                <p className="pt-4 pr-12">
-                    A little taste was all it took for me to fall in love with coding. I felt like I'd finally discovered what I was meant to do. So, I took the plunge and enrolled in
-                    DevMountain's Web Development program. After 13 simultaneously long and short weeks, I've graduated and am ready to show the world who the real Brooke Miller is.
-                </p>
+        <div className="w-full flex pb-14 flex-col items-center justify-center">
+            <h2 className='text-4xl pt-16 mb-6'>About Me</h2>
+            <div className='container  w-2/3'>
+                {data.about.map(paragraph => <p className='text-secondary-dark mb-4'>{paragraph}</p>)}
+            </div>
         </div>
     )
 }
