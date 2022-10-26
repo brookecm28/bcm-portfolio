@@ -6,7 +6,6 @@ import About from './About'
 import Projects from './Projects'
 import Contact from './Contact'
 
-
 function Landing(props) {
     useEffect(() => {
         if (props.section) {
@@ -21,8 +20,8 @@ function Landing(props) {
                 return (
                     <div className=' bg-gradient-to-br border-2 rounded-3xl transition-color duration-500
                     from-secondary-grey via-primary to-secondary-grey border-secondary-dark
-                    hover:from-secondary-light hover:via-primary hover:to-secondary-light
                     dark:from-secondary-grey dark:via-secondary-dark dark:to-secondary-grey dark:border-primary
+                    hover:from-secondary-light hover:via-primary hover:to-secondary-light hover:cursor-default
                     hover:dark:from-secondary-light hover:dark:via-secondary-dark hover:dark:to-secondary-light
                    ' key={`${stackArea}-stack`}>
                         <h3 className='text-2xl underline'>{stackArea}</h3>
@@ -41,8 +40,7 @@ function Landing(props) {
     return (
         <div className='text-secondary-dark dark:text-primary'>
             <Element name="landing">
-                <section role="region" id="landing" className="bg-light-landing dark:bg-dark-landing bg-fixed bg-center bg-no-repeat
-        bg-cover flex justify-center flex-col min-h-screen w-full pl-nav-width">
+                <section role="region" id="landing" className="bg-light-landing dark:bg-dark-landing bg-fixed bg-center bg-no-repeat bg-cover flex justify-center flex-col min-h-screen w-full pl-nav-width">
                     <h2>Who Am I?</h2>
                     <div className='flex'>
                         <ul className='container flex flex-col'>
@@ -57,8 +55,8 @@ function Landing(props) {
                 </section>
             </Element>
             <Element name="stack" >
-                <section role="region" id="stack" className="bg-primary dark:bg-secondary-dark bg-fixed bg-cover justify-center h-screen w-full pl-nav-width">
-                    <h2>My Stack:</h2>
+                <section role="region" id="stack" className="bg-primary dark:bg-secondary-dark bg-fixed bg-cover justify-center min-h-fit w-full pl-nav-width full flex-col items-center justify-center py-16">
+                    <h2 className='text-4xl mb-16'>My Stack:</h2>
                     <div className="container grid grid-cols-5 gap-20">{stackLoop()}</div>
                 </section>
             </Element>
@@ -68,7 +66,7 @@ function Landing(props) {
                 </section>
             </Element>
             <Element name="about" >
-                <section role="region" id="about" className="bg-primary dark:bg-secondary-dark bg-fixed bg-cover justify-center min-h-screen w-full pl-nav-width">
+                <section role="region" id="about" className="bg-primary dark:bg-secondary-dark bg-fixed bg-cover justify-center min-h-fit w-full pl-nav-width">
                     {About()}
                 </section>
             </Element>

@@ -1,4 +1,3 @@
-import React, {useEffect, useState} from 'react'
 import {projectsHeader, projectDescriptions, projectsButtons, projectsCredentials} from "./projects-mixin";
 
 function LemonProp() {
@@ -6,7 +5,8 @@ function LemonProp() {
 
     return (
         <div
-            className='flex flex-col items-center bg-primary dark:bg-secondary-dark min-h-screen min-w-full text-secondary-dark dark:text-primary'>
+            className='flex flex-col items-center bg-primary min-h-screen min-w-full text-secondary-dark
+            dark:bg-secondary-dark dark:text-primary'>
             {projectsHeader(key)}
             {projectsButtons(key)}
             {projectDescriptions(key)}

@@ -24,7 +24,8 @@ function Contact() {
 
             return (
                 <a href={`${item.url}`} key={`contact-item-${item.name}`}>
-                    <div className="h-72 w-72 rounded-full backdrop-brightness-110 dark:backdrop-brightness-50 flex flex-col justify-center items-center">
+                    <div className="h-72 w-72 rounded-full backdrop-brightness-110 flex flex-col justify-center items-center
+                    dark:backdrop-brightness-50">
                         <h3 className='fixed top-10 text-3xl'>{item.name}</h3>
                         {icon}
                     </div>
@@ -38,7 +39,8 @@ function Contact() {
         return contact.infoWithoutIcons.map(item => {
             return (
                 <a href={`${item.url}`} key={`contact-item-${item.name}`}>
-                    <div className="h-72 w-72 rounded-full backdrop-brightness-110 dark:backdrop-brightness-50 flex flex-col justify-center items-center">
+                    <div className="h-72 w-72 rounded-full backdrop-brightness-110 flex flex-col justify-center items-center
+                    dark:backdrop-brightness-50">
                         <h3 className='fixed top-10 text-3xl'>{item.name}</h3>
                         <p className='text-xl'>{item.display}</p>
                     </div>

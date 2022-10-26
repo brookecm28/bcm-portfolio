@@ -1,11 +1,12 @@
-import {projectsHeader, projectDescriptions, projectsButtons, projectsCredentials} from "./projects-mixin";
+import {projectsHeader, projectDescriptions, projectsButtons} from "./projects-mixin";
 
 function InventoryManager() {
     const key = 'inventoryManagerPro'
 
     return (
         <div
-            className='flex flex-col items-center bg-primary dark:bg-secondary-dark min-h-screen min-w-full text-secondary-dark dark:text-primary'>
+            className='flex flex-col items-center bg-primary min-h-screen min-w-full text-secondary-dark
+            dark:bg-secondary-dark dark:text-primary'>
             {projectsHeader(key)}
             {projectsButtons(key)}
             {projectDescriptions(key)}
