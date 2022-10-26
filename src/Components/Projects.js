@@ -51,7 +51,6 @@ function Projects() {
         return htmlForReturn
     }
 
-    // still need to figure out how to display the logos, which are all in the icons folder
     return (
         <div className="pt-24 px-24">
             <div className='grid grid-cols-2 gap-12'>{loopProjects()}</div>

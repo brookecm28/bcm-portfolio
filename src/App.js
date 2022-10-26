@@ -84,16 +84,16 @@ function App() {
                 <Landing section={location.state}/>
           </Route>
           <Route exact path='/projects/rich-recipes'>
-              <RichRecipes theme={theme}/>
+              <RichRecipes/>
           </Route>
-          <Route >
-            <LemonProp exact path='/projects/lemon-prop' />
+          <Route exact path='/projects/lemon-prop'>
+                <LemonProp/>
           </Route>
-          <Route>
-              <BcmPortfolio exact path='/projects/bcm-portfolio'/>
+          <Route exact path='/projects/bcm-portfolio'>
+              <BcmPortfolio/>
           </Route>
-          <Route>
-              <InventoryManager exact path='/projects/inventory-manager-pro' />
+          <Route exact path='/projects/inventory-manager-pro'>
+              <InventoryManager/>
           </Route>
       </Switch>
     </div>
