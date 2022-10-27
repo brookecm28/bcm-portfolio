@@ -37,14 +37,22 @@ function Contact() {
     }
 
     function loopContactInfoWithoutIcons() {
+
         return contact.infoWithoutIcons.map(item => {
+            let emailDisplay = ''
+            if (item.display.includes('@')) {
+                const display = item.display.split('@')
+                emailDisplay = (
+                    <p className='pt-10 text-lg md:text-xl'>{display[0]}<br className='md:hidden'/>@{display[1]}</p>
+                )
+            }
             return (
                 <a href={`${item.url}`} key={`contact-item-${item.name}`}>
                     <div className="h-60 w-60 rounded-full backdrop-brightness-110 flex flex-col justify-center items-center
                     dark:backdrop-brightness-50
                     md:h-72 md:w-72">
                         <h3 className='fixed top-10 text-3xl'>{item.name}</h3>
-                        <p className='text-xl'>{item.display}</p>
+                        {emailDisplay ? emailDisplay : <p className='pt-10 text-lg md:text-xl'>{item.display}</p>}
                     </div>
 
                 </a>
@@ -54,21 +62,23 @@ function Contact() {
 
     return (
         <div>
-            <div>
+
                 <h2 className='text-5xl
                 lg:pt-6 lg:pb-6
                 2xl:pt-20 2xl:pb-20'>
                     Contact Me
                 </h2>
-                <div className='flex flex-col justify-center items-center gap-6
+                <div className='flex flex-col-reverse md:flex-col'>
+                    <div className='flex flex-col flex-col-reverse justify-center items-center gap-6
                                 md:flex-row md:gap-8'>
-                    {loopContactInfoWithIcons()}
+                        {loopContactInfoWithIcons()}
+                    </div>
+                    <div className='flex flex-col justify-center items-center gap-6 mb-6
+                                md:flex-row md:gap-12 md:mb-0'>
+                        {loopContactInfoWithoutIcons()}
+                    </div>
                 </div>
-                <div className='flex flex-col justify-center items-center gap-6 mt-6
-                                md:flex-row md:gap-12 md:mt-0'>
-                    {loopContactInfoWithoutIcons()}
-                </div>
-            </div>
+
         </div>
     )
 }
