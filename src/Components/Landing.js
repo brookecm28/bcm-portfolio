@@ -38,10 +38,10 @@ function Landing(props) {
     }
 
     return (
-        <div className='text-secondary-dark dark:text-primary'>
+        <div className='text-secondary-dark dark:text-primary w-full'>
             <Element name="landing">
                 <section role="region" id="landing" className="bg-light-landing dark:bg-dark-landing bg-fixed bg-center bg-no-repeat bg-cover flex justify-center flex-col min-h-screen w-full pl-nav-width">
-                    <h2>Who Am I?</h2>
+                    <h2 className='text-7xl'>Who Am I?</h2>
                     <div className='flex'>
                         <ul className='container flex flex-col'>
                             {myDescriptions.map((description, index) => {
@@ -55,8 +55,8 @@ function Landing(props) {
                 </section>
             </Element>
             <Element name="stack" >
-                <section role="region" id="stack" className="bg-primary dark:bg-secondary-dark bg-fixed bg-cover justify-center min-h-fit w-full pl-nav-width full flex-col items-center justify-center py-16">
-                    <h2 className='text-4xl mb-16'>My Stack:</h2>
+                <section role="region" id="stack" className="bg-primary dark:bg-secondary-dark bg-fixed bg-cover justify-center min-h-fit w-full pl-nav-width full flex-col items-center justify-center pt-20 pb-16">
+                    <h2 className='text-5xl mb-16'>My Stack</h2>
                     <div className="container grid grid-cols-5 gap-20">{stackLoop()}</div>
                 </section>
             </Element>

@@ -59,7 +59,8 @@ function Projects() {
     }
 
     return (
-        <div className="pt-24 px-24">
+        <div className="pt-20 px-24">
+            <h2 className='text-5xl mb-12'>Projects</h2>
             <div className='grid grid-cols-2 gap-12'>{loopProjects()}</div>
         </div>
 

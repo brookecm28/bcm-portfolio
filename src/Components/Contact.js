@@ -23,7 +23,7 @@ function Contact() {
             }
 
             return (
-                <a href={`${item.url}`} key={`contact-item-${item.name}`}>
+                <a href={`${item.url}`} key={`contact-item-${item.name}`} target='_blank' rel='noopener noreferrer'>
                     <div className="h-72 w-72 rounded-full backdrop-brightness-110 flex flex-col justify-center items-center
                     dark:backdrop-brightness-50">
                         <h3 className='fixed top-10 text-3xl'>{item.name}</h3>
@@ -53,7 +53,7 @@ function Contact() {
     return (
         <div>
             <div>
-                <h2>Find Me at the Following:</h2>
+                <h2 className='text-5xl pt-20 pb-20'>Contact Me</h2>
                 <div className='flex justify-center items-center gap-8'>{loopContactInfoWithIcons()}</div>
                 <div className='flex justify-center items-center gap-12'>{loopContactInfoWithoutIcons()}</div>
             </div>
