@@ -50,7 +50,8 @@ function Contact() {
                 <a href={`${item.url}`} key={`contact-item-${item.name}`}>
                     <div className="h-60 w-60 rounded-full backdrop-brightness-110 flex flex-col justify-center items-center
                     dark:backdrop-brightness-50
-                    md:h-72 md:w-72">
+                    lg:h-64 lg:w-64
+                    2xl:h-72 2xl:w-72">
                         <h3 className='fixed top-10 text-3xl'>{item.name}</h3>
                         {emailDisplay ? emailDisplay : <p className='pt-10 text-lg md:text-xl'>{item.display}</p>}
                     </div>
@@ -62,9 +63,8 @@ function Contact() {
 
     return (
         <div>
-
-                <h2 className='text-5xl
-                lg:pt-6 lg:pb-6
+                <h2 className='text-5xl pt-6 pb-6
+                lg:pt-12 lg:pb-12lg:text-6xl
                 2xl:pt-20 2xl:pb-20'>
                     Contact Me
                 </h2>

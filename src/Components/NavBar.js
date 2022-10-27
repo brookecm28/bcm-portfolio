@@ -13,6 +13,7 @@ import hamburger from "../assets/icons/hamburger";
 function NavBar(props) {
     const page = useLocation().pathname
 
+    // const [hamburgerOpen, setHamburgerOpen] = useState(false)
     const [landingPage, setLandingPage] = useState( true)
     const ScrollLink = Scroll.Link
 
@@ -45,28 +46,57 @@ function NavBar(props) {
         )
     }
 
-    return (
-        <div className='nav text-secondary-dark dark:text-primary flex flex-col items-center'>
-            <div className='flex flex-col items-center'>
-                <h2 className='text-4xl pt-2'>Brooke Miller</h2>
-                <br/>
-                <h3>Web Developer</h3>
-                <hr className='border-secondary-dark dark:border-primary w-5/6'/>
-                <h3>Software Engineer</h3>
-                <br/>
-            </div>
-            <div onClick={props.toggleColorMode} className="hover:cursor-pointer h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center">
-                {moon}{sun}
-            </div>
-            {/* {hamburger} */}
+    const desktopNav = (
+            <div>
+                <div className='hidden md:flex flex-col items-center'>
+                    <h2 className='text-4xl pt-2'>Brooke Miller</h2>
+                    <br/>
+                    <h3>Web Developer</h3>
+                    <hr className='border-secondary-dark dark:border-primary w-5/6'/>
+                    <h3>Software Engineer</h3>
+                    <br/>
+                </div>
+                <div onClick={props.toggleColorMode}
+                     className="hidden h-12 w-12 backdrop-brightness-110 rounded-full
+                 md:flex justify-center items-center
+                 dark:backdrop-brightness-60
+                 hover:cursor-pointer ">
+                    {moon}{sun}
+                </div>
 
-            <nav className='mt-36 h-1/2 flex flex-col items-center gap-2'>
-                {landingPage ? scrollNav(home, 'landing') : linkNav(home, 'landing')}
-                {landingPage ? scrollNav(stack, 'stack') : linkNav(stack, 'stack')}
-                {landingPage ? scrollNav(projects, 'projects') : linkNav(projects, 'projects')}
-                {landingPage ? scrollNav(about, 'about') : linkNav(about, 'about')}
-                {landingPage ? scrollNav(contact, 'contact') : linkNav(contact, 'contact')}
-            </nav>
+                {/*Make this dynamic: */}
+                <nav className='mt-36 h-1/2 hidden md:flex flex-col items-center gap-2'>
+                    {landingPage ? scrollNav(home, 'landing') : linkNav(home, 'landing')}
+                    {landingPage ? scrollNav(stack, 'stack') : linkNav(stack, 'stack')}
+                    {landingPage ? scrollNav(projects, 'projects') : linkNav(projects, 'projects')}
+                    {landingPage ? scrollNav(about, 'about') : linkNav(about, 'about')}
+                    {landingPage ? scrollNav(contact, 'contact') : linkNav(contact, 'contact')}
+                </nav>
+            </div>
+        )
+
+//         const hamburgerDropDown = (
+//             <nav>
+// <div>hi</div>
+//             </nav>
+
+
+    // onClick={setHamburgerOpen(!hamburgerOpen)
+//         )
+
+    return (
+        <div >
+            <div
+                 className='nav mt-6 md:hidden text-secondary-dark
+                            dark:text-primary'>
+                {hamburger}
+            </div>
+            {/*{hamburgerOpen && hamburgerDropDown}*/}
+            <div className='nav hidden text-secondary-dark
+                            dark:text-primary items-center
+                            md:flex md:flex-col'>
+                {desktopNav}
+            </div>
         </div>
     )
 }
