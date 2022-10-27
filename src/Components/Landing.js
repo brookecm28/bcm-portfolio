@@ -18,18 +18,15 @@ function Landing(props) {
             const myStackAsArray = Object.keys(myStack)
             return myStackAsArray.map(stackArea => {
                 return (
-                    <div className=' bg-gradient-to-br border-2 rounded-3xl transition-color duration-500
-                    from-secondary-grey via-primary to-secondary-grey border-secondary-dark
-                    dark:from-secondary-grey dark:via-secondary-dark dark:to-secondary-grey dark:border-primary
-                    hover:from-secondary-light hover:via-primary hover:to-secondary-light hover:cursor-default
-                    hover:dark:from-secondary-light hover:dark:via-secondary-dark hover:dark:to-secondary-light
-                   ' key={`${stackArea}-stack`}>
+                    <div className='bg-gradient-to-br border-2 rounded-3xl transition-color duration-500
+                                    from-secondary-grey via-primary to-secondary-grey border-secondary-dark
+                                    dark:from-secondary-grey dark:via-secondary-dark dark:to-secondary-grey dark:border-primary
+                                    hover:from-secondary-light hover:via-primary hover:to-secondary-light hover:cursor-default
+                                    hover:dark:from-secondary-light hover:dark:via-secondary-dark hover:dark:to-secondary-light'
+                         key={`${stackArea}-stack`}>
                         <h3 className='text-2xl underline'>{stackArea}</h3>
-                        <div> {myStack[stackArea].map(stackItem => {
-                            return (
-                                <p key={`${stackArea}-${stackItem}`}>{stackItem}</p>
-                            )
-                        })}
+                        <div>
+                            {myStack[stackArea].map(stackItem => <p key={`${stackArea}-${stackItem}`}>{stackItem}</p>)}
                         </div>
                     </div>
                 )
@@ -55,23 +52,29 @@ function Landing(props) {
                 </section>
             </Element>
             <Element name="stack" >
-                <section role="region" id="stack" className="bg-primary dark:bg-secondary-dark bg-fixed bg-cover justify-center min-h-fit w-full pl-nav-width full flex-col items-center justify-center pt-20 pb-16">
+                <section role="region" id="stack" className="bg-primary min-h-fit w-full pl-nav-width flex flex-col items-center justify-center
+                dark:bg-secondary-dark pt-20 pb-16">
                     <h2 className='text-5xl mb-16'>My Stack</h2>
-                    <div className="container grid grid-cols-5 gap-20">{stackLoop()}</div>
+                    <div className="container grid grid-cols-1 gap-20
+                    lg:grid-cols-3 lg:grow
+                    2xl:grid-cols-5 2xl:grow-0 ">{stackLoop()}</div>
                 </section>
             </Element>
             <Element name="projects" >
-                <section role="region" id="projects" className="bg-baby-blue dark:bg-dark-waters bg-fixed bg-cover justify-center min-h-screen w-full pl-nav-width">
+                <section role="region" id="projects" className="bg-baby-blue bg-fixed bg-cover min-h-screen w-full pl-nav-width
+                dark:bg-dark-waters ">
                     {Projects()}
                 </section>
             </Element>
             <Element name="about" >
-                <section role="region" id="about" className="bg-primary dark:bg-secondary-dark bg-fixed bg-cover justify-center min-h-fit w-full pl-nav-width">
+                <section role="region" id="about" className="bg-primary min-h-[67%] w-full pl-nav-width
+                dark:bg-secondary-dark ">
                     {About()}
                 </section>
             </Element>
             <Element name="contact" >
-                <section role="region" id="contact" className="bg-light-wood dark:bg-dark-wood bg-cover bg-fixed justify-center min-h-screen w-full pl-nav-width">
+                <section role="region" id="contact" className="bg-light-wood
+                dark:bg-dark-wood bg-cover bg-fixed min-h-screen w-full pl-nav-width">
                     {Contact()}
                 </section>
             </Element>

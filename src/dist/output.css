@@ -612,12 +612,20 @@ video {
   margin-bottom: 1rem;
 }
 
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
 .mb-16 {
   margin-bottom: 4rem;
 }
 
 .mt-36 {
   margin-top: 9rem;
+}
+
+.mb-12 {
+  margin-bottom: 3rem;
 }
 
 .mt-8 {
@@ -632,10 +640,6 @@ video {
   margin-top: 3rem;
 }
 
-.mb-12 {
-  margin-bottom: 3rem;
-}
-
 .flex {
   display: flex;
 }
@@ -644,8 +648,8 @@ video {
   display: grid;
 }
 
-.h-72 {
-  height: 18rem;
+.h-60 {
+  height: 15rem;
 }
 
 .h-12 {
@@ -658,6 +662,14 @@ video {
 
 .h-64 {
   height: 16rem;
+}
+
+.h-6 {
+  height: 1.5rem;
+}
+
+.h-24 {
+  height: 6rem;
 }
 
 .h-full {
@@ -678,6 +690,10 @@ video {
   min-height: fit-content;
 }
 
+.min-h-\[67\%\] {
+  min-height: 67%;
+}
+
 .w-full {
   width: 100%;
 }
@@ -686,8 +702,8 @@ video {
   width: 66.666667%;
 }
 
-.w-72 {
-  width: 18rem;
+.w-60 {
+  width: 15rem;
 }
 
 .w-12 {
@@ -710,6 +726,14 @@ video {
   width: 12rem;
 }
 
+.w-6 {
+  width: 1.5rem;
+}
+
+.w-24 {
+  width: 6rem;
+}
+
 .w-1\/3 {
   width: 33.333333%;
 }
@@ -726,8 +750,8 @@ video {
   grid-auto-flow: column;
 }
 
-.grid-cols-5 {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .grid-cols-2 {
@@ -754,12 +778,8 @@ video {
   justify-content: space-around;
 }
 
-.gap-8 {
-  gap: 2rem;
-}
-
-.gap-12 {
-  gap: 3rem;
+.gap-6 {
+  gap: 1.5rem;
 }
 
 .gap-20 {
@@ -768,6 +788,14 @@ video {
 
 .gap-2 {
   gap: 0.5rem;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+.gap-12 {
+  gap: 3rem;
 }
 
 .gap-0\.5 {
@@ -843,10 +871,6 @@ video {
   background-image: url('../assets/light-wood.jpg');
 }
 
-.bg-light-waters {
-  background-image: url('../assets/light-waters.jpg');
-}
-
 .from-secondary-grey {
   --tw-gradient-from: var(--secondary-grey);
   --tw-gradient-to: rgb(255 255 255 / 0);
@@ -886,11 +910,6 @@ video {
   padding: 1rem;
 }
 
-.py-16 {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
 .px-12 {
   padding-left: 3rem;
   padding-right: 3rem;
@@ -901,16 +920,20 @@ video {
   padding-right: 6rem;
 }
 
+.pt-20 {
+  padding-top: 5rem;
+}
+
 .pb-14 {
   padding-bottom: 3.5rem;
 }
 
-.pt-16 {
-  padding-top: 4rem;
-}
-
 .pl-nav-width {
   padding-left: var(--nav-width);
+}
+
+.pb-16 {
+  padding-bottom: 4rem;
 }
 
 .pt-2 {
@@ -921,37 +944,13 @@ video {
   padding-bottom: 1rem;
 }
 
-.pt-24 {
-  padding-top: 6rem;
-}
-
-.pt-20 {
-  padding-top: 5rem;
-}
-
-.pb-16 {
-  padding-bottom: 4rem;
-}
-
-.pb-6 {
-  padding-bottom: 1.5rem;
-}
-
-.pb-12 {
-  padding-bottom: 3rem;
-}
-
-.pb-20 {
-  padding-bottom: 5rem;
-}
-
 .align-middle {
   vertical-align: middle;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
 }
 
 .text-3xl {
@@ -969,23 +968,18 @@ video {
   line-height: 2rem;
 }
 
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
-}
-
-.text-8xl {
-  font-size: 6rem;
-  line-height: 1;
-}
-
 .text-7xl {
   font-size: 4.5rem;
+  line-height: 1;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
   line-height: 1;
 }
 
@@ -1234,4 +1228,74 @@ body {
 
 .dark .hover\:dark\:text-secondary-dark:hover {
   color: var(--secondary-dark);
+}
+
+@media (min-width: 768px) {
+  .md\:mt-0 {
+    margin-top: 0px;
+  }
+
+  .md\:h-72 {
+    height: 18rem;
+  }
+
+  .md\:h-32 {
+    height: 8rem;
+  }
+
+  .md\:w-72 {
+    width: 18rem;
+  }
+
+  .md\:w-32 {
+    width: 8rem;
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
+  .md\:gap-8 {
+    gap: 2rem;
+  }
+
+  .md\:gap-12 {
+    gap: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:grow {
+    flex-grow: 1;
+  }
+
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:pt-6 {
+    padding-top: 1.5rem;
+  }
+
+  .lg\:pb-6 {
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .\32xl\:grow-0 {
+    flex-grow: 0;
+  }
+
+  .\32xl\:grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .\32xl\:pt-20 {
+    padding-top: 5rem;
+  }
+
+  .\32xl\:pb-20 {
+    padding-bottom: 5rem;
+  }
 }
