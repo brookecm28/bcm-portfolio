@@ -78,11 +78,36 @@ function NavBar(props) {
     const hamburgerDropDown = (
         <nav className='fixed bg-secondary-light text-secondary-dark h-fit w-full text-4xl divide-y-2 divide-primary
                         dark:bg-secondary-grey dark:text-primary dark:divide-primary'>
-            <div className='p-4'>1 how do you do </div>
-            <div className='p-4'>22 how do you do </div>
-            <div className='p-4'>3 how do you do </div>
-            <div className='p-4'>4 how do you do </div>
-            <div className='p-4'>555 how do you do </div>
+            <div className='flex items-center justify-end p-4'>
+                <div className='pr-12'>
+                    Home
+                </div>
+                {home}
+            </div>
+            <div className='flex items-center justify-end p-4'>
+            <div className='pr-12'>
+                Stack
+            </div>
+            {stack}
+        </div>
+            <div className='flex items-center justify-end p-4'>
+            <div className='pr-12'>
+                Projects
+            </div>
+            {projects}
+        </div>
+            <div className='flex items-center justify-end p-4'>
+            <div className='pr-12'>
+                About
+            </div>
+            {about}
+        </div>
+            <div className='flex items-center justify-end p-4'>
+            <div className='pr-12'>
+                Contact
+            </div>
+            {contact}
+        </div>
 
         </nav>
     )
@@ -90,14 +115,14 @@ function NavBar(props) {
     return (
         <div>
             <div onClick={() => setHamburgerOpen(!hamburgerOpen)}
-                className='nav mt-6 ml-6 text-secondary-dark md:hidden
-                            dark:text-primary'>
+                className='nav mt-6 ml-6 text-secondary-dark md:hidden h-12 w-mobile-nav-width
+                            dark:text-primary md:w-nav-width'>
                 {hamburger}
             </div>
             {hamburgerOpen && hamburgerDropDown}
-            <div className='nav hidden text-secondary-dark
+            <div className='nav hidden text-secondary-dark h-screen w-mobile-nav-width
                             dark:text-primary items-center
-                            md:flex md:flex-col'>
+                            md:flex md:flex-col md:w-nav-width'>
                 {desktopNav}
             </div>
         </div>

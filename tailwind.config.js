@@ -33,7 +33,8 @@ module.exports = {
         'baby-blue': "url('../assets/baby-blue.jpg')"
       },
       padding: {
-        'nav-width': 'var(--nav-width)'
+        'nav-width': 'var(--nav-width)',
+        'mobile-nav-width': 'var(--mobile-nav-width)'
       },
       backdropBrightness: {
         '60': '.6'
@@ -43,6 +44,10 @@ module.exports = {
       },
       maxHeight: {
         'icon': '5rem',
+      },
+      width: {
+        'nav-width': 'var(--nav-width)',
+        'mobile-nav-width': 'var(--mobile-nav-width)'
       }
     }
   },

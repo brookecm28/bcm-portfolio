@@ -8,6 +8,7 @@
   --secondary-dark: #062442;
   --secondary-grey: #4b5e6d;
   --nav-width: 150px;
+  --mobile-nav-width: 50px;
 }
 
 .App {
@@ -37,8 +38,7 @@ body {
 
 
 .nav {
-  width: var(--nav-width) !important;
-  height: 100vh;
+  /*width: var(--nav-width) !important;*/
   font-family: 'Raleway', sans-serif;
   z-index: 3;
   position: fixed;
