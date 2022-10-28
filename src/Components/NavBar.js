@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import {withRouter, useLocation, Link} from 'react-router-dom'
+import { withRouter, useLocation, Link } from 'react-router-dom'
 import * as Scroll from 'react-scroll'
 import moon from '../assets/icons/moon'
 import sun from '../assets/icons/sun'
@@ -13,8 +13,8 @@ import hamburger from "../assets/icons/hamburger";
 function NavBar(props) {
     const page = useLocation().pathname
 
-    // const [hamburgerOpen, setHamburgerOpen] = useState(false)
-    const [landingPage, setLandingPage] = useState( true)
+    const [hamburgerOpen, setHamburgerOpen] = useState(false)
+    const [landingPage, setLandingPage] = useState(true)
     const ScrollLink = Scroll.Link
 
     useEffect(() => {
@@ -38,60 +38,63 @@ function NavBar(props) {
 
     function linkNav(icon, section) {
         return (
-            <Link to={{pathname: '/', state: section}}>
-                    <div className='nav-item h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center hover:cursor-pointer'>
-                        {icon}
-                    </div>
+            <Link to={{ pathname: '/', state: section }}>
+                <div className='nav-item h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center hover:cursor-pointer'>
+                    {icon}
+                </div>
             </Link>
         )
     }
 
     const desktopNav = (
-            <div>
-                <div className='hidden md:flex flex-col items-center'>
-                    <h2 className='text-4xl pt-2'>Brooke Miller</h2>
-                    <br/>
-                    <h3>Web Developer</h3>
-                    <hr className='border-secondary-dark dark:border-primary w-5/6'/>
-                    <h3>Software Engineer</h3>
-                    <br/>
-                </div>
-                <div onClick={props.toggleColorMode}
-                     className="hidden h-12 w-12 backdrop-brightness-110 rounded-full
-                 md:flex justify-center items-center
+        <div className='flex flex-col items-center'>
+            <div className='hidden md:flex flex-col items-center'>
+                <h2 className='text-4xl pt-2'>Brooke Miller</h2>
+                <br />
+                <h3>Web Developer</h3>
+                <hr className='border-secondary-dark dark:border-primary w-5/6' />
+                <h3>Software Engineer</h3>
+                <br />
+            </div>
+            <div onClick={props.toggleColorMode}
+                className="hidden h-12 w-12 backdrop-brightness-110 rounded-full
+                 md:flex md:items-center md:justify-center
                  dark:backdrop-brightness-60
                  hover:cursor-pointer ">
-                    {moon}{sun}
-                </div>
-
-                {/*Make this dynamic: */}
-                <nav className='mt-36 h-1/2 hidden md:flex flex-col items-center gap-2'>
-                    {landingPage ? scrollNav(home, 'landing') : linkNav(home, 'landing')}
-                    {landingPage ? scrollNav(stack, 'stack') : linkNav(stack, 'stack')}
-                    {landingPage ? scrollNav(projects, 'projects') : linkNav(projects, 'projects')}
-                    {landingPage ? scrollNav(about, 'about') : linkNav(about, 'about')}
-                    {landingPage ? scrollNav(contact, 'contact') : linkNav(contact, 'contact')}
-                </nav>
+                {moon}{sun}
             </div>
-        )
 
-//         const hamburgerDropDown = (
-//             <nav>
-// <div>hi</div>
-//             </nav>
+            {/*Make this dynamic: */}
+            <nav className='mt-36 h-1/2 hidden md:flex flex-col items-center gap-2'>
+                {landingPage ? scrollNav(home, 'landing') : linkNav(home, 'landing')}
+                {landingPage ? scrollNav(stack, 'stack') : linkNav(stack, 'stack')}
+                {landingPage ? scrollNav(projects, 'projects') : linkNav(projects, 'projects')}
+                {landingPage ? scrollNav(about, 'about') : linkNav(about, 'about')}
+                {landingPage ? scrollNav(contact, 'contact') : linkNav(contact, 'contact')}
+            </nav>
+        </div>
+    )
 
+    const hamburgerDropDown = (
+        <nav className='fixed bg-secondary-light text-secondary-dark h-fit w-full text-4xl divide-y-2 divide-primary
+                        dark:bg-secondary-grey dark:text-primary dark:divide-primary'>
+            <div className='p-4'>1 how do you do </div>
+            <div className='p-4'>22 how do you do </div>
+            <div className='p-4'>3 how do you do </div>
+            <div className='p-4'>4 how do you do </div>
+            <div className='p-4'>555 how do you do </div>
 
-    // onClick={setHamburgerOpen(!hamburgerOpen)
-//         )
+        </nav>
+    )
 
     return (
-        <div >
-            <div
-                 className='nav mt-6 md:hidden text-secondary-dark
+        <div>
+            <div onClick={() => setHamburgerOpen(!hamburgerOpen)}
+                className='nav mt-6 ml-6 text-secondary-dark md:hidden
                             dark:text-primary'>
                 {hamburger}
             </div>
-            {/*{hamburgerOpen && hamburgerDropDown}*/}
+            {hamburgerOpen && hamburgerDropDown}
             <div className='nav hidden text-secondary-dark
                             dark:text-primary items-center
                             md:flex md:flex-col'>
