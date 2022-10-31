@@ -75,39 +75,36 @@ function NavBar(props) {
         </div>
     )
 
+    function mobileScrollNav(name, icon, to) {
+     return (
+         <ScrollLink className='flex items-center justify-end p-4' to={to} smooth spy>
+            <div className='pr-12'>
+                {name}
+            </div>
+            {icon}
+         </ScrollLink>
+     )
+}
+
+    function mobileLinkNav(name, icon, section) {
+        return (
+            <Link to={{ pathname: '/', state: section }} className='flex items-center justify-end p-4'>
+                <div className='pr-12'>
+                    {name}
+                </div>
+                {icon}
+            </Link>
+        )
+    }
+
     const hamburgerDropDown = (
         <nav className='fixed bg-secondary-light text-secondary-dark h-fit w-full text-4xl divide-y-2 divide-primary
                         dark:bg-secondary-grey dark:text-primary dark:divide-primary'>
-            <div className='flex items-center justify-end p-4'>
-                <div className='pr-12'>
-                    Home
-                </div>
-                {home}
-            </div>
-            <div className='flex items-center justify-end p-4'>
-            <div className='pr-12'>
-                Stack
-            </div>
-            {stack}
-        </div>
-            <div className='flex items-center justify-end p-4'>
-            <div className='pr-12'>
-                Projects
-            </div>
-            {projects}
-        </div>
-            <div className='flex items-center justify-end p-4'>
-            <div className='pr-12'>
-                About
-            </div>
-            {about}
-        </div>
-            <div className='flex items-center justify-end p-4'>
-            <div className='pr-12'>
-                Contact
-            </div>
-            {contact}
-        </div>
+                {landingPage ? mobileScrollNav('Home', home, 'landing') : mobileLinkNav('Home', home, 'landing')}
+                {landingPage ? mobileScrollNav('Stack', stack, 'stack') : mobileLinkNav('Stack', home, 'stack')}
+                {landingPage ? mobileScrollNav('Projects', projects, 'projects') : mobileLinkNav('Projects', home, 'projects')}
+                {landingPage ? mobileScrollNav('About', about, 'about') : mobileLinkNav('About', home, 'about')}
+                {landingPage ? mobileScrollNav('Contact', contact, 'contact') : mobileLinkNav('Contact', home, 'contact')}
 
         </nav>
     )
