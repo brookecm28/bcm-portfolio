@@ -44,10 +44,15 @@ module.exports = {
       },
       maxHeight: {
         'icon': '5rem',
+        'mobile-project-card': '28rem'
       },
       width: {
         'nav-width': 'var(--nav-width)',
         'mobile-nav-width': 'var(--mobile-nav-width)'
+      },
+      zIndex: {
+        '3': 3,
+        '9': 9
       }
     }
   },

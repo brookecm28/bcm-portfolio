@@ -37,7 +37,9 @@ function Landing(props) {
     return (
         <div className='text-secondary-dark dark:text-primary w-full'>
             <Element name="landing">
-                <section role="region" id="landing" className="bg-light-landing dark:bg-dark-landing bg-fixed bg-center bg-no-repeat bg-cover flex justify-center flex-col min-h-screen w-full pl-nav-width">
+                <section role="region" id="landing" className="bg-light-landing bg-fixed bg-center bg-no-repeat bg-cover flex justify-center flex-col min-h-screen w-full
+                            dark:bg-dark-landing
+                            md:pl-nav-width">
                     <h2 className='text-7xl'>Who Am I?</h2>
                     <div className='flex flex-col-reverse md:flex-col'>
                         <ul className='container flex flex-col'>
@@ -52,29 +54,29 @@ function Landing(props) {
                 </section>
             </Element>
             <Element name="stack" >
-                <section role="region" id="stack" className="bg-primary min-h-fit w-full pl-mobile-nav-width md:pl-nav-width flex flex-col items-center justify-center
-                dark:bg-secondary-dark pt-20 pb-16">
-                    <h2 className='text-5xl mb-16'>My Stack</h2>
-                    <div className="container grid grid-cols-1 gap-20
+                <section role="region" id="stack" className="bg-primary min-h-fit w-full md:pl-nav-width px-10 flex flex-col items-center justify-center
+                dark:bg-secondary-dark pt-10 md:pt-20 pb-16">
+                    <h2 className='text-5xl mb-10 md:mb-16'>My Stack</h2>
+                    <div className="container grid grid-cols-1 gap-12 md:gap-16
                     lg:grid-cols-3 lg:grow
                     2xl:grid-cols-5 2xl:grow-0 ">{stackLoop()}</div>
                 </section>
             </Element>
             <Element name="projects" >
-                <section role="region" id="projects" className="bg-baby-blue bg-fixed bg-cover min-h-screen w-full pl-mobile-nav-width md:pl-nav-width
+                <section role="region" id="projects" className="bg-baby-blue bg-fixed bg-cover min-h-screen w-full md:pl-nav-width
                 dark:bg-dark-waters ">
                     {Projects()}
                 </section>
             </Element>
             <Element name="about" >
-                <section role="region" id="about" className="bg-primary min-h-[67%] w-full pl-mobile-nav-width md:pl-nav-width
+                <section role="region" id="about" className="bg-primary min-h-[67%] w-full md:pl-nav-width
                 dark:bg-secondary-dark ">
                     {About()}
                 </section>
             </Element>
             <Element name="contact" >
                 <section role="region" id="contact" className="bg-light-wood
-                dark:bg-dark-wood bg-cover bg-fixed min-h-screen w-full pl-mobile-nav-width md:pl-nav-width">
+                dark:bg-dark-wood bg-cover bg-fixed min-h-screen w-full md:pl-nav-width">
                     {Contact()}
                 </section>
             </Element>

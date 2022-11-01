@@ -62,9 +62,9 @@ function Contact() {
     }
 
     return (
-        <div>
-                <h2 className='text-5xl pt-6 pb-6
-                lg:pt-12 lg:pb-12lg:text-6xl
+        <div className='pt-10 md:pt-16'>
+                <h2 className='text-5xl pb-6
+                 lg:pb-12lg:text-6xl
                 2xl:pt-20 2xl:pb-20'>
                     Contact Me
                 </h2>

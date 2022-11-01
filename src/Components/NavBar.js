@@ -77,7 +77,7 @@ function NavBar(props) {
 
     function mobileScrollNav(name, icon, to) {
      return (
-         <ScrollLink className='flex items-center justify-end p-4' to={to} smooth spy>
+         <ScrollLink className='flex items-center justify-end p-4' to={to} smooth spy onClick={() => setHamburgerOpen(!hamburgerOpen)}>
             <div className='pr-12'>
                 {name}
             </div>
@@ -88,7 +88,7 @@ function NavBar(props) {
 
     function mobileLinkNav(name, icon, section) {
         return (
-            <Link to={{ pathname: '/', state: section }} className='flex items-center justify-end p-4'>
+            <Link to={{ pathname: '/', state: section }} className='flex items-center justify-end p-4' onClick={() => setHamburgerOpen(!hamburgerOpen)}>
                 <div className='pr-12'>
                     {name}
                 </div>
@@ -98,7 +98,7 @@ function NavBar(props) {
     }
 
     const hamburgerDropDown = (
-        <nav className='fixed bg-secondary-light text-secondary-dark h-fit w-full text-4xl divide-y-2 divide-primary
+        <nav className='fixed z-9 bg-secondary-light text-secondary-dark h-fit w-full text-4xl divide-y-2 divide-primary
                         dark:bg-secondary-grey dark:text-primary dark:divide-primary'>
                 {landingPage ? mobileScrollNav('Home', home, 'landing') : mobileLinkNav('Home', home, 'landing')}
                 {landingPage ? mobileScrollNav('Stack', stack, 'stack') : mobileLinkNav('Stack', home, 'stack')}
@@ -112,12 +112,12 @@ function NavBar(props) {
     return (
         <div>
             <div onClick={() => setHamburgerOpen(!hamburgerOpen)}
-                className='nav mt-6 ml-6 text-secondary-dark md:hidden h-12 w-mobile-nav-width
+                className='nav z-10 mt-6 ml-6 text-secondary-dark md:hidden h-12 w-mobile-nav-width
                             dark:text-primary md:w-nav-width'>
                 {hamburger}
             </div>
             {hamburgerOpen && hamburgerDropDown}
-            <div className='nav hidden text-secondary-dark h-screen w-mobile-nav-width
+            <div className='nav z-3 hidden text-secondary-dark h-screen w-mobile-nav-width
                             dark:text-primary items-center
                             md:flex md:flex-col md:w-nav-width'>
                 {desktopNav}

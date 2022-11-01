@@ -40,7 +40,6 @@ body {
 .nav {
   /*width: var(--nav-width) !important;*/
   font-family: 'Raleway', sans-serif;
-  z-index: 3;
   position: fixed;
 }
 
