@@ -5,10 +5,10 @@ export function projectsHeader(key) {
     const data = projects[key]
 
     return (
-        <div className='container mt-8'>
+        <div className='container mt-16 md:mt-8'>
             <h1 className='text-6xl'> {data.displayName}</h1>
             <br/>
-            <h3 className='text-2xl'>-{data.tagline}-</h3>
+            <h3 className='text-2xl'>{data.tagline}</h3>
         </div>
     )
 }
@@ -17,7 +17,7 @@ export function projectsButtons(key, theme) {
     const data = projects[key]
 
     return (
-        <div className='flex mt-16 gap-12'>
+        <div className='flex flex-col md:flex-row mt-12 md:mt-16 gap-8 md:gap-12'>
             <a href={data.source} target='_blank' rel='noopener noreferrer'
                className='bg-secondary-light text-secondary-dark h-12 w-48 text-xl flex items-center justify-center
                dark:bg-secondary-grey dark:text-primary
@@ -72,7 +72,7 @@ export function projectsCredentials(key, type) {
     }
 
     return (
-        <div className='container my-4 w-1/3'>
+        <div className='container my-4 px-8 w-full md:w-1/3'>
             <h3 className='text-2xl bg-secondary-light text-secondary-dark
             dark:bg-secondary-grey dark:text-primary'>
                 Demo {credentialType} Login Credentials
