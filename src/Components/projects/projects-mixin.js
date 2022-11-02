@@ -72,7 +72,7 @@ export function projectsCredentials(key, type) {
     }
 
     return (
-        <div className='container my-4 px-8 w-full md:w-1/3'>
+        <div className='container my-4 px-8 md:px-0 w-full md:w-1/3'>
             <h3 className='text-2xl bg-secondary-light text-secondary-dark
             dark:bg-secondary-grey dark:text-primary'>
                 Demo {credentialType} Login Credentials
