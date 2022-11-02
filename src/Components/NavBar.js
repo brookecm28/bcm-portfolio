@@ -105,20 +105,20 @@ function NavBar(props) {
                 {landingPage ? mobileScrollNav('Projects', projects, 'projects') : mobileLinkNav('Projects', home, 'projects')}
                 {landingPage ? mobileScrollNav('About', about, 'about') : mobileLinkNav('About', home, 'about')}
                 {landingPage ? mobileScrollNav('Contact', contact, 'contact') : mobileLinkNav('Contact', home, 'contact')}
-
         </nav>
     )
 
     return (
         <div>
             <div onClick={() => setHamburgerOpen(!hamburgerOpen)}
-                className='nav z-10 mt-6 ml-6 text-secondary-dark md:hidden h-12 w-mobile-nav-width
-                            dark:text-primary md:w-nav-width'>
+                className='nav z-10 inset-6 text-secondary-dark h-12 w-mobile-nav-width
+                            dark:text-primary
+                            md:w-nav-width md:hidden'>
                 {hamburger}
             </div>
             {hamburgerOpen && hamburgerDropDown}
-            <div className='nav z-3 hidden text-secondary-dark h-screen w-mobile-nav-width
-                            dark:text-primary items-center
+            <div className='nav z-3 hidden text-secondary-dark h-screen w-mobile-nav-width items-center
+                            dark:text-primary
                             md:flex md:flex-col md:w-nav-width'>
                 {desktopNav}
             </div>

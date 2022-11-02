@@ -40,8 +40,8 @@ function Landing(props) {
                 <section role="region" id="landing" className="bg-light-landing bg-fixed bg-center bg-no-repeat bg-cover flex justify-center flex-col min-h-screen w-full
                             dark:bg-dark-landing
                             md:pl-nav-width">
-                    <h2 className='text-7xl'>Who Am I?</h2>
-                    <div className='flex flex-col-reverse md:flex-col'>
+                    <h2 className='text-7xl pt-16 md:pt-20'>Who Am I?</h2>
+                    <div className='flex flex-col-reverse md:flex-row items-center justify-center'>
                         <ul className='container flex flex-col'>
                             {myDescriptions.map((description, index) => {
                                 return (
@@ -49,13 +49,13 @@ function Landing(props) {
                                 )
                             })}
                         </ul>
-                        <img className='headshot w-fit' src={headshot} alt='Brooke Miller Headshot' />
+                        <img className='headshot w-fit my-12' src={headshot} alt='Brooke Miller Headshot' />
                     </div>
                 </section>
             </Element>
             <Element name="stack" >
                 <section role="region" id="stack" className="bg-primary min-h-fit w-full md:pl-nav-width px-10 flex flex-col items-center justify-center
-                dark:bg-secondary-dark pt-10 md:pt-20 pb-16">
+                dark:bg-secondary-dark pt-16 md:pt-20 pb-16">
                     <h2 className='text-5xl mb-10 md:mb-16'>My Stack</h2>
                     <div className="container grid grid-cols-1 gap-12 md:gap-16
                     lg:grid-cols-3 lg:grow
