@@ -6,7 +6,7 @@ export function projectsHeader(key) {
 
     return (
         <div className='container mt-16 md:mt-8'>
-            <h1 className='text-6xl'> {data.displayName}</h1>
+            <h1 className='text-6xl px-8'> {data.displayName}</h1>
             <br/>
             <h3 className='text-2xl'>{data.tagline}</h3>
         </div>
@@ -17,7 +17,8 @@ export function projectsButtons(key, theme) {
     const data = projects[key]
 
     return (
-        <div className='flex flex-col md:flex-row mt-12 md:mt-16 gap-8 md:gap-12'>
+        <div className='flex flex-col
+                        md:flex-row mt-12 md:mt-16 gap-8 md:gap-12'>
             <a href={data.source} target='_blank' rel='noopener noreferrer'
                className='bg-secondary-light text-secondary-dark h-12 w-48 text-xl flex items-center justify-center
                dark:bg-secondary-grey dark:text-primary
@@ -42,9 +43,10 @@ export function projectDescriptions(key) {
     return (
     <div className='container flex items-center flex-col'>
         <h2 className='text-4xl mt-12 mb-6'>Details</h2>
-        <div className='p-6 bg-primary w-7/12 border-2 border-secondary-dark
+        <div className='px-6 md:p-6 bg-primary w-7/12 border-2 border-secondary-dark
           dark:bg-secondary-dark dark:border-primary'>
-            <div className='grid grid-rows-2 grid-flow-col gap-0.5 bg-secondary-dark
+            <div className='grid grid-cols-1 gap-0.5 bg-secondary-dark
+                            md:grid-rows-2 md:grid-cols-2 md:grid-flow-col
                             dark:bg-primary'>
                 {data.descriptions.map((description, index) => {
                     return (
@@ -72,13 +74,15 @@ export function projectsCredentials(key, type) {
     }
 
     return (
-        <div className='container my-4 px-8 md:px-0 w-full md:w-1/3'>
-            <h3 className='text-2xl bg-secondary-light text-secondary-dark
-            dark:bg-secondary-grey dark:text-primary'>
+        <div className='container my-4 px-8
+                        md:px-0 w-full md:w-1/3'>
+            <h3 className='text-3xl bg-secondary-light text-secondary-dark
+            dark:bg-secondary-grey dark:text-primary p-2
+            md:text-2xl md:p-0'>
                 Demo {credentialType} Login Credentials
             </h3>
-                <div className='border-x border-b border-secondary-grey'>
-                    <p>Username: {data[type].username}</p>
+                <div className='text-xl py-4 border-x border-b border-secondary-grey'>
+                    <p className='pb-2'>Username: {data[type].username}</p>
                     <p>Password: {data[type].password}</p>
                 </div>
         </div>
