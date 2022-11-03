@@ -42,7 +42,7 @@ function Projects() {
                             className='border-2 border-secondary-dark h-12 w-48 flex items-center justify-center
                             dark:border-primary
                             hover:bg-secondary-dark hover:text-primary hover:border-0
-                            hover:dark:bg-primary hover:dark:text-secondary-dark'>
+                            hover:dark:bg-primary hover:dark:text-secondary-dark'> m
                             Visit Site
                         </a>
                         <Link to={`/projects/${projects[key].slug}`}

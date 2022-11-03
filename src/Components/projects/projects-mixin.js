@@ -41,7 +41,7 @@ export function projectDescriptions(key) {
     const data = projects[key]
 
     return (
-    <div className='container flex items-center flex-col'>
+    <div className='container flex items-center flex-col mb-4 md:mb-12'>
         <h2 className='text-4xl mt-12 mb-6'>Details</h2>
         <div className='px-6 md:p-6 bg-primary w-7/12 border-2 border-secondary-dark
           dark:bg-secondary-dark dark:border-primary'>
@@ -75,7 +75,7 @@ export function projectsCredentials(key, type) {
 
     return (
         <div className='container my-4 px-8
-                        md:px-0 w-full md:w-1/3'>
+                        md:px-0 w-11/12 md:w-1/3'>
             <h3 className='text-3xl bg-secondary-light text-secondary-dark
             dark:bg-secondary-grey dark:text-primary p-2
             md:text-2xl md:p-0'>

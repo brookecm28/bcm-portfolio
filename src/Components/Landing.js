@@ -42,7 +42,7 @@ function Landing(props) {
                             md:pl-nav-width">
                     <h2 className='text-7xl pt-16 md:pt-20'>Who Am I?</h2>
                     <div className='flex flex-col-reverse md:flex-row items-center justify-center'>
-                        <ul className='container flex flex-col'>
+                        <ul className='container flex flex-col pb-12'>
                             {myDescriptions.map((description, index) => {
                                 return (
                                     <li key={`description-${index}`} className="">{description}</li>
