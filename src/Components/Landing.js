@@ -54,8 +54,9 @@ function Landing(props) {
                 </section>
             </Element>
             <Element name="stack" >
-                <section role="region" id="stack" className="bg-primary min-h-fit w-full md:pl-nav-width px-10 flex flex-col items-center justify-center
-                dark:bg-secondary-dark pt-16 md:pt-20 pb-16">
+                <section role="region" id="stack" className="bg-primary min-h-fit w-full px-10 flex flex-col items-center justify-center pt-16
+                dark:bg-secondary-dark
+                md:pt-20 pb-16 md:pl-nav-width ">
                     <h2 className='text-5xl mb-10 md:mb-16'>My Stack</h2>
                     <div className="container grid grid-cols-1 gap-12 md:gap-16
                     lg:grid-cols-3 lg:grow
@@ -75,8 +76,8 @@ function Landing(props) {
                 </section>
             </Element>
             <Element name="contact" >
-                <section role="region" id="contact" className="bg-light-wood
-                dark:bg-dark-wood bg-cover bg-fixed min-h-screen w-full md:pl-nav-width">
+                <section role="region" id="contact" className="bg-light-wood bg-cover bg-fixed min-h-screen w-full
+                                                               dark:bg-dark-wood md:pl-nav-width">
                     {Contact()}
                 </section>
             </Element>

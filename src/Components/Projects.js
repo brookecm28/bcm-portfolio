@@ -29,14 +29,15 @@ function Projects() {
             }
 
             htmlForReturn.push(
-                <div key={`projects-card-${key}`} className='flex flex-col md:flex-row justify-center max-h-mobile-project-card md:h-64 rounded-3xl overflow-hidden'>
+                <div key={`projects-card-${key}`} className='flex flex-col justify-center max-h-mobile-project-card rounded-3xl overflow-hidden
+                                                            md:flex-row md:h-64'>
                     <div className='px-12 pt-4 w-full md:w-7/12 flex flex-col justify-around items-center bg-secondary-grey text-primary'>
                         <h3 className='text-3xl'>{projects[key].displayName}</h3>
                         <p className='italic pb-4 md:pb-0'>{projects[key].tagline}</p>
                         <img src={icon} alt={key} className="max-h-icon max-w-icon pb-4" />
                     </div>
-                    <div className='w-full md:w-5/12 flex flex-col justify-center gap-8 items-center bg-primary py-8
-                                    dark:bg-secondary-dark'>
+                    <div className='w-full flex flex-col justify-center gap-8 items-center bg-primary py-8
+                                    dark:bg-secondary-dark md:w-5/12 '>
                         <a href={projects[key].source} target='_blank' rel='noopener noreferrer'
                             className='border-2 border-secondary-dark h-12 w-48 flex items-center justify-center
                             dark:border-primary
@@ -59,7 +60,8 @@ function Projects() {
     }
 
     return (
-        <div className="pt-16 md:pt-20 px-10 md:px-24">
+        <div className="pt-16 px-10
+                        md:pt-20 md:px-24">
             <h2 className='text-5xl mb-12'>Projects</h2>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-12 pb-12'>{loopProjects()}</div>
         </div>
