@@ -26,7 +26,7 @@ function Contact() {
                 <a href={`${item.url}`} key={`contact-item-${item.name}`} target='_blank' rel='noopener noreferrer'>
                     <div className="h-60 w-60 rounded-full backdrop-brightness-110 flex flex-col justify-center items-center
                     dark:backdrop-brightness-50
-                    md:h-72 md:w-72">
+                    xl:h-72 xl:w-72">
                         <h3 className='fixed top-10 text-3xl'>{item.name}</h3>
                         {icon}
                     </div>
@@ -43,16 +43,16 @@ function Contact() {
             if (item.display.includes('@')) {
                 const display = item.display.split('@')
                 emailDisplay = (
-                    <p className='pt-10 text-lg md:text-xl'>{display[0]}<br className='md:hidden'/>@{display[1]}</p>
+                    <p className='pt-10 text-lg xl:text-xl'>{display[0]}<br className='xl:hidden'/>@{display[1]}</p>
                 )
             }
             return (
                 <a href={`${item.url}`} key={`contact-item-${item.name}`}>
                     <div className="h-60 w-60 rounded-full backdrop-brightness-110 flex flex-col justify-center items-center
                     dark:backdrop-brightness-50
-                    md:h-72 md:w-72">
+                    xl:h-72 xl:w-72">
                         <h3 className='fixed top-10 text-3xl'>{item.name}</h3>
-                        {emailDisplay ? emailDisplay : <p className='pt-10 text-lg md:text-xl'>{item.display}</p>}
+                        {emailDisplay ? emailDisplay : <p className='pt-10 text-lg xl:text-xl'>{item.display}</p>}
                     </div>
 
                 </a>

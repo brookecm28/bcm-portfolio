@@ -40,14 +40,14 @@ function Projects() {
                                     dark:bg-secondary-dark md:w-5/12 '>
                         <a href={projects[key].source} target='_blank' rel='noopener noreferrer'
                             className='border-2 border-secondary-dark h-12 w-48 flex items-center justify-center
-                            dark:border-primary
+                            dark:border-primary xl:w-40 2xl:w-48
                             hover:bg-secondary-dark hover:text-primary hover:border-0
-                            hover:dark:bg-primary hover:dark:text-secondary-dark'> m
+                            hover:dark:bg-primary hover:dark:text-secondary-dark'>
                             Visit Site
                         </a>
                         <Link to={`/projects/${projects[key].slug}`}
-                            className='border-2 border-secondary-dark h-12 w-48 flex items-center justify-center
-                            dark:border-primary
+                            className='border-2 border-secondary-dark h-12 w-48  flex items-center justify-center
+                            dark:border-primary xl:w-40 2xl:w-48
                             hover:bg-secondary-dark hover:text-primary hover:border-0
                             hover:dark:bg-primary hover:dark:text-secondary-dark'>
                             More Details
@@ -63,7 +63,7 @@ function Projects() {
         <div className="pt-16 px-10
                         md:pt-20 md:px-24">
             <h2 className='text-5xl mb-12'>Projects</h2>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-12 pb-12'>{loopProjects()}</div>
+            <div className='grid grid-cols-1 xl:grid-cols-2 gap-12 pb-12'>{loopProjects()}</div>
         </div>
 
     )

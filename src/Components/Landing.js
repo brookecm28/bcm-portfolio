@@ -41,15 +41,15 @@ function Landing(props) {
                             dark:bg-dark-landing
                             md:pl-nav-width">
                     <h2 className='text-7xl pt-16 md:pt-20'>Who Am I?</h2>
-                    <div className='flex flex-col-reverse md:flex-row items-center justify-center'>
-                        <ul className='container flex flex-col pb-12'>
+                    <div className='flex flex-col-reverse md:flex-row items-center justify-center md:justify-start'>
+                        <ul className='container flex flex-col pb-12 w-1/2'>
                             {myDescriptions.map((description, index) => {
                                 return (
                                     <li key={`description-${index}`} className="">{description}</li>
                                 )
                             })}
                         </ul>
-                        <img className='headshot w-fit my-12' src={headshot} alt='Brooke Miller Headshot' />
+                        <img className='h-96 lg:h-100 w-fit rounded-headshot my-12' src={headshot} alt='Brooke Miller Headshot' />
                     </div>
                 </section>
             </Element>

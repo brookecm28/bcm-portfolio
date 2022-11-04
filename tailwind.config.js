@@ -32,19 +32,25 @@ module.exports = {
         'light-landing': "url('../assets/light-landing.jpg')",
         'baby-blue': "url('../assets/baby-blue.jpg')"
       },
-      padding: {
-        'nav-width': 'var(--nav-width)',
-        'mobile-nav-width': 'var(--mobile-nav-width)'
-      },
       backdropBrightness: {
         '60': '.6'
+      },
+      borderRadius: {
+        'headshot': '45px',
       },
       maxWidth: {
         'icon': '4rem',
       },
+      height: {
+        '100': '28rem'
+      },
       maxHeight: {
         'icon': '5rem',
         'mobile-project-card': '28rem'
+      },
+      padding: {
+        'nav-width': 'var(--nav-width)',
+        'mobile-nav-width': 'var(--mobile-nav-width)'
       },
       width: {
         'nav-width': 'var(--nav-width)',
