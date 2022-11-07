@@ -49,7 +49,9 @@ function Landing(props) {
                                 )
                             })}
                         </ul>
-                        <img className='h-96 lg:h-100 w-fit rounded-headshot my-12' src={headshot} alt='Brooke Miller Headshot' />
+                        <div className='w-1/2 flex justify-center'>
+                            <img className='h-96 lg:h-100 w-fit rounded-headshot my-12' src={headshot} alt='Brooke Miller Headshot' />
+                        </div>
                     </div>
                 </section>
             </Element>

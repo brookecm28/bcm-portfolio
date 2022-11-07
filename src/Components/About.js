@@ -7,7 +7,7 @@ function About() {
                         dark:text-primary md:pt-20">
             <h2 className='text-5xl mb-0 md:mb-6'>About Me</h2>
             <div className='container w-2/3'>
-                {data.about.map(paragraph => <p className='mt-12 md:mt-0 md:mb-4'>{paragraph}</p>)}
+                {data.about.map((paragraph, index) => <p key={`about-para-${index}`} className='mt-12 md:mt-0 md:mb-4'>{paragraph}</p>)}
             </div>
         </div>
     )
