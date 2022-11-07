@@ -105,6 +105,11 @@ function NavBar(props) {
                 {landingPage ? mobileScrollNav('Projects', projects, 'projects') : mobileLinkNav('Projects', home, 'projects')}
                 {landingPage ? mobileScrollNav('About', about, 'about') : mobileLinkNav('About', home, 'about')}
                 {landingPage ? mobileScrollNav('Contact', contact, 'contact') : mobileLinkNav('Contact', home, 'contact')}
+                <div onClick={props.toggleColorMode}
+                     className="flex items-center justify-end p-4">
+                    <div className='pr-12'>Theme</div>
+                    {moon}{sun}
+                </div>
         </nav>
     )
 
