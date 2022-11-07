@@ -8,7 +8,7 @@ export function projectsHeader(key) {
         <div className='container mt-16 md:mt-8'>
             <h1 className='text-6xl px-8'> {data.displayName}</h1>
             <br/>
-            <h3 className='text-2xl'>{data.tagline}</h3>
+            <h3 className='text-2xl px-5'>{data.tagline}</h3>
         </div>
     )
 }
