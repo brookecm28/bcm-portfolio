@@ -19,9 +19,9 @@ function Landing(props) {
             return myStackAsArray.map(stackArea => {
                 return (
                     <div className='bg-gradient-to-br border-2 rounded-3xl transition-color duration-500
-                                    from-secondary-grey via-primary to-secondary-grey border-secondary-dark
+                                    from-secondary-light via-primary to-secondary-light border-secondary-dark
                                     dark:from-secondary-grey dark:via-secondary-dark dark:to-secondary-grey dark:border-primary
-                                    hover:from-secondary-light hover:via-primary hover:to-secondary-light hover:cursor-default
+                                    hover:from-secondary-grey hover:via-primary hover:to-secondary-grey hover:cursor-default
                                     hover:dark:from-secondary-light hover:dark:via-secondary-dark hover:dark:to-secondary-light'
                          key={`${stackArea}-stack`}>
                         <h3 className='text-2xl underline'>{stackArea}</h3>

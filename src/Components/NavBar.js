@@ -57,7 +57,7 @@ function NavBar(props) {
                 <br />
             </div>
             <div onClick={props.toggleColorMode}
-                className="hidden h-12 w-12 backdrop-brightness-110 rounded-full
+                className="hidden h-14 w-12 backdrop-brightness-110 rounded-full
                  md:flex md:items-center md:justify-center
                  dark:backdrop-brightness-60
                  hover:cursor-pointer ">
