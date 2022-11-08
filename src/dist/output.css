@@ -684,6 +684,10 @@ video {
   height: 3rem;
 }
 
+.h-14 {
+  height: 3.5rem;
+}
+
 .h-1\/2 {
   height: 50%;
 }
@@ -708,10 +712,6 @@ video {
 
 .h-full {
   height: 100%;
-}
-
-.h-14 {
-  height: 3.5rem;
 }
 
 .max-h-mobile-project-card {
@@ -929,12 +929,6 @@ video {
   background-image: url('../assets/light-wood.jpg');
 }
 
-.from-secondary-grey {
-  --tw-gradient-from: var(--secondary-grey);
-  --tw-gradient-to: rgb(255 255 255 / 0);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
 .from-secondary-light {
   --tw-gradient-from: var(--secondary-light);
   --tw-gradient-to: rgb(255 255 255 / 0);
@@ -944,10 +938,6 @@ video {
 .via-primary {
   --tw-gradient-to: rgb(255 255 255 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--primary), var(--tw-gradient-to);
-}
-
-.to-secondary-grey {
-  --tw-gradient-to: var(--secondary-grey);
 }
 
 .to-secondary-light {
@@ -1061,6 +1051,10 @@ video {
   vertical-align: middle;
 }
 
+.font-sans {
+  font-family: 'Raleway', sans-serif;
+}
+
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
@@ -1086,6 +1080,11 @@ video {
   line-height: 1;
 }
 
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -1096,9 +1095,8 @@ video {
   line-height: 1;
 }
 
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+.font-bold {
+  font-weight: 700;
 }
 
 .italic {
@@ -1205,6 +1203,10 @@ body {
   margin-left: 28px;
 }
 
+.tooltip {
+  font-size: 16px !important;
+}
+
 .hover-projects-buttons:hover {
   background-color: var(--secondary-dark);
   color: var(--primary)
@@ -1235,12 +1237,6 @@ body {
   background-color: var(--secondary-grey);
 }
 
-.hover\:from-secondary-light:hover {
-  --tw-gradient-from: var(--secondary-light);
-  --tw-gradient-to: rgb(255 255 255 / 0);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
 .hover\:from-secondary-grey:hover {
   --tw-gradient-from: var(--secondary-grey);
   --tw-gradient-to: rgb(255 255 255 / 0);
@@ -1250,10 +1246,6 @@ body {
 .hover\:via-primary:hover {
   --tw-gradient-to: rgb(255 255 255 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--primary), var(--tw-gradient-to);
-}
-
-.hover\:to-secondary-light:hover {
-  --tw-gradient-to: var(--secondary-light);
 }
 
 .hover\:to-secondary-grey:hover {

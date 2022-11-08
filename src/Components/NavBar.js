@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { withRouter, useLocation, Link } from 'react-router-dom'
 import * as Scroll from 'react-scroll'
+import ReactTooltip from 'react-tooltip';
 import moon from '../assets/icons/moon'
 import sun from '../assets/icons/sun'
 import home from '../assets/icons/home'
@@ -26,12 +27,15 @@ function NavBar(props) {
         setLandingPage(false)
     }, [page])
 
-    function scrollNav(icon, to) {
+    function scrollNav(name, icon, to) {
         return (
             <ScrollLink className='nav-link' to={to} smooth spy>
-                <div className='nav-item h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center hover:cursor-pointer'>
+            <ReactTooltip place='right' effect='solid' textColor='var(--secondary-dark)' backgroundColor='var(--secondary-light)'
+                    className='tooltip font-bold font-sans text-xl'/>
+                    <div data-tip={name} className='nav-item h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center hover:cursor-pointer'>
                     {icon}
                 </div>
+
             </ScrollLink>
         )
     }
@@ -66,11 +70,11 @@ function NavBar(props) {
 
             {/*Make this dynamic: */}
             <nav className='mt-36 h-1/2 hidden md:flex flex-col items-center gap-2'>
-                {landingPage ? scrollNav(home, 'landing') : linkNav(home, 'landing')}
-                {landingPage ? scrollNav(stack, 'stack') : linkNav(stack, 'stack')}
-                {landingPage ? scrollNav(projects, 'projects') : linkNav(projects, 'projects')}
-                {landingPage ? scrollNav(about, 'about') : linkNav(about, 'about')}
-                {landingPage ? scrollNav(contact, 'contact') : linkNav(contact, 'contact')}
+                {landingPage ? scrollNav('Home', home, 'landing') : linkNav(home, 'landing')}
+                {landingPage ? scrollNav('Stack', stack, 'stack') : linkNav(stack, 'stack')}
+                {landingPage ? scrollNav('Projects', projects, 'projects') : linkNav(projects, 'projects')}
+                {landingPage ? scrollNav('About', about, 'about') : linkNav(about, 'about')}
+                {landingPage ? scrollNav('Contact', contact, 'contact') : linkNav(contact, 'contact')}
             </nav>
         </div>
     )
