@@ -40,10 +40,12 @@ function NavBar(props) {
         )
     }
 
-    function linkNav(icon, section) {
+    function linkNav(name, icon, section) {
         return (
             <Link to={{ pathname: '/', state: section }}>
-                <div className='nav-item h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center hover:cursor-pointer'>
+                <ReactTooltip place='right' effect='solid' textColor='var(--secondary-dark)' backgroundColor='var(--secondary-light)'
+                              className='tooltip font-bold font-sans text-xl'/>
+                <div data-tip={name} className='nav-item h-12 w-12 backdrop-brightness-110 dark:backdrop-brightness-60 rounded-full flex justify-center items-center hover:cursor-pointer'>
                     {icon}
                 </div>
             </Link>
@@ -70,11 +72,11 @@ function NavBar(props) {
 
             {/*Make this dynamic: */}
             <nav className='mt-36 h-1/2 hidden md:flex flex-col items-center gap-2'>
-                {landingPage ? scrollNav('Home', home, 'landing') : linkNav(home, 'landing')}
-                {landingPage ? scrollNav('Stack', stack, 'stack') : linkNav(stack, 'stack')}
-                {landingPage ? scrollNav('Projects', projects, 'projects') : linkNav(projects, 'projects')}
-                {landingPage ? scrollNav('About', about, 'about') : linkNav(about, 'about')}
-                {landingPage ? scrollNav('Contact', contact, 'contact') : linkNav(contact, 'contact')}
+                {landingPage ? scrollNav('Home', home, 'landing') : linkNav("Home", home, 'landing')}
+                {landingPage ? scrollNav('Stack', stack, 'stack') : linkNav("Stack", stack, 'stack')}
+                {landingPage ? scrollNav('Projects', projects, 'projects') : linkNav("Projects", projects, 'projects')}
+                {landingPage ? scrollNav('About', about, 'about') : linkNav("About", about, 'about')}
+                {landingPage ? scrollNav('Contact', contact, 'contact') : linkNav("Contact", contact, 'contact')}
             </nav>
         </div>
     )
