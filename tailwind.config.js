@@ -14,6 +14,9 @@ module.exports = {
       'sans': "'Raleway', sans-serif",
     },
     extend: {
+      keyframes: {
+
+      },
       colors: {
         'primary': 'var(--primary)',
         'secondary-light': 'var(--secondary-light)',
