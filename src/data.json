@@ -1,11 +1,14 @@
 {
     "myDescriptions": [
         "Full Stack Web Developer",
-        "Growing Software Engineer",
         "Agile Learner",
-        "Detail-Oriented Organizer",
+        "Growing Software Engineer",
+        "Refactor Buff",
         "DevMountain Graduate",
+        "Detail-Oriented Organizer",
+        "Clean Code Neophyte",
         "Avid Debugger",
+        "Product-Minded Engineer",
         "Systematized State Manager",
         "Budding UI/UX Enthusiast"
     ],
@@ -14,24 +17,17 @@
             "JavaScript",
             "Typescript",
             "HTML",
-            "CSS",
-            "JSS",
             "JSX",
             "Handlebars.js",
             "GraphQL"
         ],
         "Design Elements": [
+            "CSS",
+            "JSS",
             "SASS/SCSS",
             "Tailwind",
             "UI Kit",
             "WCAG Requirements"
-        ],
-        "Frameworks": [
-            "Vue",
-            "React",
-            "Redux",
-            "Next.js",
-            "Alpine.js"
         ],
         "Dev Tools": [
             "WebStorm/PHPStorm",
@@ -40,6 +36,13 @@
             "Figma",
             "WordPress",
             "Zoho"
+        ],
+        "Frameworks": [
+            "React",
+            "Redux",
+            "Next.js",
+            "Vue",
+            "Alpine.js"
         ],
         "Back End": [
             "PHP",

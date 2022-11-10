@@ -16,13 +16,14 @@ function Landing(props) {
     function stackLoop() {
         if (myStack) {
             const myStackAsArray = Object.keys(myStack)
-            return myStackAsArray.map(stackArea => {
+            return myStackAsArray.map((stackArea, index) => {
                 return (
-                    <div className='bg-gradient-to-br border-2 rounded-3xl transition-color duration-500
+                    <div className={`col-span-3 ${index < 3 ? 'lg:col-span-2' : 'lg:col-span-3 2xl:col-span-2'}
+                                    bg-gradient-to-br border-2 rounded-3xl transition-color duration-500
                                     from-secondary-light via-primary to-secondary-light border-secondary-dark
                                     dark:from-secondary-grey dark:via-secondary-dark dark:to-secondary-grey dark:border-primary
                                     hover:from-secondary-grey hover:via-primary hover:to-secondary-grey hover:cursor-default
-                                    hover:dark:from-secondary-light hover:dark:via-secondary-dark hover:dark:to-secondary-light'
+                                    hover:dark:from-secondary-light hover:dark:via-secondary-dark hover:dark:to-secondary-light`}
                          key={`${stackArea}-stack`}>
                         <h3 className='text-2xl underline'>{stackArea}</h3>
                         <div>
@@ -40,7 +41,7 @@ function Landing(props) {
                 <section role="region" id="landing" className="bg-light-landing bg-fixed bg-center bg-no-repeat bg-cover flex justify-center flex-col min-h-screen w-full
                             dark:bg-dark-landing
                             md:pl-nav-width">
-                    <h2 className='text-7xl pt-16 md:pt-20'>Who Am I?</h2>
+                    <h2 className='text-7xl pt-16 md:pt-20 pb-3 lg:pb-6'>Who Am I?</h2>
                     <div className='flex flex-col-reverse md:flex-row items-center justify-center md:justify-start'>
                         <ul className='container flex flex-col pb-12 w-1/2 gap-2'>
                             {myDescriptions.map((description, index) => {
@@ -60,13 +61,13 @@ function Landing(props) {
                 dark:bg-secondary-dark
                 md:pt-20 pb-16 md:pl-nav-width ">
                     <h2 className='text-5xl mb-10 md:mb-16'>My Stack</h2>
-                    <div className="container grid grid-cols-1 gap-12 md:gap-16
-                    lg:grid-cols-3 lg:grow
-                    2xl:grid-cols-5 2xl:grow-0 ">{stackLoop()}</div>
+                    <div className="container grid grid-cols-2 gap-12 md:gap-16
+                    lg:grid-cols-6
+                    2xl:grid-cols-10">{stackLoop()}</div>
                 </section>
             </Element>
             <Element name="projects" >
-                <section role="region" id="projects" className="bg-baby-blue bg-fixed bg-cover min-h-screen w-full md:pl-nav-width
+                <section role="region" id="projects" className="bg-light-waters bg-fixed bg-cover min-h-screen w-full md:pl-nav-width
                 dark:bg-dark-waters ">
                     {Projects()}
                 </section>

@@ -70,8 +70,8 @@ function NavBar(props) {
                 {moon}{sun}
             </div>
 
-            {/*Make this dynamic: */}
-            <nav className='mt-36 h-1/2 hidden md:flex flex-col items-center gap-2'>
+            {/*Make this dynamic (possible to do without another switch stmt bc of icons?): */}
+            <nav className='mt-24 xl:mt-36 h-1/2 hidden md:flex flex-col items-center gap-2'>
                 {landingPage ? scrollNav('Home', home, 'landing') : linkNav("Home", home, 'landing')}
                 {landingPage ? scrollNav('Stack', stack, 'stack') : linkNav("Stack", stack, 'stack')}
                 {landingPage ? scrollNav('Projects', projects, 'projects') : linkNav("Projects", projects, 'projects')}
