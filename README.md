@@ -1,5 +1,11 @@
-Welcome to my porfolio! I created this website using React, HTML, CSS, and Javascript. While this may not be a very complex website, it is fully responsive to mobile and desktop viewing. 
+Welcome to my portfolio! I built this website with React, Javascript, HTML, CSS, 
+and a few design packages (Tailwindcss, React Scroll, React-Tooltip). 
+While this may not be a very complex website, it is fully responsive to mobile, tablet, 
+and desktop viewing. 
 
-On this site you will find an intro page that gives a bit of info about myself and my stack, an about page that gives more of my backstory, a project page that gives details and links to websites I've built, and a contact page with links to my LinkedIn, Github, and Resume. While my cell phone number is not displayed on the site itself, it can be found on my resume or here: 720-774-0205.
+On this site you will find a main homepage that holds information about who I am, 
+what I know, and some of the early projects that I've worked on. 
+You will also find my contact info here. Each project I've listed also has its own page 
+with more details about the venture.
 
 Please enjoy and reach out if you encounter any issues or would like to chat!
