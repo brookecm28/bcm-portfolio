@@ -51,15 +51,15 @@ function Landing(props) {
                             })}
                         </ul>
                         <div className='w-full md:w-1/2 flex justify-center'>
-                            <img className='h-96 lg:h-100 w-fit rounded-headshot my-12' src={headshot} alt='Brooke Miller Headshot' />
+                            <img className='h-96 lg:h-100 w-fit rounded-headshot my-12 dark:brightness-75' src={headshot} alt='Brooke Miller Headshot' />
                         </div>
                     </div>
                 </section>
             </Element>
             <Element name="stack" >
-                <section role="region" id="stack" className="bg-primary min-h-fit w-full px-10 flex flex-col items-center justify-center pt-16
+                <section role="region" id="stack" className="bg-primary min-h-fit w-full px-10 flex flex-col items-center justify-center py-16
                 dark:bg-secondary-dark
-                md:pt-20 pb-16 md:pl-nav-width ">
+                md:py-20 md:pl-nav-width ">
                     <h2 className='text-5xl mb-10 md:mb-16'>My Stack</h2>
                     <div className="container grid grid-cols-2 gap-12 md:gap-16
                     lg:grid-cols-6
