@@ -4,8 +4,8 @@ module.exports = {
   content: [
     "./src/*.{html, js}",
     "./src/Components/*.js",
-      "./src/assets/icons/*.js",
-      "./src/Components/projects/*.js",
+    "./src/assets/icons/*.js",
+    "./src/Components/projects/*.js",
     "./public/index.html"
   ],
   darkMode: 'class',

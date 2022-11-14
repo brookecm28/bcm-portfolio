@@ -81,7 +81,7 @@
                 "Property management website for making payments and submitting maintenance requests as a tenant",
                 "Utilized for tracking tenant activity as a manager",
                 "Conditional rendering determines what gets displayed and is dependent upon whether the user is a tenant or manager",
-                "SOMETHING ELSE"
+                "Simple data display for ease of use"
             ],
             "basicCredentials": {
                 "username": "pika@pika.com",
@@ -103,7 +103,11 @@
                 "Built with Tailwindcss for easy theme toggling",
                 "Continued education of new features while building",
                 "Complete refactor and design from v1 to v2"
-            ]
+            ],
+            "basicCredentials": {
+                "username": "N/A",
+                "password": "Enjoy!"
+            }
         },
         "inventoryManagerPro": {
             "displayName": "Inventory Manager Pro",
@@ -116,7 +120,11 @@
                 "Inventory items are added either manually or via an XML feed from various integrations",
                 "Items that are added or updated get pushed directly to the clients' sites in real time",
                 "Built with Vue, my contributions were to the front end and user experience"
-            ]
+            ],
+            "basicCredentials": {
+                "username": "Unavailable",
+                "password": "SaaS Website"
+            }
         }
     },
     "about": [

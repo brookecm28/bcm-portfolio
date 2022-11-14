@@ -1,6 +1,6 @@
-import {projectsHeader, projectDescriptions, projectsButtons} from "./projects-mixin";
+import { projectsHeader, projectDescriptions, projectsButtons, projectsCredentials } from "./projects-mixin";
 
-function BcmPortfolio()  {
+function BcmPortfolio() {
     const key = 'bcmPortfolio'
 
     return (
@@ -10,6 +10,7 @@ function BcmPortfolio()  {
             {projectsHeader(key)}
             {projectsButtons(key)}
             {projectDescriptions(key)}
+            {projectsCredentials(key, "basicCredentials")}
         </div>
     )
 }

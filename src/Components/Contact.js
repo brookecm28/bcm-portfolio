@@ -43,7 +43,7 @@ function Contact() {
             if (item.display.includes('@')) {
                 const display = item.display.split('@')
                 emailDisplay = (
-                    <p className='pt-10 text-lg xl:text-xl'>{display[0]}<br className='xl:hidden'/>@{display[1]}</p>
+                    <p className='pt-10 text-lg xl:text-xl'>{display[0]}<br className='xl:hidden' />@{display[1]}</p>
                 )
             }
             return (
@@ -61,22 +61,22 @@ function Contact() {
     }
 
     return (
-        <div className='pt-16 md:pt-16 pb-6'>
-                <h2 className='text-5xl pb-6
-                               lg:pb-12 lg:text-6xl
-                               2xl:pt-20 2xl:pb-20'>
-                    Contact Me
-                </h2>
-                <div className='flex flex-col-reverse md:flex-col'>
-                    <div className='flex flex-col flex-col-reverse justify-center items-center gap-6
+        <div className='pt-16 pb-6'>
+            <h2 className='text-5xl pb-6
+                               lg:pb-12 lg:text-6xl lg:pt-10
+                                2xl:pb-20'>
+                Contact Me
+            </h2>
+            <div className='flex flex-col-reverse md:flex-col'>
+                <div className='flex flex-col justify-center items-center gap-6
                                 md:flex-row md:gap-8'>
-                        {loopContactInfoWithIcons()}
-                    </div>
-                    <div className='flex flex-col justify-center items-center gap-6 mb-6
-                                md:flex-row md:gap-12 md:mb-0'>
-                        {loopContactInfoWithoutIcons()}
-                    </div>
+                    {loopContactInfoWithIcons()}
                 </div>
+                <div className='flex flex-col-reverse justify-center items-center gap-6 mb-6
+                                md:flex-row md:gap-12 md:mb-0'>
+                    {loopContactInfoWithoutIcons()}
+                </div>
+            </div>
 
         </div>
     )

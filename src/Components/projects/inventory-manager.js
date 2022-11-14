@@ -1,4 +1,4 @@
-import {projectsHeader, projectDescriptions, projectsButtons} from "./projects-mixin";
+import { projectsHeader, projectDescriptions, projectsButtons, projectsCredentials } from "./projects-mixin";
 
 function InventoryManager() {
     const key = 'inventoryManagerPro'
@@ -10,7 +10,7 @@ function InventoryManager() {
             {projectsHeader(key)}
             {projectsButtons(key)}
             {projectDescriptions(key)}
-            {/*{projectsCredentials(key, 'basicCredentials')}*/}
+            {projectsCredentials(key, 'basicCredentials')}
             {/*{projectsCredentials(key, 'adminCredentials')}*/}
         </div>
     )
