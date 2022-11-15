@@ -43,10 +43,10 @@ function Landing(props) {
                             md:pl-nav-width">
                     <h2 className='text-7xl pt-16 md:pt-20 pb-3 lg:pb-6'>Who Am I?</h2>
                     <div className='flex flex-col-reverse md:flex-row items-center justify-center md:justify-start'>
-                        <ul className='container flex flex-col pb-12 w-1/2 gap-2'>
+                        <ul className='container flex flex-col pb-12 w-full md:w-1/2 gap-4 md:gap-2'>
                             {myDescriptions.map((description, index) => {
                                 return (
-                                    <li key={`description-${index}`} className={`pulse text-xl`}>{description}</li>
+                                    <li key={`description-${index}`} className={`text-xl`}>{description}</li>
                                 )
                             })}
                         </ul>
@@ -79,8 +79,9 @@ function Landing(props) {
                 </section>
             </Element>
             <Element name="contact" >
-                <section role="region" id="contact" className="bg-light-wood bg-cover bg-fixed min-h-screen w-full
-                                                               dark:bg-dark-wood md:pl-nav-width">
+                <section role="region" id="contact" className="bg-light-woods bg-right bg-fixed min-h-screen w-full
+                                                               md:bg-light-wood md:bg-cover md:pl-nav-width
+                                                               dark:bg-dark-wood ">
                     {Contact()}
                 </section>
             </Element>

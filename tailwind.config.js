@@ -26,6 +26,7 @@ module.exports = {
         'dark-blues': "url('../assets/dark-blue.jpg')",
         'tropical-leaves': "url('../assets/tropical-leaves.jpg')",
         'light-wood': "url('../assets/light-wood.jpg')",
+        'light-woods': "url('../assets/light-woods.jpg')",
         'dark-wood': "url('../assets/dark-wood.jpg')",
         'mint-green': "url('../assets/mint-green.jpg')",
         'dark-landing': "url('../assets/dark-landing.jpg')",

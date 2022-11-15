@@ -756,10 +756,6 @@ video {
   width: 15rem;
 }
 
-.w-1\/2 {
-  width: 50%;
-}
-
 .w-fit {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -842,12 +838,16 @@ video {
   gap: 1.5rem;
 }
 
-.gap-2 {
-  gap: 0.5rem;
+.gap-4 {
+  gap: 1rem;
 }
 
 .gap-12 {
   gap: 3rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
 }
 
 .gap-8 {
@@ -937,8 +937,8 @@ video {
   background-image: url('../assets/light-waters.jpg');
 }
 
-.bg-light-wood {
-  background-image: url('../assets/light-wood.jpg');
+.bg-light-woods {
+  background-image: url('../assets/light-woods.jpg');
 }
 
 .from-secondary-light {
@@ -966,6 +966,10 @@ video {
 
 .bg-center {
   background-position: center;
+}
+
+.bg-right {
+  background-position: right;
 }
 
 .bg-no-repeat {
@@ -1279,10 +1283,6 @@ body {
   background-color: var(--primary);
 }
 
-.dark .dark\:bg-secondary-light {
-  background-color: var(--secondary-light);
-}
-
 .dark .dark\:bg-dark-landing {
   background-image: url('../assets/dark-landing.jpg');
 }
@@ -1472,8 +1472,20 @@ body {
     gap: 3rem;
   }
 
+  .md\:gap-2 {
+    gap: 0.5rem;
+  }
+
   .md\:gap-16 {
     gap: 4rem;
+  }
+
+  .md\:bg-light-wood {
+    background-image: url('../assets/light-wood.jpg');
+  }
+
+  .md\:bg-cover {
+    background-size: cover;
   }
 
   .md\:p-6 {
@@ -1538,16 +1550,12 @@ body {
     padding-bottom: 3rem;
   }
 
-  .lg\:pt-12 {
-    padding-top: 3rem;
+  .lg\:pt-10 {
+    padding-top: 2.5rem;
   }
 
   .lg\:pb-6 {
     padding-bottom: 1.5rem;
-  }
-
-  .lg\:pt-10 {
-    padding-top: 2.5rem;
   }
 
   .lg\:text-6xl {
