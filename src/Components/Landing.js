@@ -81,7 +81,7 @@ function Landing(props) {
             <Element name="contact" >
                 <section role="region" id="contact" className="bg-light-woods bg-right bg-fixed min-h-screen w-full
                                                                md:bg-light-wood md:bg-cover md:pl-nav-width
-                                                               dark:bg-dark-wood ">
+                                                               dark:bg-dark-wood dark:bg-left dark:md:bg-cover">
                     {Contact()}
                 </section>
             </Element>
