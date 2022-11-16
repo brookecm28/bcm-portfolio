@@ -1310,6 +1310,14 @@ body {
   --tw-gradient-to: var(--secondary-grey);
 }
 
+.dark .dark\:bg-center {
+  background-position: center;
+}
+
+.dark .dark\:bg-left {
+  background-position: left;
+}
+
 .dark .dark\:text-primary {
   color: var(--primary);
 }
@@ -1526,6 +1534,10 @@ body {
   .md\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .dark .dark\:md\:bg-cover {
+    background-size: cover;
   }
 }
 
