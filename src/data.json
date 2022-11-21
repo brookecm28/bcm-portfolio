@@ -128,9 +128,10 @@
         }
     },
     "about": [
-        "After moving to Colorado and working in a tax debt resolution firm for three years, I decided that I needed more. I had a job, but I wanted a career. I had dabbled in computer programming in high school but did not pursue it further after graduation. When the world went into quarantine, I took advantage of the extra time I gained without a commute and took a free online class for coding. A little taste was all it took for me to fall in love.",
-        "I made the decision to enroll in DevMountain’s Web Development program. The thirteen-week long bootcamp prepared me for my first job as a software engineer where I began my career in the  industry that is right for me. My current job has allowed me to continue my programming education by taking on new challenges and adding to my stack. Now, with real-world experience under my belt, I’m ready to take the next step in my career."
-    ],
+        "After moving to Colorado and working in a tax debt resolution firm for three years, I decided that I needed more. I had a job, but I wanted a career. Computer programming immediately came to mind.",
+        "When the world went into quarantine and commuting was removed from my schedule, I took advantage of the time I gained by taking an online coding class. A little taste was all it took for me to fall in love. I enrolled in DevMountain’s Web Development program, where I built foundations in coding logic, multiple languages, and full-stack web development.",
+        "That education prepared me for my first job as a software engineer, where I began my career in the industry that is right for me. My current position has allowed me to continue growing as a web developer by providing me with challenges to tackle and dedicated time to add to my stack. Now, with real-world experience under my belt, I’m ready to take the next step in my career."
+],
     "contact": {
         "infoWithIcons": [
             {
