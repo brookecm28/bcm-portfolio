@@ -1,71 +1,71 @@
 import React from 'react'
-import lobster from '../assets/blue-lobster-logo.png'
-import lemon from '../assets/lemon_prop.png'
+import lobster from '../assets/icons/richRecipes.png'
+import lemon from '../assets/icons/lemonProp.png'
+import imp from '../assets/icons/inventoryManager.png'
+import portfolio from '../assets/icons/portfolio.png'
+import { projects } from '../data.json'
+import {Link} from "react-router-dom";
 
 function Projects() {
-    return (
-        <div className='projects'>
-            <div className='project-group'>
-                <div className='title-group'>
-                    <p className='project-title'>Rich Recipes</p>
-                    <img className='logo' src={lobster}/>
-                </div>
-                <div className='info-links'>
-                    <p className='pl-top'><a className='project-link'href='https://rich-recipes.com' target='_blank' rel='noopener noreferrer'>https://rich-recipes.com</a></p>
-                    <p className='project-link separator'> | </p>
-                    <p className='pl-bot'><a className='project-link' href='https://github.com/brookecm28/rich-recipes' target='_blank' rel='noopener noreferrer'>GitHub</a></p>
-                </div>
-                <div className='project-list'>
-                	<li>Electronic storage and management system for recipes</li>
-                	<li>Built for anyone, the user can navigate through their recipes in a list, view individual recipes, and edit their recipes</li>
-                	<li>Anyone can register for an account and will receive a welcome email upon doing so</li>
-                    <li>Dummy account login</li>
-                    <li className='indent'>U: lulu@lol.com</li>
-                    <li className='indent'>P: purple</li>
-                </div>
-            </div>
-            <div className='project-group'>
-                <div className='title-group'>
-                    <p className='project-title'>LemonProp Management</p>
-                    <img className='logo' src={lemon} />
-                </div>
-                <div className='info-links'>
-                    <p className='pl-top'><a className='project-link' href='https://lemonprop.com' target='_blank' rel='noopener noreferrer'>https://lemonprop.com</a></p>
-                    <p className='project-link separator'> | </p>
-                    <p className='pl-bot'><a className='project-link' href='https://github.com/Lemon-Prop-Management/lemon-prop' target='_blank' rel='noopener noreferrer'>GitHub</a></p>
-                </div>
-                <div className='project-list'>
-                	<li>Property management website for making payments and submitting maintenance requests as a tenant</li>
-                	<li>Utilized for tracking tenant activity as a manager</li>
-                	<li>Conditional rendering determines what gets displayed and is dependent upon whether the user is a tenant or manager</li>
-                    <div className='dummy-acct'>
-                        <div className='dummy-sub'>
-                            <li>Dummy tenant account login</li>
-                            <li className='indent'>U: pika@pika.com</li>
-                            <li className='indent'>P: Michael</li>
-                        </div>
-                        <div className='dummy-sub dummy-right'>
-                            <li>Dummy manager account login</li>
-                            <li className='indent'>U: manager@manager.com</li>
-                            <li className='indent'>P: manager</li>
-                        </div>
+    function loopProjects() {
+        const htmlForReturn = []
+        for (const key in projects) {
+            let icon
+            switch (key) {
+                case "richRecipes":
+                    icon = lobster
+                    break
+                case "lemonProp":
+                    icon = lemon
+                    break
+                case "bcmPortfolio":
+                    icon = portfolio
+                    break
+                case "inventoryManagerPro":
+                    icon = imp
+                    break
+                default:
+                    icon = ""
+            }
+
+            htmlForReturn.push(
+                <div key={`projects-card-${key}`} className='flex flex-col justify-center max-h-mobile-project-card rounded-3xl overflow-hidden
+                                                            md:flex-row md:h-64'>
+                    <div className='px-12 pt-4 w-full md:w-7/12 flex flex-col justify-around items-center bg-secondary-grey text-primary'>
+                        <h3 className='text-3xl'>{projects[key].displayName}</h3>
+                        <p className='italic pb-4 md:pb-0'>{projects[key].tagline}</p>
+                        <img src={icon} alt={key} className="max-h-icon max-w-icon pb-4" />
+                    </div>
+                    <div className='w-full flex flex-col justify-center gap-8 items-center bg-primary py-8
+                                    dark:bg-secondary-dark md:w-5/12 '>
+                        <a href={projects[key].source} target='_blank' rel='noopener noreferrer'
+                            className='border-2 border-secondary-dark h-12 w-48 flex items-center justify-center
+                            dark:border-primary xl:w-40 2xl:w-48
+                            hover:bg-secondary-dark hover:text-primary hover:border-0
+                            hover:dark:bg-primary hover:dark:text-secondary-dark'>
+                            Visit Site
+                        </a>
+                        <Link to={`/projects/${projects[key].slug}`}
+                            className='border-2 border-secondary-dark h-12 w-48  flex items-center justify-center
+                            dark:border-primary xl:w-40 2xl:w-48
+                            hover:bg-secondary-dark hover:text-primary hover:border-0
+                            hover:dark:bg-primary hover:dark:text-secondary-dark'>
+                            More Details
+                        </Link>
                     </div>
                 </div>
-            </div>
-            <div className='project-group'>
-                <p className='project-title'>Portfolio Website</p>
-                <div className='info-links larger-link'>
-                    <p className='project-link pl-top'>https://brookemillerdev.com</p>
-                    <p className='project-link separator'> | </p>
-                    <p className='pl-bot'><a className='project-link' href='https://github.com/brookecm28/bcm-portfolio' target='_blank' rel='noopener noreferrer'>GitHub</a></p>
-                </div>
-                <div className='project-list'>
-                	<li>Portfolio website built from the ground up with an emphasis on design and no template</li>
-                	<li>Responsive design built for both mobile and desktop viewing</li>
-                	<li className='bottom-sub'>Continued education of new features while building</li>
-                </div>
-            </div>
+            )
+        }
+        return htmlForReturn
+    }
+
+    return (
+        <div className="pt-16 px-10
+                        md:pt-20 md:px-24">
+            <h2 className='text-5xl mb-12'>Projects</h2>
+            <div className='grid grid-cols-1 xl:grid-cols-2 gap-12 pb-12'>{loopProjects()}</div>
         </div>
+
     )
 }
 

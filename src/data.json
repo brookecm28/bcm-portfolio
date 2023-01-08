@@ -1,0 +1,166 @@
+{
+    "myDescriptions": [
+        "Full Stack Web Developer",
+        "Agile Learner",
+        "Growing Software Engineer",
+        "Refactor Buff",
+        "DevMountain Graduate",
+        "Detail-Oriented Organizer",
+        "Clean Code Neophyte",
+        "Avid Debugger",
+        "Product-Minded Engineer",
+        "Systematized State Manager",
+        "Budding UI/UX Enthusiast"
+    ],
+    "myStack": {
+        "Front End": [
+            "JavaScript",
+            "Typescript",
+            "HTML",
+            "JSX",
+            "Handlebars.js",
+            "GraphQL"
+        ],
+        "Design Elements": [
+            "CSS",
+            "JSS",
+            "SASS/SCSS",
+            "Tailwind",
+            "UI Kit",
+            "WCAG Requirements"
+        ],
+        "Dev Tools": [
+            "WebStorm/PHPStorm",
+            "Visual Studio Code",
+            "Chrome DevTools",
+            "Figma",
+            "WordPress",
+            "Zoho"
+        ],
+        "Frameworks": [
+            "React",
+            "Redux",
+            "Next.js",
+            "Vue",
+            "Alpine.js"
+        ],
+        "Back End": [
+            "PHP",
+            "Linux Command Line",
+            "Node.js",
+            "PostgreSQL",
+            "Nodemailer"
+        ]
+    },
+    "projects": {
+        "richRecipes": {
+            "displayName": "Rich Recipes",
+            "slug": "rich-recipes",
+            "source": "https://rich-recipes.com",
+            "gitHub": "https://github.com/brookecm28/rich-recipes",
+            "tagline": "Your easy recipe storage solution",
+            "logo": "./assets/icons/richRecipes.png",
+            "descriptions": [
+                "Electronic storage and management system for recipes",
+                "Built for anyone, the user can navigate through their recipes in a list, view individual recipes, and edit their recipes",
+                "Anyone can register for an account and will receive a welcome email upon doing so",
+                "My first solo website"
+            ],
+            "basicCredentials": {
+                "username": "lulu@lol.com",
+                "password": "purple"
+            }
+        },
+        "lemonProp": {
+            "displayName": "Lemon Prop",
+            "slug": "lemon-prop",
+            "source": "https://lemonprop.com",
+            "gitHub": "https://github.com/Lemon-Prop-Management/lemon-prop",
+            "tagline": "Property management portal for tenants and managers alike",
+            "descriptions": [
+                "Property management website for making payments and submitting maintenance requests as a tenant",
+                "Utilized for tracking tenant activity as a manager",
+                "Conditional rendering determines what gets displayed and is dependent upon whether the user is a tenant or manager",
+                "Simple data display for ease of use"
+            ],
+            "basicCredentials": {
+                "username": "pika@pika.com",
+                "password": "Michael"
+            },
+            "adminCredentials": {
+                "username": "manager@manager.com",
+                "password": "manager"
+            }
+        },
+        "bcmPortfolio": {
+            "displayName": "Portfolio",
+            "slug": "bcm-portfolio",
+            "source": "https://brookemillerdev.com",
+            "gitHub": "https://github.com/brookecm28/bcm-portfolio",
+            "tagline": "Your source for all things Brooke Miller",
+            "descriptions": [
+                "Portfolio website built from the ground up with an emphasis on design and no template",
+                "Built with Tailwindcss for easy theme toggling",
+                "Continued education of new features while building",
+                "Complete refactor and design from v1 to v2"
+            ],
+            "basicCredentials": {
+                "username": "N/A",
+                "password": "Enjoy!"
+            }
+        },
+        "inventoryManagerPro": {
+            "displayName": "Inventory Manager Pro",
+            "slug": "inventory-manager-pro",
+            "source": "https://inventorymanagerpro.com",
+            "gitHub": "https://github.com/nativerank/inventory-manager",
+            "tagline": "Inventory Redefined",
+            "descriptions": [
+                "Inventory system designed for boat and vehicle dealerships and manufacturers",
+                "Inventory items are added either manually or via an XML feed from various integrations",
+                "Items that are added or updated get pushed directly to the clients' sites in real time",
+                "Built with Vue, my contributions were to the front end and user experience"
+            ],
+            "basicCredentials": {
+                "username": "Unavailable",
+                "password": "Paid SaaS Website"
+            }
+        }
+    },
+    "about": [
+        "After moving to Colorado and working in a tax debt resolution firm for three years, I decided that I needed more. I had a job, but I wanted a career. Computer programming immediately came to mind.",
+        "When the world went into quarantine and commuting was removed from my schedule, I took advantage of the time I gained by taking an online coding class. A little taste was all it took for me to fall in love. I enrolled in DevMountain’s Web Development program, where I built foundations in coding logic, multiple languages, and full-stack web development.",
+        "That education prepared me for my first job as a software engineer, where I began my career in the industry that is right for me. My current position has allowed me to continue growing as a web developer by providing me with challenges to tackle and dedicated time to add to my stack. Now, with real-world experience under my belt, I’m ready to take the next step in my career."
+],
+    "contact": {
+        "infoWithIcons": [
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/brooke-miller-95a08479",
+                "icon": true
+            },
+            {
+                "name": "GitHub",
+                "url": "https://github.com/brookecm28",
+                "icon": true
+            },
+            {
+                "name": "Resume",
+                "url": "https://drive.google.com/file/d/14ZVmLG59H2SBaUN69QB3gitBtQGVEUvL/view?usp=sharing",
+                "icon": true
+            }
+        ],
+        "infoWithoutIcons": [
+            {
+                "name": "Email",
+                "url": "mailto:brooke.miller.dev@gmail.com",
+                "display": "brooke.miller.dev@gmail.com"
+            },
+            {
+                "name": "Phone",
+                "url": "tel:720-774-0205",
+                "display": "(720) 774-0205"
+            }
+        ]
+    }
+}
